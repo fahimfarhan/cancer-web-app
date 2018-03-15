@@ -1,0 +1,15 @@
+{% extends 'accounts/base.html' %}
+
+{% block body %}
+<div class="w3-container">
+<h2>Registration</h2>
+  <p>You can create new account here!</p>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Register</button>
+</form>
+
+</div>
+
+{% endblock %}

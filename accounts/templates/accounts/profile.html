@@ -1,0 +1,30 @@
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body-->
+{% extends 'accounts/base.html' %}
+{% block body %}
+
+<div class="w3-container">
+    <h2 align="center">User Profile</h2>
+    <p>
+        username : {{user}}
+    </p>
+
+    <p>
+        first name : {{user.first_name}}
+    </p>
+    <p>
+        last name : {{user.last_name}}
+    </p>
+    <p>
+        email : {{user.email}}
+    </p>
+</div>
+
+{% endblock %}
+<!--/body>
+</html-->
