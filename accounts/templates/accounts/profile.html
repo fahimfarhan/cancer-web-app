@@ -7,8 +7,31 @@
 <body-->
 {% extends 'accounts/base.html' %}
 {% block body %}
+<div class="w3-row-padding">
+    <h2 align="center">Profile</h2>
+        <div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-light-gray w3-center">
+            <li class="w3-black w3-xlarge w3-padding-16"></li>
+                    <li class="w3-padding-16">User Name</li>
+                    <li class="w3-padding-16">First Name</li>
+                    <li class="w3-padding-16">Last Name</li>
+                    <li class="w3-padding-16">Email</li>
+                    </ul>
+        </div>
+         <div class="w3-half w3-margin-bottom">
+             <ul class="w3-ul w3-light-gray w3-center">
+            <li class="w3-black w3-xlarge w3-padding-16"></li>
+                    <li class="w3-padding-16"> {{user}} </li>
+                    <li class="w3-padding-16">{{user.first_name}}</li>
+                    <li class="w3-padding-16">{{user.last_name}}</li>
+                    <li class="w3-padding-16">{{user.email}}</li>
+             </ul>
+        </div>
 
-<div class="w3-container">
+    </div>
+<!--div class="w3-container">
+
+    <div class="w3-display-middle w3-mobile">
     <h2 align="center">User Profile</h2>
     <p>
         username : {{user}}
@@ -24,7 +47,7 @@
         email : {{user.email}}
     </p>
 </div>
-
+</div-->
 {% endblock %}
 <!--/body>
 </html-->

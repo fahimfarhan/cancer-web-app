@@ -2,14 +2,15 @@
 
 {% block body %}
 <div class="w3-container">
-<h2>Registration</h2>
+    <div class="w3-display-middle w3-mobile">
+<br><br><h2>Registration</h2>
   <p>You can create new account here!</p>
 <form method="post">
   {% csrf_token %}
   {{ form.as_p }}
   <button type="submit">Register</button>
 </form>
-
+    </div>
 </div>
 
 {% endblock %}

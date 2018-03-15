@@ -2,6 +2,8 @@
 
 {% block body %}
 <div class="w3-container">
+    <div class="w3-display-middle w3-mobile">
+        <h2>Edit Profile</h2>
     <form method="post">
         {%csrf_token%}
         {{form.as_p}}
@@ -17,5 +19,6 @@
     <input type="email" name="email" value="{{user.email}}" maxlength="254" id="id_email" /></p-->
         <button type="submit">Submit</button>
     </form>
+</div>
 </div>
 {% endblock %}

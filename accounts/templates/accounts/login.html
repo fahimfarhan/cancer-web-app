@@ -2,6 +2,7 @@
 
 {% block body %}
 <div class="w3-container">
+    <div class="w3-display-middle w3-mobile">
 <h2>Welcome!</h2>
   <p>You can sign in here!</p>
 <form method="post">
@@ -9,7 +10,7 @@
   {{ form.as_p }}
   <button type="submit">Sign In</button>
 </form>
-
+    </div>
 </div>
 
 {% endblock %}
