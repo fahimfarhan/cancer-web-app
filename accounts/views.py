@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from accounts.forms import RegistrationForm, EditProfileForm
 
 
+@login_required
 def home(request):
     return render(request, 'accounts/home.html')
 

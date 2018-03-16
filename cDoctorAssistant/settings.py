@@ -31,7 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'patientbasicinfo',
     'accounts',
+    'filetransfers',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -124,6 +126,12 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "staticfiles"),
 ]
 
+# MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media') # original
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+# URL that handles the media served from MEDIA_ROOT. Make sure to use a
+# trailing slash.
+# Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
+MEDIA_URL = '/media/'
 
 # email settings start
 EMAIL_USE_TLS = True

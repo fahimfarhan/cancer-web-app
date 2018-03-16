@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<div class="w3-container" id="identity">
+<div class="w3-container w3-black">
+
+    <h2 align="center">Identity</h2>
+
+</div>
+
+    <div class="w3-half w3-margin-bottom">
+        <ul>
+    <p>Name   : {{patient.name}}</p>
+    <p>Mobile : {{patient.mobileNo}}</p>
+    <p>unit   : {{patient.unit}}</p>
+    <p>gender : {{patient.gender}}</p>
+    <p>Address: {{patient.address}}</p>
+    <p>Date Of Admission: {{patient.dateOfAdmission}}</p>
+    <p>Referred By: {{patient.referredBy}}</p>
+    <a href="{% url 'pbi:edit_identity' patient.pk %}" class="w3-btn w3-green">Edit Identity</a>
+</ul>
+    </div>
+    <div class="w3-half">
+{% if patient.image %}
+    <p>
+        <img src="{{ patient.image.url }}" width="240" height="240" alt="No Image Available">
+    </p>
+        {% else %}
+    <p>
+        <img src="{% static 'img/blank-profile-picture.png' %}" width="240" height="240" alt="No Image Available">
+    </p>
+{% endif %}
+    </div>
+
+
+</div>

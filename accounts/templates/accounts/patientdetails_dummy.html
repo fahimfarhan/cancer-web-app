@@ -1,0 +1,93 @@
+<div class="w3-main w3-light-gray" style="margin-left:340px;margin-right:40px">
+    <div class="w3-container w3-white" style="margin-top:80px">
+    <div><p><h2 align="center">Patient Info</h2></p></div>
+    </div>
+    {%include 'patientbasicinfo/ViewIdentity.html' %}
+    <div class="w3-container">
+        <div></div>
+    </div>
+    <!--*************************-->
+    {%include 'patientbasicinfo/ViewProfile.html' %}
+    {%include 'patientbasicinfo/ViewComorbidity.html' %}
+    <div class="w3-container w3-white" style="margin-top:80px" id = "prescription">
+       <ul><p>
+        <h2 align="center">Prescriptions</h2>
+    </p></ul>
+    </div>
+    {%include 'prescription/prescription.html' %}
+
+
+
+    <div class="w3-container w3-white" style="margin-top:80px" id="treatmentplan">
+    <p>
+        <h2 align="center">Treatment Plan</h2>
+    </p>
+    </div>
+
+    <div class="w3-container w3-white" style="margin-top:80px" id = "radiotherapy">
+       <ul><p>
+        <h2 align="center">Radio Therapy</h2>
+    </p></ul>
+    </div>
+    {%include 'radiotherapy/Cobalt.html' %}
+    {% if cobalt %}{% include 'table/cobalt_cycle.html' %} {% endif %}
+
+    {%include 'radiotherapy/Linac.html' %}
+    {% if linac %}{% include 'table/linac_cycle.html' %}{% endif %}
+
+    {%include 'radiotherapy/Brachy.html' %}
+    {% if brachy %}{% include 'table/brachy_cycle.html' %}{% endif %}
+
+    <div class="w3-container w3-white" style="margin-top:80px" id = "chemotherapy">
+       <ul><p>
+        <h2 align="center">Chemo Therapy</h2>
+    </p></ul>
+    </div>
+    {%include 'chemotherapy/NACT.html' %}
+    {% if nact %}{% include 'table/nact_cycle.html' %}{% endif %}
+
+    {%include 'chemotherapy/ACT.html' %}
+    {% if act %}{% include 'table/act_cycle.html' %}{% endif %}
+
+    {%include 'chemotherapy/concurrent.html' %}
+    {% if concurrent %}{% include 'table/concurrent_cycle.html' %}{% endif %}
+
+    {%include 'chemotherapy/palliative.html' %}
+    {% if palliative %}{% include 'table/palliative_cycle.html' %}{% endif %}
+
+    {%include 'surgeryhormone/surgery.html' %}
+    {%include 'surgeryhormone/hormone.html' %}
+<div class="w3-container w3-white" style="margin-top:80px" id = "targetedtherapy">
+       <ul><p>
+        <h2 align="center">Targeted Therapy</h2>
+    </p></ul>
+    </div>
+
+    {%include 'targetedtherapy/TargetedTherapy.html' %}
+
+    <div class="w3-container w3-white" style="margin-top:80px" id = "presentingfeatures">
+       <ul><p>
+        <h2 align="center">Presenting Features</h2>
+    </p>
+       </ul>
+    </div>
+    <div>
+        <ul>
+            <p>Here you can add new Status, Marker, Routines(CBC, RBS, LFT, KFT, Serum Electrolytes, Others) etc</p>
+        </ul>
+    </div>
+    {%include 'status/status.html' %}
+    {%include 'investigation/investigation.html' %}
+    {%include 'imaging/imaging.html' %}
+<div class="w3-container w3-white" style="margin-top:80px" id = "history">
+       <ul><p>
+        <h2 align="center">Patient History</h2>
+    </p>
+       </ul>
+    </div>
+
+    {%include 'history/history.html' %}
+    {%include 'referralnote/ViewReferralNote.html' %}
+    {%include 'followup/followup.html' %}
+
+</div>

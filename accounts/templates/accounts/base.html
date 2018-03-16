@@ -2,21 +2,44 @@
 {% load staticfiles %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-
+	 <meta charset="UTF-8">
+	<title>cDoctorAssistant</title>
+	<link rel="icon" href="{% static 'img/favicon.ico' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/w3v4.css' %}">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>cDoctorAssistant</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/webtable.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/w3template.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"> <!--if any trouble, cmnt it out-->
+
+	<!---->
+	<meta http-equiv="x-ua-compatible" content="IE=Edge"/>
+    <link rel="stylesheet" href="{% static 'css/autocomplete.css' %}">
+
+	<link rel="stylesheet" href="{% static 'css/jquery.atwho.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/googleapistylesheet1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/googleapistylesheet2.css' %}">
+    <script type="text/javascript" src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.caret.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.atwho.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/mobileview.js' %}"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--script type="text/javascript" src="{% static 'js/InvestigationDataList.js' %}"></script-->
 </head>
+<!--head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/w3v4.css' %}">
+ <title>cDoctorAssistant</title>
+</head-->
 <body>
  <br>
       <div class="w3-top">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
       {% if user.is_authenticated %}
-    <a href="{% url 'home' %}" class="w3-bar-item w3-button"><b>BR</b> Home</a>
+
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
-      <a href="{% url 'profile' %}" class="w3-bar-item w3-button">Profile</a>
+      <a href="{% url 'home' %}" class="w3-bar-item w3-button">Home</a>
+        <a href="{% url 'profile' %}" class="w3-bar-item w3-button"><b>{{user}}</b></a>
       <a href="{% url 'edit_profile' %}" class="w3-bar-item w3-button">Edit Profile</a>
       <a href="{% url 'change_password' %}" class="w3-bar-item w3-button">Change Password</a>
       <a href="{% url 'mylogout' %}" class="w3-bar-item w3-button">Log out</a>
@@ -36,5 +59,54 @@
 {% block body %}
 {% endblock %}
 </div>
+<script type="text/javascript">
+	 $(function(){
+    $.fn.atwho.debug = true
+
+    //var jeremy = decodeURI("J%C3%A9r%C3%A9my") // Jérémy
+    var bangla = {{ bangla | safe }}
+    var names = {{ medicine | safe }}
+	var dose =  {{ dose | safe }} //["20 mg","50mg"]
+	var timetable =  {{ timetable | safe }} // ["once daily","twice daily", "for 5 days"]
+
+	var myarray = bangla.concat(names).concat(dose).concat(timetable);
+	//myarray = myarray.concat(timetable);
+
+	// var re =new RegExp('[a-z]+'); //;
+
+    var at_config = {
+      at:  "@", //  /\b(\w{2,})$/, //"@m",
+      data: myarray,   //names,
+      headerTpl: '<div class="atwho-header">Suggested Medicine List<small>↑&nbsp;↓&nbsp;</small></div>',
+      insertTpl: '${name}',
+      displayTpl: "<li>${name}</li>",
+      limit: 200
+    }
+ var at_configt = {
+      at: "!",  //"@t",
+      data: timetable,
+      headerTpl: '<div class="atwho-header">Time List<small>↑&nbsp;↓&nbsp;</small></div>',
+      insertTpl: '${name}',
+      displayTpl: "<li>${name}</li>",
+      limit: 10
+    }
+    var at_configd = {
+      at: "#",  //"@d",
+      data: dose,
+       headerTpl: '<div class="atwho-header">Dose List<small>↑&nbsp;↓&nbsp;</small></div>',
+      displayTpl: "<li>${name}</li>",
+      insertTpl: '${name}',
+      limit: 10
+    }
+    $inputor = $('#inputor').atwho(at_configd).atwho(at_config).atwho(at_configt);
+    $inputor.caret('pos', 47);
+    $inputor.focus().atwho('run');
+
+    $inputor0 = $('#inputor0').atwho(at_configd).atwho(at_config).atwho(at_configt);
+    $inputor0.caret('pos', 47);
+    $inputor0.focus().atwho('run');
+  });
+
+</script>
 </body>
 </html>

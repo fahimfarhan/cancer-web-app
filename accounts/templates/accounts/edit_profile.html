@@ -7,17 +7,8 @@
     <form method="post">
         {%csrf_token%}
         {{form.as_p}}
-        <!--p><label for="id_username">Username:</label>
-<input type="text" name="username" value="{{user.username}}" maxlength="150" required id="id_username" />
-            <br>
-<span class="helptext w3-text-red">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span></p>
-<p><label for="id_first_name">First name:</label>
-    <input type="text" name="first_name" value="{{user.first_name}}" maxlength="30" id="id_first_name" /></p>
-<p><label for="id_last_name">Last name:</label>
-    <input type="text" value="{{user.last_name}}" name="last_name" maxlength="150" id="id_last_name" /></p>
-<p><label for="id_email">Email address:</label>
-    <input type="email" name="email" value="{{user.email}}" maxlength="254" id="id_email" /></p-->
-        <button type="submit">Submit</button>
+        <button type = "submit" style="color:#047ff8;">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
     </form>
 </div>
 </div>

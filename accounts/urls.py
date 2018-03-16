@@ -6,6 +6,7 @@ from django.urls import path, include
 from accounts import views
 
 # app_name = 'accounts'
+from accounts.patientdetails import view_patientdetails
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
@@ -20,6 +21,7 @@ urlpatterns = [
     url(r'^reset-password/confirm/(?P<uidb64>[0-9A-Za-z_\]+)/(?P<token>[0-9A-Za-z]{1,13}[0-9A-Za-z]{1,20})/$',
         password_reset_confirm, name='password_reset_confirm'),
     url(r'^reset-password/complete/$', password_reset_complete, name='password_reset_complete'),
+    url(r'^(?P<p_id>[0-9]+)/view_patientdetails/$', view_patientdetails, name='view_patientdetails'),
     # url(r'^reset-password/confirm/(?P<uidb64>[0-9A-Za-z]+)-(P?<token>.+)$', password_reset_confirm,
     #    name='password_reset_confirm'),
 
