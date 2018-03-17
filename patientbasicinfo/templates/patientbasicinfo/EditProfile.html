@@ -1,8 +1,10 @@
 {% extends 'accounts/base.html' %}
 {% block body %}
+
 <div class="w3-display-middle w3-mobile">
 <ul>
-<h1>Patient Identity:</h1>
+    <br><br><br><br>
+<h1>Patient Profile:</h1>
     <form method = post  enctype="multipart/form-data">
         {% csrf_token %}
         {{form.as_p}}

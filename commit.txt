@@ -2,3 +2,4 @@ FC 1: fully functional basic login system check
 FC 2
 FC 3: identity done, pro pic not done
 FC 4: Comorbidity dome! :D
+FC 5: Profile done! :D form edit problem <django.db. ... >   solved

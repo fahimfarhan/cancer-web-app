@@ -4,15 +4,50 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 # class Views:
-from patientbasicinfo.forms import IdentityForm, ComorbidityForm
+from patientbasicinfo.forms import IdentityForm, ComorbidityForm, ProfileForm
 from django.utils import timezone
 
-from patientbasicinfo.models import Identity, Comorbidity
+from patientbasicinfo.models import Identity, Comorbidity, Profile
 
 
 @login_required
 def ok(request):
     return HttpResponse('<h1>ok</h1>')
+
+
+@login_required
+def edit_profile(request, p_id):
+    temp_pk = p_id
+    if not Profile.objects.filter(identity=p_id).exists():
+        return new_profile(request, p_id)
+    else:
+        p_profile = get_object_or_404(Profile, identity=p_id)
+        if request.method == "POST":
+            form = ProfileForm(request.POST, instance=p_profile)
+            if form.is_valid():
+                p_profile = form.save()
+                return redirect('view_patientdetails', p_id=temp_pk)
+        else:
+            form = ProfileForm(instance=p_profile)  # Profile
+        context = {'form': form, 'p_profile': p_profile}
+        return render(request, 'patientbasicinfo/EditProfile.html', context)
+        # return HttpResponse("ep")
+
+
+@login_required
+def new_profile(request, p_id):
+    temp_pk = p_id
+    if request.method == "POST":
+        form = ProfileForm(request.POST)
+        if form.is_valid():
+            p_profile = form.save(commit=False)
+            p_profile.identity = Identity.objects.get(pk=p_id)
+            p_profile.save()
+            return redirect('view_patientdetails', p_id=temp_pk)
+    else:
+        form = ProfileForm()
+    context = {'form': form}
+    return render(request, 'patientbasicinfo/EditProfile.html', context)
 
 
 @login_required
@@ -34,7 +69,7 @@ def new_identity(request):
 def edit_identity(request, p_id):
     identity = get_object_or_404(Identity, pk=p_id)
     if request.method == "POST":
-        form = IdentityForm(request.POST, instance=identity)   # request.FILES,
+        form = IdentityForm(request.POST, instance=identity)  # request.FILES,
         if form.is_valid():
             identity = form.save(commit=False)
             identity.dateOfAdmission = timezone.now()
@@ -44,6 +79,7 @@ def edit_identity(request, p_id):
     else:
         form = IdentityForm(instance=identity)
         return render(request, 'patientbasicinfo/EditIdentity.html', {'form': form})
+
 
 @login_required
 def new_comorbidity(request, p_id):
@@ -68,7 +104,7 @@ def new_comorbidity(request, p_id):
 
 
 @login_required
-def edit_comorbidity(request,p_id):
+def edit_comorbidity(request, p_id):
     if not Comorbidity.objects.filter(identity=p_id).exists():
         print(1)
         return new_comorbidity(request, p_id)

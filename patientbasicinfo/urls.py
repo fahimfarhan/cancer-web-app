@@ -12,4 +12,7 @@ urlpatterns = [
     url(r'^(?P<p_id>[0-9]+)/edit_comorbidity/$', views.edit_comorbidity, name='edit_comorbidity'),
     url(r'^(?P<p_id>[0-9]+)/new_comorbidity/$', views.new_comorbidity, name='new_comorbidity'),
     #
+    url(r'^(?P<p_id>[0-9]+)/edit_profile/$', views.edit_profile, name='edit_profile'),
+    url(r'^(?P<p_id>[0-9]+)/new_profile/$', views.new_profile, name='new_profile'),
+    #
 ]

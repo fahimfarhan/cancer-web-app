@@ -1,0 +1,47 @@
+<div class="w3-container" style="margin-top:20px" id="profile">
+{% if profile %}
+    <div class="w3-row-padding">
+        <div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-light-gray w3-center">
+            <li class="w3-black w3-xlarge w3-padding-16">Profile</li>
+                    <li class="w3-padding-16">Disease Code</li>
+                    <li class="w3-padding-16">Histopathology</li>
+                    <li class="w3-padding-16">IHC</li>
+                    <li class="w3-padding-16">ER/PR</li>
+                    <li class="w3-padding-16">Stage</li>
+                    <li class="w3-padding-16">TNM</li>
+            <li class="w3-padding-16">Height</li>
+            <li class="w3-padding-16">Weight</li>
+            <li class="w3-padding-16">BSA</li>
+            <li class="w3-padding-16">PS</li>
+            <li class="w3-padding-16">Blood Group</li>
+            </ul>
+        </div>
+         <div class="w3-half w3-margin-bottom">
+             <ul class="w3-ul w3-light-gray w3-center">
+            <li class="w3-black w3-xlarge w3-padding-16">#</li>
+                    <li class="w3-padding-16"> {{profile.diseaseCode}}</li>
+                    <li class="w3-padding-16">{{profile.histopathology}}</li>
+                    <li class="w3-padding-16">{{profile.ihc}}</li>
+                    <li class="w3-padding-16">{{profile.er_pr}}</li>
+                    <li class="w3-padding-16">{{profile.stage}}</li>
+                    <li class="w3-padding-16">{{profile.tnm}}</li>
+            <li class="w3-padding-16">{{profile.height}}</li>
+            <li class="w3-padding-16">{{profile.weight}}</li>
+            <li class="w3-padding-16">{{profile.bsa}}</li>
+            <li class="w3-padding-16">{{profile.ps}}</li>
+            <li class="w3-padding-16">{{profile.bloodGroup}}</li>
+             </ul>
+        </div>
+    <br>
+         <a href="{% url 'pbi:edit_profile' profile.identity.pk %}" class="w3-btn w3-green">Edit Profile</a>
+    <br>
+    </div>
+
+{% else %}
+    <ul><h2>Nothing to show in Profile</h2>
+    <a href="{% url 'pbi:new_profile' patient.pk %}" class="w3-btn w3-green">New Profile</a>
+    </ul>
+{% endif %}
+
+</div>
