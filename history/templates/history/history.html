@@ -38,7 +38,7 @@
     {% for i in historyfile %}
 <div class="w3-third">
   <div class="w3-card">
-    <img src="{% static "img/pdf.png" %}" alt="Image Not Available" style="width:100%">
+    <img src="{% static "img/pdf.png" %}" alt="Image Not Available" style="width:50%">
     <div class="w3-container w3-center">
         <p>{{i.name}}</p>
       <p><a href="{% url 'history_123:download_file' patient.pk i.fnum %}" class="w3-btn w3-green">View</a>
