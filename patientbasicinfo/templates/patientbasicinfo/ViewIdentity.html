@@ -26,6 +26,8 @@
         {% else %}
     <p>
         <img src="{% static 'img/blank-profile-picture.png' %}" width="240" height="240" alt="No Image Available">
+        <br>
+        <a href="{% url 'pbi:upload_handler' patient.pk %}" class="w3-btn w3-green">Upload Picture</a>
     </p>
 {% endif %}
     </div>

@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 # class Views:
-from patientbasicinfo.forms import IdentityForm, ComorbidityForm, ProfileForm
+from patientbasicinfo.forms import IdentityForm, ComorbidityForm, ProfileForm, UploadForm
 from django.utils import timezone
 
 from patientbasicinfo.models import Identity, Comorbidity, Profile
@@ -162,3 +162,31 @@ def myarray(p_comorbidity):
     else:
         my_list.append(0)
     return my_list
+
+
+@login_required
+def upload_handler(request, p_id):
+    pid = p_id
+    identity = get_object_or_404(Identity, pk=p_id)
+    if request.method == "POST":
+        form = UploadForm(request.POST, request.FILES, instance = identity)
+        if form.is_valid():
+            p_upload = form.save(commit=False)
+            p_upload.pk = p_id  # Investigations.
+            p_upload.image = form.cleaned_data['image']
+            # p_upload.name = form.cleaned_data['file'].name
+            p_upload.save()
+            return redirect('view_patientdetails', p_id=pid)
+    else:
+        form = UploadForm(instance = Identity)
+    context = {'form': form}
+    return render(request, 'uploadfile/uploadfile.html', context)
+
+
+'''@login_required
+def delete_propic(request, p_id, num):
+    pid = p_id
+    p = get_object_or_404(HistoryModelFile, identity_fk=p_id, fnum=num)
+    p.delete()
+    return redirect('view_patientdetails', p_id=pid)
+'''

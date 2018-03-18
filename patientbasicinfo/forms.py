@@ -61,7 +61,10 @@ class ComorbidityForm(forms.ModelForm):
         fields = ('hypertension', 'diabetes', 'cardiac', 'liver', 'kedney', 'others')
 
 
-
+class UploadForm(forms.ModelForm):
+    class Meta:
+        model = Identity
+        fields = ('image',)
 '''
 stage_choice = [
         ('Not Selected', 'Not Selected'),

@@ -15,4 +15,5 @@ urlpatterns = [
     url(r'^(?P<p_id>[0-9]+)/edit_profile/$', views.edit_profile, name='edit_profile'),
     url(r'^(?P<p_id>[0-9]+)/new_profile/$', views.new_profile, name='new_profile'),
     #
+    url(r'^uploadfile/(?P<p_id>[0-9]+)/$', views.upload_handler, name='upload_handler'),
 ]
