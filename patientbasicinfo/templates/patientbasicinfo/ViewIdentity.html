@@ -22,6 +22,10 @@
 {% if patient.image %}
     <p>
         <img src="{{ patient.image.url }}" width="240" height="240" alt="No Image Available">
+        <br>
+        <a href="{% url 'pbi:change_propic' patient.pk %}" class="w3-btn w3-green">Change Photo</a>
+        <a href="{% url 'pbi:delete_propic' patient.pk %}" class="w3-btn w3-red"
+      onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
     </p>
         {% else %}
     <p>

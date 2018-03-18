@@ -1,3 +1,4 @@
+import os
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
@@ -183,10 +184,50 @@ def upload_handler(request, p_id):
     return render(request, 'uploadfile/uploadfile.html', context)
 
 
-'''@login_required
-def delete_propic(request, p_id, num):
+@login_required
+def delete_propic(request, p_id):
+    old_file = None
+    identity = get_object_or_404(Identity, pk=p_id)
+    try:
+        old_file = Identity.objects.get(pk=p_id).image
+    except:  # Identity.DoesNotExist:
+        print("Most probably file doesnot exist!")
+        return False
+    if os.path.isfile(old_file.path):
+        print("dadada")
+        os.remove(old_file.path)
+        identity.image=None
+        identity.save()
+    print("xoxoxo")
+    return redirect('view_patientdetails', p_id=p_id)
+
+@login_required
+def change_propic(request, p_id):
     pid = p_id
-    p = get_object_or_404(HistoryModelFile, identity_fk=p_id, fnum=num)
-    p.delete()
-    return redirect('view_patientdetails', p_id=pid)
-'''
+    identity = get_object_or_404(Identity, pk=p_id)
+    if request.method == "POST":
+        form = UploadForm(request.POST, request.FILES, instance = identity)
+        if form.is_valid():
+            old_file = None
+            identity = get_object_or_404(Identity, pk=p_id)
+            try:
+                old_file = Identity.objects.get(pk=p_id).image
+            except:  # Identity.DoesNotExist:
+                print("Most probably file doesnot exist!")
+                return False
+            if os.path.isfile(old_file.path):
+                print("dadada")
+                os.remove(old_file.path)
+                identity.image = None
+                identity.save()
+            print("xoxoxo")
+            p_upload = form.save(commit=False)
+            p_upload.pk = p_id  # Investigations.
+            p_upload.image = form.cleaned_data['image']
+            # p_upload.name = form.cleaned_data['file'].name
+            p_upload.save()
+            return redirect('view_patientdetails', p_id=pid)
+    else:
+        form = UploadForm(instance = Identity)
+    context = {'form': form}
+    return render(request, 'uploadfile/uploadfile.html', context)

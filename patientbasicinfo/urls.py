@@ -16,4 +16,6 @@ urlpatterns = [
     url(r'^(?P<p_id>[0-9]+)/new_profile/$', views.new_profile, name='new_profile'),
     #
     url(r'^uploadfile/(?P<p_id>[0-9]+)/$', views.upload_handler, name='upload_handler'),
+    url(r'^delete_propic/(?P<p_id>[0-9]+)/$', views.delete_propic, name='delete_propic'),
+    url(r'^change_propic/(?P<p_id>[0-9]+)/$', views.change_propic, name='change_propic'),
 ]
