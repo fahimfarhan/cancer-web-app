@@ -4,3 +4,4 @@ FC 3: identity done, pro pic not done
 FC 4: Comorbidity dome! :D
 FC 5: Profile done! :D form edit problem <django.db. ... >   solved
 FC 6: referral notes
+FC 7: history

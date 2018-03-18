@@ -1,0 +1,15 @@
+{% extends 'accounts/base.html' %}
+{% block body %}
+
+<ul>
+<h1 align="center">Upload A File</h1>
+    <form method = post  enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type = "submit" style="color:#047ff8;">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
+    </form>
+</ul>
+{% endblock %}
+<!--/body>
+</html-->

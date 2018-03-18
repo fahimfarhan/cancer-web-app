@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'patientbasicinfo',
     'followup',
     'referralnote',
+    'history',
     'filetransfers',
     'django.contrib.admin',
     'django.contrib.auth',

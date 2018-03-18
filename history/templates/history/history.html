@@ -1,0 +1,68 @@
+{% load static %}
+
+<div class="w3-container" style="margin-top:20px" id="history">
+    {% if history %}
+    <!--h3 align="center">History</h3-->
+<div class="w3-row-padding">
+        <div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-light-gray w3-center">
+            <li class="w3-black w3-xlarge w3-padding-16">History</li>
+                    <li class="w3-padding-16">Details</li>
+                    <li class="w3-padding-16">Notes</li>
+            </ul>
+        </div>
+         <div class="w3-half w3-margin-bottom">
+             <ul class="w3-ul w3-light-gray w3-center">
+            <li class="w3-black w3-xlarge w3-padding-16">Values</li>
+                    <li class="w3-padding-16">{{history.details}}</li>
+                    <li class="w3-padding-16">{{history.notes}}</li>
+             </ul>
+        </div>
+</div>
+    <a href="{% url 'history_123:edit_history' history.identity_fk.pk %}" class="w3-btn w3-green">Edit History</a>
+<br>
+
+    {% else %}
+<ul>
+    <h3> Nothing in History </h3>
+    <a href="{% url 'history_123:new_history' patient.pk %}" class="w3-btn w3-green">New History</a>
+</ul>
+
+
+{% endif %}
+
+    <!------------------------------------------------>
+<div class="w3-container">
+{% if historyfile %}
+    <h3>History Files</h3>
+    {% for i in historyfile %}
+<div class="w3-third">
+  <div class="w3-card">
+    <img src="{% static "img/pdf.png" %}" alt="Image Not Available" style="width:100%">
+    <div class="w3-container w3-center">
+        <p>{{i.name}}</p>
+      <p><a href="{% url 'history_123:download_file' patient.pk i.fnum %}" class="w3-btn w3-green">View</a>
+      <a href="{% url 'history_123:delete_historyfile' patient.pk i.fnum %}" class="w3-btn w3-red"
+      onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+    {% endfor %}
+ {% endif %}
+    </div>
+    <!----------------------------------->
+
+<div>
+<ul>
+    <p>Add New History File</p>
+    <a href="{% url 'history_123:upload_handler' patient.pk %}" class="w3-btn w3-green">Add New History File</a>
+</ul>
+<br>
+</div>
+
+</div>
+

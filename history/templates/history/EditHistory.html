@@ -1,0 +1,28 @@
+{% extends 'accounts/base.html' %}
+{% block body %}
+{% load staticfiles %}
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body-->
+
+<ul>
+<h1>History</h1>
+    <form method = post  enctype="multipart/form-data">
+        {% csrf_token %}
+
+<p><label for="id_details">Details:</label><br>
+    <textarea id="inputor" class="inputor" name="details" maxlength="200" id="id_details">{{p_history.details}}</textarea></p>
+<p><label for="id_notes">Notes:</label><br>
+    <textarea id="inputor0" class="inputor" name="notes" maxlength="200" id="id_notes">{{p_history.notes}}</textarea></p>
+
+        <button type = "submit" style="color:#047ff8;">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
+    </form>
+</ul>
+{% endblock %}
+<!--/body>
+</html-->
