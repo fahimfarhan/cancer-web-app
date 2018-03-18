@@ -1,0 +1,55 @@
+{% load staticfiles %}
+
+<div class="w3-container" style="margin-top:20px" id="followup">
+{% if followup %}
+<div  class="w3-container w3-black" style="margin-top:20px" >
+    <ul>
+        <h2 align="center">Follow Up</h2>
+    </ul>
+</div>
+    <div>
+
+        <!--------- start ---------->
+<table class="GeneratedTable">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>date</th>
+      <th>details</th>
+      <th>edit</th>
+
+    </tr>
+  </thead>
+  {% for i in followup %}
+  <tbody>
+    <tr>
+      <td>{{i.si_no}}</td>
+      <td>{{i.date}}</td>
+      <td>{{i.details}}</td>
+      <td><a href="{% url 'followup:edit_followup' i.identity_fk.pk i.si_no %}" class="w3-btn w3-green">Edit {{i.si_no}}</a></td>
+
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+
+<!------- end --------->
+    </div>
+     <div>
+        <ul>
+            <a href="{% url 'followup:new_followup' patient.pk %}" class="w3-btn w3-green">Add More</a>
+        </ul>
+    </div>
+</div>
+
+{% else %}
+ <div>
+        <ul>
+            <h3>Follow Up is Empty</h3>
+            <a href="{% url 'followup:new_followup' patient.pk %}" class="w3-btn w3-green">Create Follow Up</a>
+        </ul>
+    </div>
+
+{% endif%}
+
+</div>

@@ -1,0 +1,63 @@
+<div class="w3-container" style="margin-top:20px" id="referralnote">
+{% if referralnote %}
+<div class="w3-container w3-black" style="margin-top:20px">
+    <ul>
+        <h2 align="center">Referral Note</h2>
+    </ul>
+</div>
+
+    {% for i in referralnote %}
+    <div class="w3-row-padding">
+        <ul>
+            <div class="w3-half w3-margin-bottom">
+                <ul class="w3-ul w3-light-grey w3-center">
+                    <li class="w3-black w3-large w3-padding-16">Referral Note #</li>
+                    <li class="w3-padding-16">Purpose</li>
+                    <li class="w3-padding-16">Condition</li>
+                    <li class="w3-padding-16">Referred Department</li>
+                    <li class="w3-padding-16">Referred Consultant</li>
+                    <li class="w3-padding-16">Response Note</li>
+                    <li class="w3-padding-16">Remarks</li>
+
+                </ul>
+            </div>
+        </ul>
+        <ul>
+            <div class="w3-half">
+                <ul class="w3-ul w3-light-grey w3-center">
+                    <li class="w3-black w3-large w3-padding-16">{{i.noteNo}}</li>
+                    <li class="w3-padding-16">- {{i.purpose}}</li>
+                    <li class="w3-padding-16">- {{i.condition}}</li>
+                    <li class="w3-padding-16">- {{i.refferedDept}}</li>
+                    <li class="w3-padding-16">- {{i.refferedConsultant}}</li>
+                    <li class="w3-padding-16">- {{i.responseNote}}</li>
+                    <li class="w3-padding-16">- {{i.remarks}}</li>
+                </ul>
+            </div>
+        </ul>
+        </div>
+    <ul>
+        <p>
+            <a href="{% url 'referral_note:edit_referralnote' i.identity.pk i.noteNo %}" class="w3-btn w3-green">Edit</a>
+            <a href="{% url 'referral_note:delete_referralnote' i.identity.pk i.noteNo %}" class="w3-btn w3-red"
+            onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+        </p>
+        <br>
+    </ul><br>
+    {% endfor %}
+
+
+    <div>
+        <ul>
+    <a href="{% url 'referral_note:new_referralnote' patient.pk %}" class="w3-btn w3-green">Add New</a>
+    </ul>
+    </div>
+{% else %}
+    <div>
+        <ul>
+            <h3>Nothing in referral notes.</h3>
+            <a href="{% url 'referral_note:new_referralnote' patient.pk %}" class="w3-btn w3-green">Add New</a>
+        </ul>
+    </div>
+{% endif %}
+</div>

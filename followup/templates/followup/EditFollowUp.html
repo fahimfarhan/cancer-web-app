@@ -1,0 +1,18 @@
+{% extends 'accounts/base.html' %}
+{% block body %}
+<div class="w3-container">
+    <div class="w3-display-middle w3-mobile">
+
+<ul>
+<h3>Follow Up #{{p_followup.si_no}}</h3>
+    <form method = post  enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <!--p><label for="id_date">Date:</label> <input type="date" name="date" value="{{p_followup.date}}" required id="id_date" /><input type="hidden" name="initial-date" id="initial-id_date" /></p>
+<p><label for="id_details">Details:</label> <input type="text" name="details" value="{{p_followup.details}}" maxlength="50" id="id_details" /></p-->
+        <button type = "submit" style="color:#047ff8;">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
+    </form>
+</ul>
+    </div></div>
+{% endblock %}

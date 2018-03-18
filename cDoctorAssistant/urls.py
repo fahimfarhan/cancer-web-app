@@ -27,6 +27,8 @@ urlpatterns = [
     url(r'^$', views.login_redirect, name='login_redirect'),
     path('home/', include('patientbasicinfo.urls')),
     path('accounts/', include('accounts.urls')),
+    path('followup/', include('followup.urls')),
+path('referralnotes/', include('referralnote.urls')),
     path('admin/', admin.site.urls),
     url('^', include('django.contrib.auth.urls')),
 url(r'^favicon.ico$',

@@ -31,8 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'patientbasicinfo',
     'accounts',
+    'patientbasicinfo',
+    'followup',
+    'referralnote',
     'filetransfers',
     'django.contrib.admin',
     'django.contrib.auth',
