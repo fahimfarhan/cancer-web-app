@@ -1,0 +1,59 @@
+{% extends 'accounts/base.html' %}
+{% block body %}
+{% load staticfiles %}
+<!-- Sidebar/menu -->
+
+    <nav class="w3-sidebar w3-light-grey w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar">
+        <br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-16">
+                <b>Hello
+                    <br>Doctor {{user}}!</b>
+            </h3>
+        </div>
+        <div class="w3-bar-block">
+            <!--a href=" fix this when ready" onclick="w3_close()"
+               class="w3-bar-item w3-button w3-hover-light-green">Full Report</a-->
+            <a href="#identity" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Identity</a>
+            <a href="{% url 'view_patientdetails' patient.pk %}"  class="w3-bar-item w3-button w3-hover-light-green">Patient Details</a>
+            <a href="#radiotherapy" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Radio Therapy</a>
+            <a href="#chemotherapy" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Chemo Therapy</a>
+            <a href="#surgery" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Surgery</a>
+            <a href="#hormonetherapy" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Hormone Therapy</a>
+            <a href="#targetedtherapy" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Targeted Therapy</a>
+
+
+            </div>
+    </nav>
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+     <!-- !PAGE CONTENT! -->
+<div class="w3-main w3-light-gray" style="margin-left:340px;margin-right:40px">
+
+    <div class="w3-container w3-white" style="margin-top:80px">
+    <div><p>
+        <h2 align="center">Treatment Plan Details</h2>
+        </p>
+    </div>
+
+    </div>
+    {%include 'patientbasicinfo/ViewIdentity.html' %}
+    <div class="w3-container">
+        <div></div>
+    </div>
+
+    <!---------------------------------------------------->
+    {%include 'surgeryhormone/surgery.html' %}
+    <div class="w3-container">
+        <div></div>
+    </div>
+    <!---------------------------------------------------->
+    <!---------------------------------------------------->
+    {%include 'surgeryhormone/hormone.html' %}
+    <div class="w3-container">
+        <div></div>
+    </div>
+    <!---------------------------------------------------->
+</div>
+<br>
+{% endblock %}

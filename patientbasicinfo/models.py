@@ -80,3 +80,11 @@ class Bangla(models.Model):
 
     def __str__(self):
         return self.bangla
+
+
+class TreatmentPlan(models.Model):
+    identity_fk = models.ForeignKey(Identity, on_delete=models.CASCADE)
+    num = models.IntegerField()
+
+    def __str__(self):
+        return self.identity_fk.name+' '+str(self.num)

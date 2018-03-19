@@ -1,0 +1,25 @@
+<div class="w3-container" style="margin-top:20px" id="treatmentplan">
+    <div class="w3-container w3-white" style="margin-top:20px">
+    <ul>
+        <h2 align="center">Treatment Plans</h2>
+    </ul>
+</div>
+    <div>
+        <p>
+            <a href="{% url 'pbi:new_treatmentplan' patient.pk %}" class="w3-btn w3-green">New Treatment Plan</a>
+        </p>
+    </div>
+    {% if treatmentplan %}
+    {% for i in treatmentplan %}
+        <div class="w3-container w3-black">
+            <h3 align="center">Treatment Plan #{{i.num}}</h3>
+        </div>
+    <div class="w3-container">
+        <p>
+            <a href="{% url 'pbi:view_treatmentplan' patient.pk i.num %}" class="w3-btn w3-green">View</a>
+        </p>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+</div>

@@ -1,0 +1,31 @@
+<div class="w3-container" style="margin-top:20px" id="surgery">
+    {% if surgery %}
+
+<div class="w3-row-padding">
+        <div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-light-gray w3-center">
+                <li class="w3-black w3-xlarge w3-padding-16">Surgery</li>
+                <li class="w3-padding-16">Details</li>
+            </ul>
+        </div>
+         <div class="w3-half w3-margin-bottom">
+             <ul class="w3-ul w3-light-gray w3-center">
+                <li class="w3-black w3-xlarge w3-padding-16">#</li>
+                 <li class="w3-padding-16"> {{surgery.details}}</li>
+             </ul>
+        </div>
+    <div>
+        <ul>
+    <a href="{% url 'surgeryhormone:edit_surgery' patient.pk tp_fk.num %}" class="w3-btn w3-green">Edit Surgery</a>
+        </ul>
+    </div>
+</div>
+
+
+{% else %}
+<ul>
+    <h3> Nothing in Surgery</h3>
+    <a href="{% url 'surgeryhormone:new_surgery' patient.pk tp_fk.num %}" class="w3-btn w3-green">New Surgery</a>
+</ul>
+{% endif %}
+</div>

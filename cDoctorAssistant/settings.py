@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'referralnote',
     'history',
     'presentingfeatures',
+    'surgeryhormone',
     'filetransfers',
     'django.contrib.admin',
     'django.contrib.auth',

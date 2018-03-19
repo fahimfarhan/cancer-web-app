@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404, render, get_list_or_404
 
 from followup.models import FollowUp
 from history.models import HistoryModel, HistoryModelFile
-from patientbasicinfo.models import Identity, Comorbidity, Profile
+from patientbasicinfo.models import Identity, Comorbidity, Profile, TreatmentPlan
 from presentingfeatures.models import Status, Investigation
 from referralnote.models import ReferralNote
 
@@ -96,10 +96,16 @@ def view_patientdetails(request, p_id):
         ofile = None
     else:
         ofile = get_list_or_404(Investigation, identity_fk=p_id, type='Others')
+    ###############################################################################################3
+    if not TreatmentPlan.objects.filter(identity_fk=p_id).exists():
+        treatmentplan = None
+    else:
+        treatmentplan = get_list_or_404(TreatmentPlan, identity_fk=p_id)
 
     context = {'patient': patient, 'comorbidity': comorbidity, 'profile': profile, 'followup': followup,
                'referralnote': referralnote, 'history': history, 'historyfile': historyfile, 'status': status,
                'markerfile': markerfile,'xrayfile': xrayfile, 'usgfile':usgfile, 'ctscanfile':ctscanfile,
                'mrifile':mrifile,'mrsfile':mrsfile, 'petfile':petfile, 'echofile':echofile, 'cbcfile':cbcfile,
-               'rbsfile':rbsfile, 'lftfile':lftfile, 'kftfile':kftfile, 'sefile':sefile, 'ofile':ofile}
+               'rbsfile':rbsfile, 'lftfile':lftfile, 'kftfile':kftfile, 'sefile':sefile, 'ofile':ofile,
+               'treatmentplan':treatmentplan}
     return render(request, 'accounts/patientdetails.html', context)

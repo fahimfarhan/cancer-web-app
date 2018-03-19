@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from patientbasicinfo.models import Identity, Comorbidity, Profile, Medicine, Dose, Timetable, Bangla
+from patientbasicinfo.models import Identity, Comorbidity, Profile, Medicine, Dose, Timetable, Bangla, TreatmentPlan
 
 admin.site.register(Identity)
 admin.site.register(Medicine)
@@ -10,3 +10,4 @@ admin.site.register(Timetable)
 admin.site.register(Bangla)
 admin.site.register(Profile)
 admin.site.register(Comorbidity)
+admin.site.register(TreatmentPlan)

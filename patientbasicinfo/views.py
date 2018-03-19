@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 from patientbasicinfo.forms import IdentityForm, ComorbidityForm, ProfileForm, UploadForm
 from django.utils import timezone
 
-from patientbasicinfo.models import Identity, Comorbidity, Profile
+from patientbasicinfo.models import Identity, Comorbidity, Profile, TreatmentPlan
 
 
 @login_required
@@ -231,3 +231,17 @@ def change_propic(request, p_id):
         form = UploadForm(instance = Identity)
     context = {'form': form}
     return render(request, 'uploadfile/uploadfile.html', context)
+
+
+@login_required
+def new_treatmentplan(request, p_id):
+    pid = p_id
+    number = 1
+    try:
+        number = 1 + TreatmentPlan.objects.filter(identity_fk=p_id).latest('num').num
+    except:  # num = 1 + Investigations.objects.filter(identity_fk=p_id, type=data.type).count()
+        print("Exception at upload handler history/views.py")
+    identity = get_object_or_404(Identity, pk=p_id)
+    tp = TreatmentPlan(identity_fk=identity, num=number)
+    tp.save()
+    return redirect('view_patientdetails', p_id=pid)
