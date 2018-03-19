@@ -1,3 +1,4 @@
+import os
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.shortcuts import render, get_object_or_404, redirect
@@ -55,9 +56,12 @@ def new_history(request, p_id):
 def delete_historyfile(request, p_id, num):
     pid = p_id
     p = get_object_or_404(HistoryModelFile, identity_fk=p_id, fnum=num)
+    old_file = p.file
+    if os.path.isfile(old_file.path):
+        print("dadada")
+        os.remove(old_file.path)
     p.delete()
     return redirect('view_patientdetails', p_id=pid)
-
 
 @login_required
 def download_file(request, p_id, num):

@@ -1,0 +1,32 @@
+<div class="w3-container" style="margin-top:20px" id="status">
+    {% if status %}
+<div class="w3-row-padding">
+    <div class="w3-container w3-white"><h3 align="center">Status</h3></div>
+
+        <div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-light-gray w3-center">
+            <li class="w3-black w3-xlarge w3-padding-16">Status</li>
+                    <li class="w3-padding-16">Details</li>
+                    <li class="w3-padding-16">Advice</li>
+            </ul>
+        </div>
+         <div class="w3-half w3-margin-bottom">
+             <ul class="w3-ul w3-light-gray w3-center">
+            <li class="w3-black w3-xlarge w3-padding-16">Values</li>
+                    <li class="w3-padding-16">{{status.details}}</li>
+                    <li class="w3-padding-16">{{status.advice}}</li>
+             </ul>
+        </div>
+</div>
+    <br><a href="{% url 'pf:edit_status' status.identity_fk.pk %}" class="w3-btn w3-green">Edit Status</a>
+<br>
+
+
+
+{% else %}
+<ul>
+    <h3> Nothing in Status </h3>
+    <a href="{% url 'pf:new_status' patient.pk %}" class="w3-btn w3-green">New Status</a>
+</ul>
+{% endif %}
+</div>

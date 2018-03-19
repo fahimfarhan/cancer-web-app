@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'followup',
     'referralnote',
     'history',
+    'presentingfeatures',
     'filetransfers',
     'django.contrib.admin',
     'django.contrib.auth',

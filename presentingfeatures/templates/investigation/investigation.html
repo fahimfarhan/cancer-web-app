@@ -1,0 +1,358 @@
+{% load static %}
+
+<div class="w3-container  w3-white" style="margin-top:20px" id="investigations">
+    <h2 align="center">Investigations</h2>
+</div>
+
+<div>
+<ul>
+    <p>You can upload and store various kinds of files(x-ray, CT-Scan, MRI,MRS, etc) here!</p>
+    <a href="{% url 'pf:upload_handler' patient.pk %}" class="w3-btn w3-green">Upload New</a>
+</ul>
+<br>
+</div>
+
+
+    <!----------------------------------->
+<div class="w3-container"><h2 align="center">Imaging</h2></div>
+<!------------------------------------------------>
+<div class="w3-container">
+{% if xrayfile %}
+    <h3 align="center">X-Ray</h3>
+    {% for i in xrayfile %}
+
+<div class="w3-third">
+  <div class="w3-card">
+    <img src="{% static "img/pdf.png" %}" alt="Image Not Available" style="width:25%">
+    <div class="w3-container w3-center"><p>{{i.name}}</p>
+      <p><a href="{% url 'pf:download_file' patient.pk 'X-ray' i.fnum %}" class="w3-btn w3-green">View</a>
+      <a href="{% url 'pf:delete_file' patient.pk 'X-ray' i.fnum %}" class="w3-btn w3-red"
+      onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+    {% endfor %}
+ {% endif %}
+    </div>
+    <!----------------------------------->
+<!------------------------------------------------>
+<div class="w3-container">
+{% if usgfile %}
+    <h3 align="center">USG</h3>
+    {% for i in usgfile %}
+
+<div class="w3-third">
+  <div class="w3-card">
+    <img src="{% static "img/pdf.png" %}" alt="Image Not Available" style="width:25%">
+    <div class="w3-container w3-center"><p>{{i.name}}</p>
+      <p><a href="{% url 'pf:download_file' patient.pk 'USG' i.fnum %}" class="w3-btn w3-green">View</a>
+      <a href="{% url 'pf:delete_file' patient.pk 'USG' i.fnum %}" class="w3-btn w3-red"
+      onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+    {% endfor %}
+ {% endif %}
+    </div>
+    <!----------------------------------->
+<!------------------------------------------------>
+<div class="w3-container">
+{% if ctscanfile %}
+    <h3 align="center">CT-Scan</h3>
+    {% for i in ctscanfile %}
+
+<div class="w3-third">
+  <div class="w3-card">
+    <img src="{% static "img/pdf.png" %}" alt="Image Not Available" style="width:25%">
+    <div class="w3-container w3-center"><p>{{i.name}}</p>
+      <p><a href="{% url 'pf:download_file' patient.pk 'CT-Scan' i.fnum %}" class="w3-btn w3-green">View</a>
+      <a href="{% url 'pf:delete_file' patient.pk 'CT-Scan' i.fnum %}" class="w3-btn w3-red"
+      onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+    {% endfor %}
+ {% endif %}
+    </div>
+    <!----------------------------------->
+<!------------------------------------------------>
+<div class="w3-container">
+{% if mrifile %}
+    <h3 align="center">MRI</h3>
+    {% for i in mrifile %}
+
+<div class="w3-third">
+  <div class="w3-card">
+    <img src="{% static "img/pdf.png" %}" alt="Image Not Available" style="width:25%">
+    <div class="w3-container w3-center"><p>{{i.name}}</p>
+      <p><a href="{% url 'pf:download_file' patient.pk 'MRI' i.fnum %}" class="w3-btn w3-green">View</a>
+      <a href="{% url 'pf:delete_file' patient.pk 'MRI' i.fnum %}" class="w3-btn w3-red"
+      onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+    {% endfor %}
+ {% endif %}
+    </div>
+    <!----------------------------------->
+
+<!------------------------------------------------>
+<div class="w3-container">
+{% if mrsfile %}
+    <h3 align="center">MRS</h3>
+    {% for i in mrsfile %}
+
+<div class="w3-third">
+  <div class="w3-card">
+    <img src="{% static "img/pdf.png" %}" alt="Image Not Available" style="width:25%">
+    <div class="w3-container w3-center"><p>{{i.name}}</p>
+      <p><a href="{% url 'pf:download_file' patient.pk 'MRS' i.fnum %}" class="w3-btn w3-green">View</a>
+      <a href="{% url 'pf:delete_file' patient.pk 'MRS' i.fnum %}" class="w3-btn w3-red"
+      onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+    {% endfor %}
+ {% endif %}
+    </div>
+    <!----------------------------------->
+
+<!------------------------------------------------>
+<div class="w3-container">
+{% if petfile %}
+    <h3 align="center">PET</h3>
+    {% for i in petfile %}
+
+<div class="w3-third">
+  <div class="w3-card">
+    <img src="{% static "img/pdf.png" %}" alt="Image Not Available" style="width:25%">
+    <div class="w3-container w3-center"><p>{{i.name}}</p>
+      <p><a href="{% url 'pf:download_file' patient.pk 'PET' i.fnum %}" class="w3-btn w3-green">View</a>
+      <a href="{% url 'pf:delete_file' patient.pk 'PET' i.fnum %}" class="w3-btn w3-red"
+      onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+    {% endfor %}
+ {% endif %}
+    </div>
+    <!----------------------------------->
+
+<!------------------------------------------------>
+<div class="w3-container">
+{% if echofile %}
+    <h3 align="center">Echo</h3>
+    {% for i in echofile %}
+
+<div class="w3-third">
+  <div class="w3-card">
+    <img src="{% static "img/pdf.png" %}" alt="Image Not Available" style="width:25%">
+    <div class="w3-container w3-center"><p>{{i.name}}</p>
+      <p><a href="{% url 'pf:download_file' patient.pk 'Echo' i.fnum %}" class="w3-btn w3-green">View</a>
+      <a href="{% url 'pf:delete_file' patient.pk 'Echo' i.fnum %}" class="w3-btn w3-red"
+      onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+    {% endfor %}
+ {% endif %}
+    </div>
+    <!----------------------------------->
+    <!------------------------------------------------>
+<div class="w3-container">
+{% if markerfile %}
+    <h3 align="center">Blood Profile / Marker</h3>
+    {% for i in markerfile %}
+
+<div class="w3-third">
+  <div class="w3-card">
+    <img src="{% static "img/pdf.png" %}" alt="Image Not Available" style="width:25%">
+    <div class="w3-container w3-center"><p>{{i.name}}</p>
+      <p><a href="{% url 'pf:download_file' patient.pk 'Marker' i.fnum %}" class="w3-btn w3-green">View</a>
+      <a href="{% url 'pf:delete_file' patient.pk 'Marker' i.fnum %}" class="w3-btn w3-red"
+      onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+    {% endfor %}
+ {% endif %}
+    </div>
+
+<!--**************************************************************-->
+<div class="w3-container"><h2 align="center">Blood Profile /Routine</h2></div>
+<!------------------------------------------------>
+<div class="w3-container">
+{% if cbcfile %}
+    <h3 align="center">CBC</h3>
+    {% for i in cbcfile %}
+
+<div class="w3-third">
+  <div class="w3-card">
+    <img src="{% static "img/pdf.png" %}" alt="Image Not Available" style="width:25%">
+    <div class="w3-container w3-center"><p>{{i.name}}</p>
+      <p><a href="{% url 'pf:download_file' patient.pk 'CBC' i.fnum %}" class="w3-btn w3-green">View</a>
+      <a href="{% url 'pf:delete_file' patient.pk 'CBC' i.fnum %}" class="w3-btn w3-red"
+      onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+    {% endfor %}
+ {% endif %}
+    </div>
+    <!----------------------------------->
+<!------------------------------------------------>
+<div class="w3-container">
+{% if rbsfile %}
+    <h3 align="center">RBS</h3>
+    {% for i in rbsfile %}
+
+<div class="w3-third">
+  <div class="w3-card">
+    <img src="{% static "img/pdf.png" %}" alt="Image Not Available" style="width:25%">
+    <div class="w3-container w3-center"><p>{{i.name}}</p>
+      <p><a href="{% url 'pf:download_file' patient.pk 'RBS' i.fnum %}" class="w3-btn w3-green">View</a>
+      <a href="{% url 'pf:delete_file' patient.pk 'RBS' i.fnum %}" class="w3-btn w3-red"
+      onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+    {% endfor %}
+ {% endif %}
+    </div>
+    <!----------------------------------->
+<!------------------------------------------------>
+<div class="w3-container">
+{% if lftfile %}
+    <h3 align="center">LFT</h3>
+    {% for i in lftfile %}
+
+<div class="w3-third">
+  <div class="w3-card">
+    <img src="{% static "img/pdf.png" %}" alt="Image Not Available" style="width:25%">
+    <div class="w3-container w3-center"><p>{{i.name}}</p>
+      <p><a href="{% url 'pf:download_file' patient.pk 'LFT' i.fnum %}" class="w3-btn w3-green">View</a>
+      <a href="{% url 'pf:delete_file' patient.pk 'LFT' i.fnum %}" class="w3-btn w3-red"
+      onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+    {% endfor %}
+ {% endif %}
+    </div>
+    <!----------------------------------->
+<!------------------------------------------------>
+<div class="w3-container">
+{% if kftfile %}
+    <h3 align="center">KFT</h3>
+    {% for i in kftfile %}
+
+<div class="w3-third">
+  <div class="w3-card">
+    <img src="{% static "img/pdf.png" %}" alt="Image Not Available" style="width:25%">
+    <div class="w3-container w3-center"><p>{{i.name}}</p>
+      <p><a href="{% url 'pf:download_file' patient.pk 'KFT' i.fnum %}" class="w3-btn w3-green">View</a>
+      <a href="{% url 'pf:delete_file' patient.pk 'KFT' i.fnum %}" class="w3-btn w3-red"
+      onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+    {% endfor %}
+ {% endif %}
+    </div>
+    <!----------------------------------->
+<!------------------------------------------------>
+<div class="w3-container">
+{% if sefile %}
+    <h3 align="center">Serum-Electrolytes</h3>
+    {% for i in sefile %}
+
+<div class="w3-third">
+  <div class="w3-card">
+    <img src="{% static "img/pdf.png" %}" alt="Image Not Available" style="width:25%">
+    <div class="w3-container w3-center"><p>{{i.name}}</p>
+      <p><a href="{% url 'pf:download_file' patient.pk 'Serum-Electrolytes' i.fnum %}" class="w3-btn w3-green">View</a>
+      <a href="{% url 'pf:delete_file' patient.pk 'Serum-Electrolytes' i.fnum %}" class="w3-btn w3-red"
+      onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+    {% endfor %}
+ {% endif %}
+    </div>
+    <!----------------------------------->
+<!------------------------------------------------>
+<div class="w3-container">
+{% if ofile %}
+    <h3 align="center">Others</h3>
+    {% for i in ofile %}
+
+<div class="w3-third">
+  <div class="w3-card">
+    <img src="{% static "img/pdf.png" %}" alt="Image Not Available" style="width:25%">
+    <div class="w3-container w3-center"><p>{{i.name}}</p>
+      <p><a href="{% url 'pf:download_file' patient.pk 'Others' i.fnum %}" class="w3-btn w3-green">View</a>
+      <a href="{% url 'pf:delete_file' patient.pk 'Others' i.fnum %}" class="w3-btn w3-red"
+      onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+    {% endfor %}
+ {% endif %}
+    </div>
+    <!----------------------------------->

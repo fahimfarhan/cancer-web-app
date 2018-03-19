@@ -30,6 +30,7 @@ urlpatterns = [
     path('followup/', include('followup.urls')),
     path('referralnotes/', include('referralnote.urls')),
     path('history', include('history.urls')),
+path('presentingfeatures/', include('presentingfeatures.urls')),
     path('admin/', admin.site.urls),
     url('^', include('django.contrib.auth.urls')),
 url(r'^favicon.ico$',

@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404, render, get_list_or_404
 from followup.models import FollowUp
 from history.models import HistoryModel, HistoryModelFile
 from patientbasicinfo.models import Identity, Comorbidity, Profile
+from presentingfeatures.models import Status, Investigation
 from referralnote.models import ReferralNote
 
 
@@ -35,7 +36,70 @@ def view_patientdetails(request, p_id):
         historyfile = None
     else:
         historyfile = get_list_or_404(HistoryModelFile, identity_fk=p_id)
+    if not Status.objects.filter(identity_fk=p_id).exists():
+        status = None
+    else:
+        status = get_object_or_404(Status, identity_fk=p_id)
+    if not Investigation.objects.filter(identity_fk=p_id, type='Marker').exists():
+        markerfile = None
+    else:
+        markerfile = get_list_or_404(Investigation, identity_fk=p_id, type='Marker')
+    if not Investigation.objects.filter(identity_fk=p_id, type='X-ray').exists():
+        xrayfile = None
+    else:
+        xrayfile = get_list_or_404(Investigation, identity_fk=p_id, type='X-ray')
+    if not Investigation.objects.filter(identity_fk=p_id, type='USG').exists():
+        usgfile = None
+    else:
+        usgfile = get_list_or_404(Investigation, identity_fk=p_id, type='USG')
+    if not Investigation.objects.filter(identity_fk=p_id, type='CT-Scan').exists():
+        ctscanfile = None
+    else:
+        ctscanfile = get_list_or_404(Investigation, identity_fk=p_id, type='CT-Scan')
+    if not Investigation.objects.filter(identity_fk=p_id, type='MRI').exists():
+        mrifile = None
+    else:
+        mrifile = get_list_or_404(Investigation, identity_fk=p_id, type='MRI')
+    if not Investigation.objects.filter(identity_fk=p_id, type='MRS').exists():
+        mrsfile = None
+    else:
+        mrsfile = get_list_or_404(Investigation, identity_fk=p_id, type='MRS')
+    if not Investigation.objects.filter(identity_fk=p_id, type='PET').exists():
+        petfile = None
+    else:
+        petfile = get_list_or_404(Investigation, identity_fk=p_id, type='PET')
+    if not Investigation.objects.filter(identity_fk=p_id, type='Echo').exists():
+        echofile = None
+    else:
+        echofile = get_list_or_404(Investigation, identity_fk=p_id, type='Echo')
+    if not Investigation.objects.filter(identity_fk=p_id, type='CBC').exists():
+        cbcfile = None
+    else:
+        cbcfile = get_list_or_404(Investigation, identity_fk=p_id, type='CBC')
+    if not Investigation.objects.filter(identity_fk=p_id, type='RBS').exists():
+        rbsfile = None
+    else:
+        rbsfile = get_list_or_404(Investigation, identity_fk=p_id, type='RBS')
+    if not Investigation.objects.filter(identity_fk=p_id, type='LFT').exists():
+        lftfile = None
+    else:
+        lftfile = get_list_or_404(Investigation, identity_fk=p_id, type='LFT')
+    if not Investigation.objects.filter(identity_fk=p_id, type='KFT').exists():
+        kftfile = None
+    else:
+        kftfile = get_list_or_404(Investigation, identity_fk=p_id, type='KFT')
+    if not Investigation.objects.filter(identity_fk=p_id, type='Serum-Electrolytes').exists():
+        sefile = None
+    else:
+        sefile = get_list_or_404(Investigation, identity_fk=p_id, type='Serum-Electrolytes')
+    if not Investigation.objects.filter(identity_fk=p_id, type='Others').exists():
+        ofile = None
+    else:
+        ofile = get_list_or_404(Investigation, identity_fk=p_id, type='Others')
 
     context = {'patient': patient, 'comorbidity': comorbidity, 'profile': profile, 'followup': followup,
-               'referralnote': referralnote, 'history': history, 'historyfile': historyfile}
+               'referralnote': referralnote, 'history': history, 'historyfile': historyfile, 'status': status,
+               'markerfile': markerfile,'xrayfile': xrayfile, 'usgfile':usgfile, 'ctscanfile':ctscanfile,
+               'mrifile':mrifile,'mrsfile':mrsfile, 'petfile':petfile, 'echofile':echofile, 'cbcfile':cbcfile,
+               'rbsfile':rbsfile, 'lftfile':lftfile, 'kftfile':kftfile, 'sefile':sefile, 'ofile':ofile}
     return render(request, 'accounts/patientdetails.html', context)
