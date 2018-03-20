@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'presentingfeatures',
     'surgeryhormone',
     'radiotherapy',
+    'chemotherapy',
     'filetransfers',
     'django.contrib.admin',
     'django.contrib.auth',

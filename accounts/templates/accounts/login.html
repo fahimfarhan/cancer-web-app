@@ -12,7 +12,9 @@
   {% csrf_token %}
   {{ form.as_p }}
   <button type = "submit" style="color:#047ff8;">Sign In</button>
-        <button type="reset" value="Reset">Reset</button>
+    <button type="reset" value="Reset">Reset</button>
+    <br>
+    <p><a href="{% url 'myadmin_login' %}">Login as admin</a></p>
 </form>
         {% endif %}
     </div>

@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, render
 
+from chemotherapy.models import ChemoTherapy
 from patientbasicinfo.models import Identity, TreatmentPlan
 from radiotherapy.models import RadioTherapy
 from surgeryhormone.models import Hormone, Surgery
@@ -33,7 +34,24 @@ def view_treatmentplan(request, p_id, tp_num):
         brachy = None
     else:
         brachy = get_object_or_404(RadioTherapy, tp_fk=tp_fk, type="Brachy")
+    if not ChemoTherapy.objects.filter(tp_fk=tp_fk, type="Palliative").exists():
+        palliative = None
+    else:
+        palliative = get_object_or_404(ChemoTherapy, tp_fk=tp_fk, type="Palliative")
+    if not ChemoTherapy.objects.filter(tp_fk=tp_fk, type="NACT").exists():
+        nact = None
+    else:
+        nact = get_object_or_404(ChemoTherapy, tp_fk=tp_fk, type="NACT")
+    if not ChemoTherapy.objects.filter(tp_fk=tp_fk, type="ACT").exists():
+        act = None
+    else:
+        act = get_object_or_404(ChemoTherapy, tp_fk=tp_fk, type="ACT")
+    if not ChemoTherapy.objects.filter(tp_fk=tp_fk, type="Concurrent").exists():
+        concurrent = None
+    else:
+        concurrent = get_object_or_404(ChemoTherapy, tp_fk=tp_fk, type="Concurrent")
 
     context = {'patient': patient, 'tp_fk': tp_fk, 'hormone': hormone, 'surgery': surgery, 'cobalt': cobalt,
-               'linac': linac, 'brachy': brachy }
+               'linac': linac, 'brachy': brachy, 'palliative': palliative, 'nact': nact, 'act': act,
+               'concurrent':concurrent}
     return render(request, 'treatmentplan/ViewTreatmentPlan.html', context)

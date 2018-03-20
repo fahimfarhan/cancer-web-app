@@ -1,0 +1,36 @@
+<div class="w3-container" style="margin-top:20px" id="nact">
+    <ul>
+
+    </ul>
+
+    {% if nact %}
+
+<div class="w3-row-padding">
+        <div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-light-gray w3-center">
+                <li class="w3-black w3-xlarge w3-padding-16">NACT</li>
+                    <li class="w3-padding-16">Details</li>
+            </ul>
+        </div>
+         <div class="w3-half w3-margin-bottom">
+             <ul class="w3-ul w3-light-gray w3-center">
+                <li class="w3-black w3-xlarge w3-padding-16">#</li>
+                 <li class="w3-padding-16"> {{nact.details}}</li>
+             </ul>
+        </div>
+    <div>
+        <ul>
+        <a href="{% url 'chemotherapy:edit_nact'  patient.pk  tp_fk.num  %}" class="w3-btn w3-green">Edit NACT</a>
+
+        </ul>
+    </div>
+</div>
+
+
+{% else %}
+<ul>
+    <h3> Nothing in NACT </h3>
+    <a href="{% url 'chemotherapy:new_nact'  patient.pk  tp_fk.num  %}" class="w3-btn w3-green">New NACT</a>
+</ul>
+{% endif %}
+</div>
