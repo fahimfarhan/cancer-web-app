@@ -1,0 +1,72 @@
+<div class="w3-container" id="targetedtherapy">
+<div class="w3-container w3-white">
+
+    <h2 align="center">Targeted Therapy</h2>
+    </div>
+</div>
+<div class="w3-container" id="immunotherapy">
+
+    {%if immunotherapy %}
+
+<div class="w3-row-padding">
+        <div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-light-gray w3-center">
+                <li class="w3-black w3-xlarge w3-padding-16">ImmunoTherapy</li>
+
+                <li class="w3-padding-16">Details</li>
+            </ul>
+        </div>
+         <div class="w3-half w3-margin-bottom">
+             <ul class="w3-ul w3-light-gray w3-center">
+                <li class="w3-black w3-xlarge w3-padding-16">#</li>
+                 <li class="w3-padding-16"> {{immunotherapy.details}}</li>
+             </ul>
+        </div>
+    <div>
+        <ul>
+
+     <a href="{% url 'targetedtherapy:edit_immunotherapy'  patient.pk tp_fk.num %}" class="w3-btn w3-green">Edit ImmunoTherapy</a>
+        </ul>
+    </div>
+</div>
+
+{% else %}
+    <ul><h2>Nothing to show in ImmunoTherapy</h2>
+        <a href="{% url 'targetedtherapy:new_immunotherapy' patient.pk tp_fk.num %}" class="w3-btn w3-green">New ImmunoTherapy</a>
+    </ul>
+{% endif %}
+    <br>
+    <!--{#% if immunotherapy %}
+    {#% include 'table/immuno_cycle.html' %}
+{#% endif %}-->
+    <div class="w3-container" id="tki">
+    {%if tki %}
+
+<div class="w3-row-padding">
+        <div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-light-gray w3-center">
+                <li class="w3-black w3-xlarge w3-padding-16">TKI</li>
+
+                <li class="w3-padding-16">Details</li>
+            </ul>
+        </div>
+         <div class="w3-half w3-margin-bottom">
+             <ul class="w3-ul w3-light-gray w3-center">
+                <li class="w3-black w3-xlarge w3-padding-16">#</li>
+                 <li class="w3-padding-16"> {{tki.details}}</li>
+             </ul>
+        </div>
+    <div>
+        <ul>
+    <a href="{% url 'targetedtherapy:edit_tki' patient.pk tp_fk.num %}" class="w3-btn w3-green">Edit TKI</a>
+       </ul>
+    </div>
+</div>
+
+{% else %}
+    <ul><h2>Nothing to show in TKI</h2>
+    <a href="{% url 'targetedtherapy:new_tki' patient.pk tp_fk.num %}" class="w3-btn w3-green">New TKI</a>
+    </ul>
+</div>
+{% endif %}
+</div>

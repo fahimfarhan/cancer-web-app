@@ -1,0 +1,14 @@
+{% extends 'accounts/base.html' %}
+{% block body %}
+{% load staticfiles %}
+<ul>
+<h1>Targeted Therapy:</h1>
+    <h2>{{type}}</h2>
+    <form method = post  enctype="multipart/form-data">
+        {% csrf_token %}
+        <p><label for="id_details">Details:</label> <textarea id="inputor" class="inputor" name="details" maxlength="200" required id="id_details">{{p_targetedtherapy.details}}</textarea></p>
+        <button type = "submit" style="color:#047ff8;">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
+    </form>
+</ul>
+{% endblock %}

@@ -12,3 +12,4 @@ FC 11: cobalt done
 FC 11: requirement.txt added
 FC 12: radiotherapy without charts
 FC 13: chemo whithout charts
+FC 14: targeted therapy done

@@ -24,25 +24,26 @@ from django.conf.urls.static import static
 from cDoctorAssistant import views
 
 urlpatterns = [
-      url(r'^$', views.login_redirect, name='login_redirect'),
-      path('home/', include('patientbasicinfo.urls')),
-      path('accounts/', include('accounts.urls')),
-      path('followup/', include('followup.urls')),
-      path('referralnotes/', include('referralnote.urls')),
-      path('history', include('history.urls')),
-      path('presentingfeatures/', include('presentingfeatures.urls')),
-      path('surgeryhormone', include('surgeryhormone.urls')),
-      url('radiotherapy/', include('radiotherapy.urls')),
-      url('chemotherapy/', include('chemotherapy.urls')),
-      path('admin/', admin.site.urls),
-      path('admin-login/$', admin.site.login, name='myadmin_login'),
-      url('^', include('django.contrib.auth.urls')),
-      url(r'^favicon.ico$',
-          RedirectView.as_view(  # the redirecting function
-              url=staticfiles_storage.url('img/favicon.ico'),
-              # converts the static directory + our favicon into a URL
-              # in my case, the result would be http://www.tumblingprogrammer.com/static/img/favicon.ico
-          ),
-          name="favicon"  # name of our view
-          ),
-    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                  url(r'^$', views.login_redirect, name='login_redirect'),
+                  path('home/', include('patientbasicinfo.urls')),
+                  path('accounts/', include('accounts.urls')),
+                  path('followup/', include('followup.urls')),
+                  path('referralnotes/', include('referralnote.urls')),
+                  path('history', include('history.urls')),
+                  path('presentingfeatures/', include('presentingfeatures.urls')),
+                  path('surgeryhormone', include('surgeryhormone.urls')),
+                  url('radiotherapy/', include('radiotherapy.urls')),
+                  url('chemotherapy/', include('chemotherapy.urls')),
+                  url('targetedtherapy/', include('targetedtherapy.urls')),
+                  path('admin/', admin.site.urls),
+                  url('admin-login/$', admin.site.login, name='myadmin_login'),
+                  url('^', include('django.contrib.auth.urls')),
+                  url(r'^favicon.ico$',
+                      RedirectView.as_view(  # the redirecting function
+                          url=staticfiles_storage.url('img/favicon.ico'),
+                          # converts the static directory + our favicon into a URL
+                          # in my case, the result would be http://www.tumblingprogrammer.com/static/img/favicon.ico
+                      ),
+                      name="favicon"  # name of our view
+                      ),
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

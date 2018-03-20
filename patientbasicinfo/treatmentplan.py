@@ -5,6 +5,7 @@ from chemotherapy.models import ChemoTherapy
 from patientbasicinfo.models import Identity, TreatmentPlan
 from radiotherapy.models import RadioTherapy
 from surgeryhormone.models import Hormone, Surgery
+from targetedtherapy.models import Immunotherapy, Tki
 
 
 @login_required
@@ -50,8 +51,16 @@ def view_treatmentplan(request, p_id, tp_num):
         concurrent = None
     else:
         concurrent = get_object_or_404(ChemoTherapy, tp_fk=tp_fk, type="Concurrent")
+    if not Immunotherapy.objects.filter(tp_fk=tp_fk).exists():
+        immunotherapy = None
+    else:
+        immunotherapy = get_object_or_404(Immunotherapy, tp_fk=tp_fk)
+    if not Tki.objects.filter(tp_fk=tp_fk).exists():
+        tki = None
+    else:
+        tki = get_object_or_404(Tki, tp_fk=tp_fk)
 
     context = {'patient': patient, 'tp_fk': tp_fk, 'hormone': hormone, 'surgery': surgery, 'cobalt': cobalt,
                'linac': linac, 'brachy': brachy, 'palliative': palliative, 'nact': nact, 'act': act,
-               'concurrent':concurrent}
+               'concurrent':concurrent, 'immunotherapy':immunotherapy, 'tki': tki}
     return render(request, 'treatmentplan/ViewTreatmentPlan.html', context)
