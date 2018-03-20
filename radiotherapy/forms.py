@@ -12,7 +12,7 @@ class RadioTherapyForm(forms.ModelForm):
         model = RadioTherapy
         fields = (
              'intensity','dose',
-             'gray', 'fractionFx', 'startDate', 'endDate', 'details')  # ekhan theke 'type' soray disi.
+             'gray', 'fractionFx', 'startDate', 'endDate')  # ekhan theke 'type' soray disi.
         widgets = {
             'startDate': DateInput(),
             'endDate' : DateInput()

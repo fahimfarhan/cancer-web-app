@@ -5,13 +5,14 @@
 <!--{#% if not medicine %}
 <script type="text/javascript" src="{% static 'js/autocomplete.js' %}"></script>
 {#% endif %}-->
+<div class="w3-display-middle w3-mobile">
 <ul>
 <h1>RadioTherapy</h1>
     <h3>{{type}}</h3>
     <form method = post>
         {% csrf_token %}
-        <!--{#{form.as_p}}-->
-<p><label for="id_intensity">Intensity:</label>
+        {{form.as_p}}
+<!--p><label for="id_intensity">Intensity:</label>
     <input type="text" name="intensity" maxlength="50" id="id_intensity" value="{{p_radiotherapy.intensity}}" /></p>
 <p><label for="id_dose">Dose:</label>
     <input type="text" name="dose" maxlength="50" id="id_dose" value="{{p_radiotherapy.dose}}" /></p>
@@ -28,9 +29,10 @@
 
 <p><label for="id_details">Details:</label>
     <textarea id="inputor" class="inputor" name="details" maxlength="200"
-               id="id_details">{{p_radiotherapy.details}}</textarea></p>
+               id="id_details">{{p_radiotherapy.details}}</textarea></p-->
         <button type = "submit" style="color:#047ff8;">Submit</button>
         <button type="reset" value="Reset">Reset</button>
     </form>
 </ul>
+    </div>
 {% endblock %}

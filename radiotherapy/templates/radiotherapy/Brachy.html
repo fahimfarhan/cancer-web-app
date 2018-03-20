@@ -1,9 +1,9 @@
-<div class="w3-container" style="margin-top:20px" id="cobalt">
-    {% if cobalt %}
+<div class="w3-container" style="margin-top:20px" id="brachy">
+    {% if brachy %}
 <div class="w3-row-padding">
         <div class="w3-half w3-margin-bottom">
             <ul class="w3-ul w3-light-gray w3-center">
-            <li class="w3-black w3-xlarge w3-padding-16">Cobalt Therapy</li>
+            <li class="w3-black w3-xlarge w3-padding-16">Brachy Therapy</li>
                     <li class="w3-padding-16">Type</li>
                     <li class="w3-padding-16">Intensity</li>
                     <li class="w3-padding-16">Dose</li>
@@ -17,27 +17,27 @@
          <div class="w3-half w3-margin-bottom">
              <ul class="w3-ul w3-light-gray w3-center">
             <li class="w3-black w3-xlarge w3-padding-16">#</li>
-                    <li class="w3-padding-16">{{cobalt.type}}</li>
-                    <li class="w3-padding-16">{{cobalt.intensity}}</li>
-                    <li class="w3-padding-16">{{cobalt.dose}} </li>
-                    <li class="w3-padding-16">{{cobalt.gray}} </li>
-                    <li class="w3-padding-16">{{cobalt.fractionFx}}</li>
-                    <li class="w3-padding-16">{{cobalt.startDate}}</li>
-                    <li class="w3-padding-16">{{cobalt.endDate}}</li>
+                    <li class="w3-padding-16">{{brachy.type}}</li>
+                    <li class="w3-padding-16">{{brachy.intensity}}</li>
+                    <li class="w3-padding-16">{{brachy.dose}} </li>
+                    <li class="w3-padding-16">{{brachy.gray}} </li>
+                    <li class="w3-padding-16">{{brachy.fractionFx}}</li>
+                    <li class="w3-padding-16">{{brachy.startDate}}</li>
+                    <li class="w3-padding-16">{{brachy.endDate}}</li>
                     <!--li class="w3-padding-16">{{cobalt.details}}</li-->
              </ul>
         </div>
 </div>
-    <br><a href="{% url 'radiotherapy:edit_Cobalt' patient.pk tp_fk.num %}"
-    class="w3-btn w3-green">Edit Cobalt Therapy</a>
+    <br><a href="{% url 'radiotherapy:edit_Brachy' patient.pk tp_fk.num %}"
+    class="w3-btn w3-green">Edit Brachy Therapy</a>
 <br>
 
 
 
 {% else %}
 <ul>
-    <h3> Nothing in Cobalt Therapy </h3>
-    <a href="{% url 'radiotherapy:new_Cobalt' patient.pk tp_fk.num %}" class="w3-btn w3-green">New Cobalt Therapy</a>
+    <h3> Nothing in Brachy Therapy </h3>
+    <a href="{% url 'radiotherapy:new_Brachy' patient.pk tp_fk.num %}" class="w3-btn w3-green">New Brachy Therapy</a>
 </ul>
 {% endif %}
 </div>

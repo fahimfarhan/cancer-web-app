@@ -25,5 +25,15 @@ def view_treatmentplan(request, p_id, tp_num):
         cobalt = None
     else:
         cobalt = get_object_or_404(RadioTherapy, tp_fk=tp_fk, type="Cobalt")
-    context = {'patient': patient, 'tp_fk': tp_fk, 'hormone': hormone, 'surgery': surgery, 'cobalt': cobalt}
+    if not RadioTherapy.objects.filter(tp_fk=tp_fk, type="Linac").exists():
+        linac = None
+    else:
+        linac = get_object_or_404(RadioTherapy, tp_fk=tp_fk, type="Linac")
+    if not RadioTherapy.objects.filter(tp_fk=tp_fk, type="Brachy").exists():
+        brachy = None
+    else:
+        brachy = get_object_or_404(RadioTherapy, tp_fk=tp_fk, type="Brachy")
+
+    context = {'patient': patient, 'tp_fk': tp_fk, 'hormone': hormone, 'surgery': surgery, 'cobalt': cobalt,
+               'linac': linac, 'brachy': brachy }
     return render(request, 'treatmentplan/ViewTreatmentPlan.html', context)

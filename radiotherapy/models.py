@@ -14,7 +14,7 @@ class RadioTherapy(models.Model):
     fractionFx = models.FloatField(default=0, blank=True)
     startDate = models.DateField(default=now, blank=True)
     endDate = models.DateField(default=now, blank=True)
-    details = models.CharField(max_length=200, blank=True)
+    #details = models.CharField(max_length=200, blank=True)
 
     def __str__(self):
         return self.identity.name+' - '+self.type
