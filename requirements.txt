@@ -1,0 +1,4 @@
+Django==2.0.3
+pdfkit==0.6.1
+Pillow==5.0.0
+pytz==2017.3
