@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, render
 
 from patientbasicinfo.models import Identity, TreatmentPlan
+from radiotherapy.models import RadioTherapy
 from surgeryhormone.models import Hormone, Surgery
 
 
@@ -20,5 +21,9 @@ def view_treatmentplan(request, p_id, tp_num):
         surgery = None
     else:
         surgery = get_object_or_404(Surgery, tp_fk=tp_fk)
-    context = {'patient': patient, 'tp_fk': tp_fk, 'hormone': hormone, 'surgery': surgery}
+    if not RadioTherapy.objects.filter(tp_fk=tp_fk, type="Cobalt").exists():
+        cobalt = None
+    else:
+        cobalt = get_object_or_404(RadioTherapy, tp_fk=tp_fk, type="Cobalt")
+    context = {'patient': patient, 'tp_fk': tp_fk, 'hormone': hormone, 'surgery': surgery, 'cobalt': cobalt}
     return render(request, 'treatmentplan/ViewTreatmentPlan.html', context)

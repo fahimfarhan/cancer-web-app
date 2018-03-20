@@ -1,0 +1,36 @@
+{% extends 'accounts/base.html' %}
+{% block body %}
+{% load staticfiles %}
+
+<!--{#% if not medicine %}
+<script type="text/javascript" src="{% static 'js/autocomplete.js' %}"></script>
+{#% endif %}-->
+<ul>
+<h1>RadioTherapy</h1>
+    <h3>{{type}}</h3>
+    <form method = post>
+        {% csrf_token %}
+        <!--{#{form.as_p}}-->
+<p><label for="id_intensity">Intensity:</label>
+    <input type="text" name="intensity" maxlength="50" id="id_intensity" value="{{p_radiotherapy.intensity}}" /></p>
+<p><label for="id_dose">Dose:</label>
+    <input type="text" name="dose" maxlength="50" id="id_dose" value="{{p_radiotherapy.dose}}" /></p>
+<p><label for="id_gray">Gray:</label>
+    <input type="number" name="gray" step="any" id="id_gray" value="{{p_radiotherapy.gray}}" /></p>
+<p><label for="id_fractionFx">FractionFx:</label>
+    <input type="number" name="fractionFx" value="{{p_radiotherapy.fractionFx}}" step="any" id="id_fractionFx" /></p>
+<p><label for="id_startDate">StartDate:</label> <input type="date" name="startDate" value="{{p_radiotherapy.startDate}}"
+    id="id_startDate" /><input type="hidden" name="initial-startDate" value="{{p_radiotherapy.startDate}}"
+                               id="initial-id_startDate" /></p>
+<p><label for="id_endDate">EndDate:</label>
+    <input type="date" name="endDate" value="{{p_radiotherapy.endDate}}" id="id_endDate" />
+    <input type="hidden" name="initial-endDate" value="{{p_radiotherapy.endDate}}" id="initial-id_endDate" /></p>
+
+<p><label for="id_details">Details:</label>
+    <textarea id="inputor" class="inputor" name="details" maxlength="200"
+               id="id_details">{{p_radiotherapy.details}}</textarea></p>
+        <button type = "submit" style="color:#047ff8;">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
+    </form>
+</ul>
+{% endblock %}

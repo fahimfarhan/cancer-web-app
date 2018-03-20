@@ -32,6 +32,7 @@ urlpatterns = [
     path('history', include('history.urls')),
     path('presentingfeatures/', include('presentingfeatures.urls')),
     path('surgeryhormone', include('surgeryhormone.urls')),
+    url('radiotherapy/', include('radiotherapy.urls')),
     path('admin/', admin.site.urls),
     url('^', include('django.contrib.auth.urls')),
 url(r'^favicon.ico$',

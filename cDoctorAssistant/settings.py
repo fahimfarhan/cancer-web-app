@@ -25,7 +25,7 @@ SECRET_KEY = 'bu(2&=m+oouj2&-xy_3ubug5km=+8@zhr=54v0vh!@2-em4a_-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fahimfarhan.pythonanywhere.com', '127.0.0.1','localhost']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'history',
     'presentingfeatures',
     'surgeryhormone',
+    'radiotherapy',
     'filetransfers',
     'django.contrib.admin',
     'django.contrib.auth',
