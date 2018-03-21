@@ -246,7 +246,7 @@ def new_treatmentplan(request, p_id):
     identity = get_object_or_404(Identity, pk=p_id)
     tp = TreatmentPlan(identity_fk=identity, num=number)
     tp.save()
-    return redirect('view_patientdetails', p_id=pid)
+    return redirect('pbi:view_treatmentplan', p_id=pid, tp_num=number)
 
 
 @login_required

@@ -27,7 +27,7 @@ class IdentityForm(forms.ModelForm):
     class Meta:
         model = Identity
         fields = (
-            'name', 'mobileNo', 'unit', 'gender', 'dateOfBirth', 'religion', 'address', 'referredBy', 'regNo'
+            'name', 'mobileNo', 'email', 'unit', 'gender', 'dateOfBirth', 'religion', 'address', 'referredBy', 'regNo'
         )
         widgets = {
             'dateOfBirth': DateInput()
@@ -71,6 +71,3 @@ class PrescriptionForm(forms.ModelForm):
     class Meta:
         model = Prescription
         fields = ('details',)
-
-
-

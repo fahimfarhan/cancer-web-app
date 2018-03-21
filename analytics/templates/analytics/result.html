@@ -10,6 +10,7 @@
     <div class="w3-half">
         <p> <a href="{% url 'view_patientdetails' i.pk %}" class="w3-btn w3-green">{{ i.name }}</a>
     </p>
+        <p> E-mail: {{i.email}}</p>
     <p> unit: {{i.unit}}</p>
         <p>Date of Admission: {{i.dateOfAdmission}}</p>
         <p> Referred By:{{i.referredBy}}</p>

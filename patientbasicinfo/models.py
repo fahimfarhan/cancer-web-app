@@ -8,6 +8,7 @@ class Identity(models.Model):
     name = models.CharField(max_length=50)
     mobileNo = models.IntegerField(default=0, db_index=True)
     dateOfAdmission = models.DateField(default=now)
+    email = models.EmailField(db_index=True, blank=True)
     unit = models.CharField(max_length=5, blank=True)
     religion = models.CharField(max_length=15, blank=True)
     gender = models.CharField(max_length=10, blank=True)
