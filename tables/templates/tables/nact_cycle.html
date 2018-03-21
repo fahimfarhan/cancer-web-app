@@ -1,0 +1,52 @@
+{% if nact_cycle %}
+<div class="container">
+<table class="GeneratedTable">
+  <thead>
+    <tr>
+      <th>---</th>
+      <th>Cycle No</th>
+        <th>date</th>
+      <th>day 1</th>
+      <th>day 2</th>
+      <th>day 3</th>
+      <th>day 4</th>
+      <th>day 5</th>
+      <th>day 8</th>
+      <th>day 15</th>
+
+    </tr>
+  </thead>
+  {% for Cell in nact_cycle %}
+  <tbody>
+    <tr>
+      <td><a href="< {% url 'table:edit_nactcycle' patient.pk tp_fk.num Cell.cycle %}" class="w3-btn w3-green">Edit</a></td>
+      <td>{{Cell.cycle}}</td>
+        <td>{{Cell.date}}</td>
+      <td>{{Cell.day1}}</td>
+      <td>{{Cell.day2}}</td>
+      <td>{{Cell.day3}}</td>
+      <td>{{Cell.day4}}</td>
+      <td>{{Cell.day5}}</td>
+      <td>{{Cell.day8}}</td>
+      <td>{{Cell.day15}}</td>
+
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+</div>
+
+<div>
+        <ul>
+            <a href="{% url 'table:new_nactcycle' patient.pk tp_fk.num %}" class="w3-btn w3-green">Add New Cycle</a>
+        </ul>
+    </div>
+
+{% else %}
+ <div>
+        <ul>
+            <h3>NACT schedule is empty.</h3>
+            <a href="{% url 'table:new_nactcycle' patient.pk tp_fk.num %}" class="w3-btn w3-green">Add New Table</a>
+        </ul>
+    </div>
+{% endif %}

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'radiotherapy',
     'chemotherapy',
     'targetedtherapy',
+    'tables',
     'filetransfers',
     'django.contrib.admin',
     'django.contrib.auth',

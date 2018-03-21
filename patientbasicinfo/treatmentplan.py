@@ -1,10 +1,11 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, get_list_or_404
 
 from chemotherapy.models import ChemoTherapy
 from patientbasicinfo.models import Identity, TreatmentPlan
 from radiotherapy.models import RadioTherapy
 from surgeryhormone.models import Hormone, Surgery
+from tables.models import NactCycle, ActCycle, ConcurrentCycle, PalliativeCycle
 from targetedtherapy.models import Immunotherapy, Tki
 
 
@@ -59,8 +60,24 @@ def view_treatmentplan(request, p_id, tp_num):
         tki = None
     else:
         tki = get_object_or_404(Tki, tp_fk=tp_fk)
-
+    if not NactCycle.objects.filter(nact_fk=nact).exists():
+        nact_cycle= None
+    else:
+        nact_cycle = get_list_or_404(NactCycle,nact_fk=nact)
+    if not ActCycle.objects.filter(act_fk=act).exists():
+        act_cycle= None
+    else:
+        act_cycle = get_list_or_404(ActCycle,act_fk=act)
+    if not ConcurrentCycle.objects.filter(concurr_fk=concurrent).exists():
+        concurr_cycle = None
+    else:
+        concurr_cycle = get_list_or_404(ConcurrentCycle, concurr_fk=concurrent)
+    if not PalliativeCycle.objects.filter(palliative_fk=palliative).exists():
+        palliative_cycle = None
+    else:
+        palliative_cycle = get_list_or_404(PalliativeCycle, palliative_fk=palliative)
     context = {'patient': patient, 'tp_fk': tp_fk, 'hormone': hormone, 'surgery': surgery, 'cobalt': cobalt,
                'linac': linac, 'brachy': brachy, 'palliative': palliative, 'nact': nact, 'act': act,
-               'concurrent':concurrent, 'immunotherapy':immunotherapy, 'tki': tki}
+               'concurrent':concurrent, 'immunotherapy':immunotherapy, 'tki': tki, 'nact_cycle':nact_cycle,
+               'act_cycle':act_cycle, 'concurr_cycle':concurr_cycle, 'palliative_cycle':palliative_cycle}
     return render(request, 'treatmentplan/ViewTreatmentPlan.html', context)

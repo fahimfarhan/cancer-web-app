@@ -1,0 +1,65 @@
+{% extends 'accounts/base.html' %}
+{% block body %}
+
+<div class="container">
+<h2 align="center">Chart: {{type}} </h2>
+    <h3 align="center">Row: {{t_cycle.cycle}}</h3>
+    <form method = post  enctype="multipart/form-data">
+        {% csrf_token %}
+
+
+        <table class="GeneratedTable">
+    <thead>
+    <tr>
+        <th><label for="id_date">Date:</label></th>
+        <th><label for="id_day1">Day1:</label></th>
+        <th><label for="id_day2">Day2:</label></th>
+        <th><label for="id_day3">Day3:</label></th>
+
+
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td><input type="text" name="date" value="{{t_cycle.date}}" maxlength="50" id="id_date" /></td>
+        <td><input type="text" name="day1" value="{{t_cycle.day1}}" maxlength="50" id="id_day1" /></td>
+        <td><input type="text" name="day2" value="{{t_cycle.day2}}" maxlength="50" id="id_day2" /></td>
+        <td><input type="text" name="day3" value="{{t_cycle.day3}}" maxlength="50" id="id_day3" /></td>
+
+
+
+    </tr>
+
+    </tbody>
+        </table>
+<br>
+        <table class="GeneratedTable">
+    <thead>
+    <tr>
+        <th><label for="id_day4">Day4:</label></th>
+        <th><label for="id_day5">Day5:</label></th>
+        <th><label for="id_day8">Day8:</label></th>
+        <th><label for="id_day15">Day15:</label></th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td><input type="text" name="day4" value="{{t_cycle.day4}}" maxlength="50" id="id_day4" /></td>
+        <td><input type="text" name="day5" value="{{t_cycle.day5}}" maxlength="50" id="id_day5" /></td>
+        <td><input type="text" name="day8" value="{{t_cycle.day8}}" maxlength="50" id="id_day8" /></td>
+        <td><input type="text" name="day15" value="{{t_cycle.day15}}" maxlength="50" id="id_day15" /></td>
+    </tr>
+
+    </tbody>
+        </table>
+
+
+
+    <button type = "submit" style="color:#047ff8;">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
+    </form>
+</div>
+{% endblock %}
