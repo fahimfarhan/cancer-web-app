@@ -18,16 +18,15 @@
             <a href="#identity" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Identity</a>
             <a href="#profile" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Profile</a>
             <a href="#comorbidity" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Comorbidity</a>
-            <a href="#prescription" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Prescription</a>
             <!--a href="#radiotherapy" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Radio Therapy</a>
             <a href="#chemotherapy" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Chemo Therapy</a>
             <a href="#surgery" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Surgery</a>
             <a href="#hormonetherapy" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Hormone Therapy</a>
             <a href="#targetedtherapy" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">
             Targeted Therapy</a-->
-
-            <a href="#history" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Patient History</a>
             <a href="#presentingfeatures" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Presenting Features</a>
+            <a href="#history" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Patient History</a>
+            <a href="#description" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Description</a>
             <a href="#treatmentplan" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Treatment Plans</a>
 
             <a href="#referralnote" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Referral Notes</a>
@@ -66,11 +65,6 @@
     <div class="w3-container">
         <div></div>
     </div>
-        <!--**********************************************-->
-        {%include 'history/history.html' %}
-    <div class="w3-container">
-        <div></div>
-    </div>
 
 <!--YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY-->
 
@@ -80,6 +74,8 @@
     </p>
        </ul>
     </div>
+
+
     <!--####################################################-->
     {%include 'status/status.html' %}
     <div class="w3-container">
@@ -91,6 +87,18 @@
         <div></div>
     </div>
     <!--**********************************************-->
+         <!--**********************************************-->
+        {%include 'history/history.html' %}
+    <div class="w3-container">
+        <div></div>
+    </div>
+
+<!--############################################-->
+    {%include 'patientbasicinfo/ViewDescription.html' %}
+    <div class="w3-container">
+        <div></div>
+    </div>
+
     <!--############################################-->
     {%include 'treatmentplan/treatmentplan.html' %}
     <div class="w3-container">

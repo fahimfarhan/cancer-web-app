@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404, render, get_list_or_404
 
 from followup.models import FollowUp
 from history.models import HistoryModel, HistoryModelFile
-from patientbasicinfo.models import Identity, Comorbidity, Profile, TreatmentPlan
+from patientbasicinfo.models import Identity, Comorbidity, Profile, TreatmentPlan, Description
 from presentingfeatures.models import Status, Investigation
 from referralnote.models import ReferralNote
 
@@ -15,6 +15,10 @@ def view_patientdetails(request, p_id):
         profile = None
     else:
         profile = get_object_or_404(Profile, identity=p_id)
+    if not Description.objects.filter(identity_fk=p_id).exists():
+        description = None
+    else:
+        description = get_object_or_404(Description, identity_fk=p_id)
 
     if not Comorbidity.objects.filter(identity=p_id).exists():
         comorbidity = None
@@ -107,5 +111,5 @@ def view_patientdetails(request, p_id):
                'markerfile': markerfile,'xrayfile': xrayfile, 'usgfile':usgfile, 'ctscanfile':ctscanfile,
                'mrifile':mrifile,'mrsfile':mrsfile, 'petfile':petfile, 'echofile':echofile, 'cbcfile':cbcfile,
                'rbsfile':rbsfile, 'lftfile':lftfile, 'kftfile':kftfile, 'sefile':sefile, 'ofile':ofile,
-               'treatmentplan':treatmentplan}
+               'treatmentplan':treatmentplan, 'description':description}
     return render(request, 'accounts/patientdetails.html', context)

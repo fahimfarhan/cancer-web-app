@@ -22,4 +22,9 @@ urlpatterns = [
     url(r'^(?P<p_id>[0-9]+)/new_treatmentplan/$', views.new_treatmentplan, name='new_treatmentplan'),
     url(r'^view_treatmentplan/(?P<p_id>[0-9]+)/(?P<tp_num>[0-9]+)/$', treatmentplan.view_treatmentplan,
         name='view_treatmentplan'),
+    #
+    url(r'^(?P<p_id>[0-9]+)/edit_description/$', views.edit_description, name='edit_description'),
+    url(r'^(?P<p_id>[0-9]+)/new_description/$', views.new_description, name='new_description'),
+    #
+
 ]

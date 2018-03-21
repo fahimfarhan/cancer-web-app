@@ -1,6 +1,6 @@
 from django import forms
 
-from patientbasicinfo.models import Identity, Comorbidity, Profile
+from patientbasicinfo.models import Identity, Comorbidity, Profile, Description
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 
@@ -50,7 +50,7 @@ class ProfileForm(forms.ModelForm):
         model = Profile
         # fields = "__all__"
         fields = (
-            'diseaseCode', 'histopathology', 'ihc', 'er_pr', 'stage', 'tnm', 'height', 'weight', 'bsa', 'ps',
+            'diseaseCode', 'histopathology', 'ihc', 'er_pr', 'tnm', 'stage', 'height', 'weight', 'bsa', 'ps',
             'bloodGroup'
         )
 
@@ -65,12 +65,9 @@ class UploadForm(forms.ModelForm):
     class Meta:
         model = Identity
         fields = ('image',)
-'''
-stage_choice = [
-        ('Not Selected', 'Not Selected'),
-        ('stage 0', 'stage 0'),
-        ('stage 1', 'stage 1'), ('stage 2', 'stage 2'),
-        ('stage 3', 'stage 3'), ('stage 4', 'stage 4'),
-    ]
-    stage = forms.ChoiceField(widget=forms.Select, choices=stage_choice)
-'''
+
+
+class DescriptionForm(forms.ModelForm):
+    class Meta:
+        model = Description
+        fields = ('details',)

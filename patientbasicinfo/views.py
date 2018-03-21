@@ -5,10 +5,10 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 # class Views:
-from patientbasicinfo.forms import IdentityForm, ComorbidityForm, ProfileForm, UploadForm
+from patientbasicinfo.forms import IdentityForm, ComorbidityForm, ProfileForm, UploadForm, DescriptionForm
 from django.utils import timezone
 
-from patientbasicinfo.models import Identity, Comorbidity, Profile, TreatmentPlan
+from patientbasicinfo.models import Identity, Comorbidity, Profile, TreatmentPlan, Description
 
 
 @login_required
@@ -245,3 +245,38 @@ def new_treatmentplan(request, p_id):
     tp = TreatmentPlan(identity_fk=identity, num=number)
     tp.save()
     return redirect('view_patientdetails', p_id=pid)
+
+
+@login_required
+def edit_description(request, p_id):
+    temp_pk = p_id
+    if not Description.objects.filter(identity_fk=p_id).exists():
+        return new_description(request, p_id)
+    else:
+        p_description = get_object_or_404(Description, identity_fk=p_id)
+        if request.method == "POST":
+            form = DescriptionForm(request.POST, instance=p_description)
+            if form.is_valid():
+                p_description = form.save()
+                return redirect('view_patientdetails', p_id=temp_pk)
+        else:
+            form = DescriptionForm(instance=p_description)  # Profile
+        context = {'form': form, 'p_description': p_description}
+        return render(request, 'patientbasicinfo/EditDescription.html', context)
+        # return HttpResponse("ep")
+
+
+@login_required
+def new_description(request, p_id):
+    temp_pk = p_id
+    if request.method == "POST":
+        form = DescriptionForm(request.POST)
+        if form.is_valid():
+            p_description = form.save(commit=False)
+            p_description.identity_fk = Identity.objects.get(pk=p_id)
+            p_description.save()
+            return redirect('view_patientdetails', p_id=temp_pk)
+    else:
+        form = DescriptionForm()
+    context = {'form': form}
+    return render(request, 'patientbasicinfo/EditDescription.html', context)

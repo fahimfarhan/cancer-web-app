@@ -88,3 +88,8 @@ class TreatmentPlan(models.Model):
 
     def __str__(self):
         return self.identity_fk.name+' '+str(self.num)
+
+
+class Description(models.Model):
+    identity_fk = models.OneToOneField(Identity, on_delete=models.CASCADE)
+    details = models.CharField(max_length=1000, blank=True)

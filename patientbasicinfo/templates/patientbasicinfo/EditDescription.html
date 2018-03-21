@@ -1,0 +1,22 @@
+{% extends 'accounts/base.html' %}
+{% block body %}
+<div class="w3-container">
+<ul>
+<h1 align="center">Description</h1>
+    <form method = post  enctype="multipart/form-data">
+        {% csrf_token %}
+        <p><label>Details:</label></p><br>
+<p><textarea rows="4" cols="250" name="details" maxlength="200" id="inputor" class="inputor">{{p_description.details}}</textarea></p>
+        <button type = "submit" style="color:#047ff8;">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
+    </form>
+
+    <!--form method = post  enctype="multipart/form-data">
+        {#% csrf_token %}
+        {#{form.as_p}}
+        <button type = "submit" style="color:#047ff8;">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
+    </form-->
+</ul>
+</div>
+{% endblock %}
