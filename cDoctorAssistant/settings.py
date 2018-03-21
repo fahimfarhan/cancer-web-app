@@ -136,7 +136,7 @@ STATICFILES_DIRS = [
 ]
 
 # MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media') # original
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, '../media/')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
@@ -146,8 +146,8 @@ MEDIA_URL = '/media/'
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_PASSWORD = '**********' #password
-EMAIL_HOST_USER = 'soumicqazifahim@gmail.com' #my gmail username
+EMAIL_HOST_PASSWORD = '**********' # password
+EMAIL_HOST_USER = 'soumicqazifahim@gmail.com' # my gmail username
 EMAIL_PORT = 587
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # email settings end

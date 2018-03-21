@@ -14,3 +14,4 @@ FC 12: radiotherapy without charts
 FC 13: chemo whithout charts
 FC 14: targeted therapy done
 FC 15: chemo chart done
+FC 16: media folder changed
