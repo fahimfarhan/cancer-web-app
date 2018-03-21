@@ -16,3 +16,4 @@ FC 14: targeted therapy done
 FC 15: chemo chart done
 FC 16: media folder changed
 FC 17: radiotherapy chart done
+FC 18: prescription done

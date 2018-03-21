@@ -5,11 +5,15 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 from accounts.forms import RegistrationForm, EditProfileForm
+from analytics.forms import SearchByNumForm, SearchByPkForm
 
 
 @login_required
 def home(request):
-    return render(request, 'accounts/home.html')
+    form = SearchByNumForm()
+    form_pk = SearchByPkForm()
+    context = {'form':form, 'form_pk':form_pk}
+    return render(request, 'accounts/home.html', context)
 
 
 def register(request):

@@ -5,10 +5,11 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 # class Views:
-from patientbasicinfo.forms import IdentityForm, ComorbidityForm, ProfileForm, UploadForm, DescriptionForm
+from patientbasicinfo.controller import autocomplete
+from patientbasicinfo.forms import IdentityForm, ComorbidityForm, ProfileForm, UploadForm, PrescriptionForm
 from django.utils import timezone
 
-from patientbasicinfo.models import Identity, Comorbidity, Profile, TreatmentPlan, Description
+from patientbasicinfo.models import Identity, Comorbidity, Profile, TreatmentPlan, Prescription
 
 
 @login_required
@@ -170,7 +171,7 @@ def upload_handler(request, p_id):
     pid = p_id
     identity = get_object_or_404(Identity, pk=p_id)
     if request.method == "POST":
-        form = UploadForm(request.POST, request.FILES, instance = identity)
+        form = UploadForm(request.POST, request.FILES, instance=identity)
         if form.is_valid():
             p_upload = form.save(commit=False)
             p_upload.pk = p_id  # Investigations.
@@ -179,7 +180,7 @@ def upload_handler(request, p_id):
             p_upload.save()
             return redirect('view_patientdetails', p_id=pid)
     else:
-        form = UploadForm(instance = Identity)
+        form = UploadForm(instance=Identity)
     context = {'form': form}
     return render(request, 'uploadfile/uploadfile.html', context)
 
@@ -196,17 +197,18 @@ def delete_propic(request, p_id):
     if os.path.isfile(old_file.path):
         print("dadada")
         os.remove(old_file.path)
-        identity.image=None
+        identity.image = None
         identity.save()
     print("xoxoxo")
     return redirect('view_patientdetails', p_id=p_id)
+
 
 @login_required
 def change_propic(request, p_id):
     pid = p_id
     identity = get_object_or_404(Identity, pk=p_id)
     if request.method == "POST":
-        form = UploadForm(request.POST, request.FILES, instance = identity)
+        form = UploadForm(request.POST, request.FILES, instance=identity)
         if form.is_valid():
             old_file = None
             identity = get_object_or_404(Identity, pk=p_id)
@@ -228,7 +230,7 @@ def change_propic(request, p_id):
             p_upload.save()
             return redirect('view_patientdetails', p_id=pid)
     else:
-        form = UploadForm(instance = Identity)
+        form = UploadForm(instance=Identity)
     context = {'form': form}
     return render(request, 'uploadfile/uploadfile.html', context)
 
@@ -248,35 +250,58 @@ def new_treatmentplan(request, p_id):
 
 
 @login_required
-def edit_description(request, p_id):
-    temp_pk = p_id
-    if not Description.objects.filter(identity_fk=p_id).exists():
-        return new_description(request, p_id)
+def edit_prescription(request, p_id, number):
+    pid = p_id
+    if not Prescription.objects.filter(identity_fk=p_id, num=number).exists():
+        return new_prescription(request, p_id)
     else:
-        p_description = get_object_or_404(Description, identity_fk=p_id)
+        p_prescription = get_object_or_404(Prescription, identity_fk=p_id, num=number)
         if request.method == "POST":
-            form = DescriptionForm(request.POST, instance=p_description)
+            form = PrescriptionForm(request.POST, instance=p_prescription)
             if form.is_valid():
-                p_description = form.save()
-                return redirect('view_patientdetails', p_id=temp_pk)
+                p_investigations = form.save()  # """ ekhane change kora lagte pare"""
+                return redirect('view_patientdetails', p_id=pid)
         else:
-            form = DescriptionForm(instance=p_description)  # Profile
-        context = {'form': form, 'p_description': p_description}
-        return render(request, 'patientbasicinfo/EditDescription.html', context)
-        # return HttpResponse("ep")
+            form = PrescriptionForm(instance=Prescription)
+        ac = autocomplete()
+        z = {'form': form, 'p_prescription': p_prescription}
+        context = {**z, **ac}
+        return render(request, 'patientbasicinfo/EditPrescription.html', context)
 
 
 @login_required
-def new_description(request, p_id):
-    temp_pk = p_id
+def new_prescription(request, p_id):
+    pid = p_id
+    num = 1
     if request.method == "POST":
-        form = DescriptionForm(request.POST)
+        form = PrescriptionForm(request.POST)
         if form.is_valid():
-            p_description = form.save(commit=False)
-            p_description.identity_fk = Identity.objects.get(pk=p_id)
-            p_description.save()
-            return redirect('view_patientdetails', p_id=temp_pk)
+            data = form.save(commit=False)
+            data.identity_fk = Identity.objects.get(pk=p_id)
+            try:
+                num = 1 + Prescription.objects.filter(identity_fk=p_id).latest('num').num
+            except:
+                print("Exception! Shit!")
+            data.num = num
+            data.save()
+        return redirect('view_patientdetails', p_id=pid)
     else:
-        form = DescriptionForm()
-    context = {'form': form}
-    return render(request, 'patientbasicinfo/EditDescription.html', context)
+        form = PrescriptionForm()
+    ac = autocomplete()
+    z = {'form': form}
+    context = {**z, **ac}
+    return render(request, 'patientbasicinfo/EditPrescription.html', context)
+
+
+@login_required
+def delete_prescription(request, p_id, number):
+    p = get_object_or_404(Prescription, identity_fk=p_id, num=number)
+    p.delete()
+    return redirect('view_patientdetails', p_id=p_id)
+
+
+@login_required
+def delete_treatmentplan(request, p_id, number):
+    p = get_object_or_404(TreatmentPlan, identity_fk=p_id, num=number)
+    p.delete()
+    return redirect('view_patientdetails', p_id=p_id)

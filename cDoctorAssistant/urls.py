@@ -36,6 +36,7 @@ urlpatterns = [
                   url('chemotherapy/', include('chemotherapy.urls')),
                   url('targetedtherapy/', include('targetedtherapy.urls')),
                   url('tables/', include('tables.urls')),
+                  url('analytics/', include('analytics.urls')),
                   path('admin/', admin.site.urls),
                   url('admin-login/$', admin.site.login, name='myadmin_login'),
                   url('^', include('django.contrib.auth.urls')),

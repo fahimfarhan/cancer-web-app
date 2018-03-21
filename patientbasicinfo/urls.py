@@ -22,9 +22,13 @@ urlpatterns = [
     url(r'^(?P<p_id>[0-9]+)/new_treatmentplan/$', views.new_treatmentplan, name='new_treatmentplan'),
     url(r'^view_treatmentplan/(?P<p_id>[0-9]+)/(?P<tp_num>[0-9]+)/$', treatmentplan.view_treatmentplan,
         name='view_treatmentplan'),
+    url(r'^delete/treatmentplan/(?P<p_id>[0-9]+)/(?P<number>[0-9]+)/$', views.delete_treatmentplan,
+        name='delete_treatmentplan'),
     #
-    url(r'^(?P<p_id>[0-9]+)/edit_description/$', views.edit_description, name='edit_description'),
-    url(r'^(?P<p_id>[0-9]+)/new_description/$', views.new_description, name='new_description'),
+    url(r'^(?P<p_id>[0-9]+)/(?P<number>[0-9]+)/edit_prescription/$', views.edit_prescription, name='edit_prescription'),
+    url(r'^(?P<p_id>[0-9]+)/new_prescription/$', views.new_prescription, name='new_prescription'),
+    url(r'^delete/prescription/(?P<p_id>[0-9]+)/(?P<number>[0-9]+)/$', views.delete_prescription,
+        name='delete_prescription'),
     #
 
 ]

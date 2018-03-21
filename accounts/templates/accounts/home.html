@@ -3,6 +3,36 @@
 {% block body %}
 <div class="w3-container">
     <h2 align="center">Home</h2>
-    <p>Welcome home</p>
+
+    <div class="w3-container w3-half">
+           <p>
+    <ul>
+    <a href="{% url 'pbi:new_identity' %}" class="w3-btn w3-green">Create New Patient</a>
+    </ul>
+    </p>
+        <br>
+    <h3>Search by Mobile No:</h3>
+
+    <form action="{% url 'analytics:form_handle' %}" method="POST" class="w3-text-black">
+        {% csrf_token %}
+        <!--p>
+            <input type="text" name="mobile" value="{{mobile}}" maxlength="10" required id="id_mobile" />
+        </p-->
+    {{form.as_p}}
+    <button type="submit" style="color:#047ff8;">Search</button>
+    </form>
+
+        <br>
+
+
+    </div>
+
+
+    <div class="w3-container w3-half">
+        <h3 align="center">Analytics</h3>
+    </div>
+
+
+
 </div>
 {% endblock %}

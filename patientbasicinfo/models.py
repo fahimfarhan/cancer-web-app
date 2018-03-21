@@ -90,6 +90,10 @@ class TreatmentPlan(models.Model):
         return self.identity_fk.name+' '+str(self.num)
 
 
-class Description(models.Model):
-    identity_fk = models.OneToOneField(Identity, on_delete=models.CASCADE)
+class Prescription(models.Model):
+    identity_fk = models.ForeignKey(Identity, on_delete=models.CASCADE)
+    num = models.IntegerField()
     details = models.CharField(max_length=1000, blank=True)
+
+    def __str__(self):
+        return self.identity_fk.name + ' ' + str(self.num)

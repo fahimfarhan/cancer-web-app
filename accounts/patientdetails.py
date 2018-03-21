@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404, render, get_list_or_404
 
 from followup.models import FollowUp
 from history.models import HistoryModel, HistoryModelFile
-from patientbasicinfo.models import Identity, Comorbidity, Profile, TreatmentPlan, Description
+from patientbasicinfo.models import Identity, Comorbidity, Profile, TreatmentPlan, Prescription
 from presentingfeatures.models import Status, Investigation
 from referralnote.models import ReferralNote
 
@@ -15,15 +15,14 @@ def view_patientdetails(request, p_id):
         profile = None
     else:
         profile = get_object_or_404(Profile, identity=p_id)
-    if not Description.objects.filter(identity_fk=p_id).exists():
-        description = None
-    else:
-        description = get_object_or_404(Description, identity_fk=p_id)
-
     if not Comorbidity.objects.filter(identity=p_id).exists():
         comorbidity = None
     else:
         comorbidity = get_object_or_404(Comorbidity, identity=p_id)
+    if not Prescription.objects.filter(identity_fk=p_id).exists():
+        prescription = None
+    else:
+        prescription = get_list_or_404(Prescription, identity_fk=p_id)
     if not FollowUp.objects.filter(identity_fk=p_id).exists():
         followup = None
     else:
@@ -108,8 +107,8 @@ def view_patientdetails(request, p_id):
 
     context = {'patient': patient, 'comorbidity': comorbidity, 'profile': profile, 'followup': followup,
                'referralnote': referralnote, 'history': history, 'historyfile': historyfile, 'status': status,
-               'markerfile': markerfile,'xrayfile': xrayfile, 'usgfile':usgfile, 'ctscanfile':ctscanfile,
-               'mrifile':mrifile,'mrsfile':mrsfile, 'petfile':petfile, 'echofile':echofile, 'cbcfile':cbcfile,
-               'rbsfile':rbsfile, 'lftfile':lftfile, 'kftfile':kftfile, 'sefile':sefile, 'ofile':ofile,
-               'treatmentplan':treatmentplan, 'description':description}
+               'markerfile': markerfile, 'xrayfile': xrayfile, 'usgfile': usgfile, 'ctscanfile': ctscanfile,
+               'mrifile': mrifile, 'mrsfile': mrsfile, 'petfile': petfile, 'echofile': echofile, 'cbcfile': cbcfile,
+               'rbsfile': rbsfile, 'lftfile': lftfile, 'kftfile': kftfile, 'sefile': sefile, 'ofile': ofile,
+               'treatmentplan': treatmentplan, 'prescription': prescription}
     return render(request, 'accounts/patientdetails.html', context)

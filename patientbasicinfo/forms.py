@@ -1,6 +1,6 @@
 from django import forms
 
-from patientbasicinfo.models import Identity, Comorbidity, Profile, Description
+from patientbasicinfo.models import Identity, Comorbidity, Profile, Prescription
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 
@@ -67,7 +67,10 @@ class UploadForm(forms.ModelForm):
         fields = ('image',)
 
 
-class DescriptionForm(forms.ModelForm):
+class PrescriptionForm(forms.ModelForm):
     class Meta:
-        model = Description
+        model = Prescription
         fields = ('details',)
+
+
+

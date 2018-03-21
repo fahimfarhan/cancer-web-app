@@ -39,7 +39,7 @@
     <ul>
         <p>
             <a href="{% url 'referral_note:edit_referralnote' i.identity.pk i.noteNo %}" class="w3-btn w3-green">Edit</a>
-            <a href="{% url 'referral_note:delete_referralnote' i.identity.pk i.noteNo %}" class="w3-btn w3-red"
+            <a href="{% url 'referral_note:delete_referralnote' i.identity.pk i.noteNo %}" class="w3-btn w3-red w3-right"
             onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
         </p>
         <br>
