@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 from chemotherapy.models import ChemoTherapy
+from radiotherapy.models import RadioTherapy
 
 
 class Cycle(models.Model):
@@ -32,5 +33,22 @@ class PalliativeCycle(Cycle):
     palliative_fk = models.ForeignKey(ChemoTherapy, on_delete=models.CASCADE)
 
 
-#class RadioTherapyChart(models.Model):
-#    date = models.CharField
+class RadioTherapyChart(models.Model):
+    serialno = models.IntegerField()
+    date = models.CharField(max_length=50, blank=True)
+    nameoffield = models.CharField(max_length=50, blank=True)
+    fieldsize = models.FloatField(blank=True)
+    tumordose = models.CharField(max_length=50, blank=True)
+    seperation = models.CharField(max_length=50, blank=True)
+
+
+class CobaltChart(RadioTherapyChart):
+    cobalt_fk = models.ForeignKey(RadioTherapy, on_delete=models.CASCADE)
+
+
+class LinacChart(RadioTherapyChart):
+    linac_fk = models.ForeignKey(RadioTherapy, on_delete=models.CASCADE)
+
+
+class BrachyChart(RadioTherapyChart):
+    brachy_fk = models.ForeignKey(RadioTherapy, on_delete=models.CASCADE)

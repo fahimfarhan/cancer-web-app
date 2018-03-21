@@ -4,8 +4,10 @@ from django.shortcuts import render, redirect, get_object_or_404
 # Create your views here.
 from chemotherapy.models import ChemoTherapy
 from patientbasicinfo.models import TreatmentPlan
-from tables.forms import NactCycleForm, ActCycleForm, ConcurrentCycleForm, PalliativeCycleForm
-from tables.models import NactCycle, ActCycle, ConcurrentCycle, PalliativeCycle
+from radiotherapy.models import RadioTherapy
+from tables.forms import NactCycleForm, ActCycleForm, ConcurrentCycleForm, PalliativeCycleForm, CobaltChartForm, \
+    LinacChartForm, BrachyChartForm
+from tables.models import NactCycle, ActCycle, ConcurrentCycle, PalliativeCycle, CobaltChart, LinacChart, BrachyChart
 
 
 @login_required
@@ -200,3 +202,152 @@ def edit_palliativecycle(request, p_id, tp_num, cycleno):
             form = PalliativeCycleForm(instance=t_cycle)  # NactCycle
         context = {'form': form, 't_cycle': t_cycle, 'type':'Palliative'}
         return render(request, 'tables/EditChemoCycle.html', context)
+
+
+# --------------------------------RadioTherapy---------------------------------------------
+@login_required
+def new_cobaltcycle(request, p_id, tp_num):
+    tp_fk = TreatmentPlan.objects.get(identity_fk=p_id, num=tp_num)
+    cobalt_fk = RadioTherapy.objects.get(tp_fk=tp_fk, type='Cobalt')
+    num=0
+    print(1)
+    # num = 1 + CobaltCycle.objects.filter(cobalt_fk=p_id, type="Cobalt").count()
+    num = 1 + CobaltChart.objects.filter(cobalt_fk=cobalt_fk).count()
+    print(2)
+    if request.method == "POST":
+        form = CobaltChartForm(request.POST)
+        print(3)
+        if form.is_valid():
+            print(4)
+            t_cycle = form.save(commit=False)
+            t_cycle.cobalt_fk = cobalt_fk
+            t_cycle.serialno = num
+            t_cycle.save()
+            print(5)
+        return redirect('pbi:view_treatmentplan', p_id, tp_num)
+    else:
+        form = CobaltChartForm()
+        print(6)
+    context = {'form': form, 'type':'Cobalt'}
+    print(7)
+    return render(request, 'tables/EditRadioCycle.html', context)
+
+
+@login_required
+def edit_cobaltcycle(request, p_id, tp_num, sino):
+    tp_fk = TreatmentPlan.objects.get(identity_fk=p_id, num=tp_num)
+    cobalt_fk = RadioTherapy.objects.get(tp_fk=tp_fk, type='Cobalt')
+    num = 0
+    if not CobaltChart.objects.filter(cobalt_fk=cobalt_fk).exists():
+        return new_cobaltcycle(request, p_id, tp_num)
+    else:
+        t_cycle = get_object_or_404(CobaltChart, cobalt_fk=cobalt_fk, serialno=sino)
+        if request.method == "POST":
+            form = CobaltChartForm(request.POST, instance=t_cycle)
+            if form.is_valid():
+                t_cycle = form.save()
+                return redirect('pbi:view_treatmentplan', p_id, tp_num)
+        else:
+            form = CobaltChartForm(instance=t_cycle)  # NactCycle
+        context = {'form': form, 't_cycle': t_cycle, 'type':'Cobalt'}
+        return render(request, 'tables/EditRadioCycle.html', context)
+
+
+# -----------------------------------------------------------------------------
+
+@login_required
+def new_linaccycle(request, p_id, tp_num):
+    tp_fk = TreatmentPlan.objects.get(identity_fk=p_id, num=tp_num)
+    linac_fk = RadioTherapy.objects.get(tp_fk=tp_fk, type='Linac')
+    num=0
+    print(1)
+    # num = 1 + CobaltCycle.objects.filter(cobalt_fk=p_id, type="Cobalt").count()
+    num = 1 + LinacChart.objects.filter(linac_fk=linac_fk).count()
+    print(2)
+    if request.method == "POST":
+        form = LinacChartForm(request.POST)
+        print(3)
+        if form.is_valid():
+            print(4)
+            t_cycle = form.save(commit=False)
+            t_cycle.linac_fk = linac_fk
+            t_cycle.serialno = num
+            t_cycle.save()
+            print(5)
+        return redirect('pbi:view_treatmentplan', p_id, tp_num)
+    else:
+        form = LinacChartForm()
+        print(6)
+    context = {'form': form, 'type':'Linac'}
+    print(7)
+    return render(request, 'tables/EditRadioCycle.html', context)
+
+
+@login_required
+def edit_linaccycle(request, p_id, tp_num, sino):
+    tp_fk = TreatmentPlan.objects.get(identity_fk=p_id, num=tp_num)
+    linac_fk = RadioTherapy.objects.get(tp_fk=tp_fk, type='Linac')
+    num = 0
+    if not LinacChart.objects.filter(linac_fk=linac_fk).exists():
+        return new_linaccycle(request, p_id, tp_num)
+    else:
+        t_cycle = get_object_or_404(LinacChart, linac_fk=linac_fk, serialno=sino)
+        if request.method == "POST":
+            form = LinacChartForm(request.POST, instance=t_cycle)
+            if form.is_valid():
+                t_cycle = form.save()
+                return redirect('pbi:view_treatmentplan', p_id, tp_num)
+        else:
+            form = LinacChartForm(instance=t_cycle)  # NactCycle
+        context = {'form': form, 't_cycle': t_cycle, 'type':'Linac'}
+        return render(request, 'tables/EditRadioCycle.html', context)
+
+
+# -----------------------------------------------------------------------------
+
+@login_required
+def new_brachycycle(request, p_id, tp_num):
+    tp_fk = TreatmentPlan.objects.get(identity_fk=p_id, num=tp_num)
+    brachy_fk = RadioTherapy.objects.get(tp_fk=tp_fk, type='Brachy')
+    num=0
+    print(1)
+    # num = 1 + CobaltCycle.objects.filter(cobalt_fk=p_id, type="Cobalt").count()
+    num = 1 + BrachyChart.objects.filter(brachy_fk=brachy_fk).count()
+    print(2)
+    if request.method == "POST":
+        form = BrachyChartForm(request.POST)
+        print(3)
+        if form.is_valid():
+            print(4)
+            t_cycle = form.save(commit=False)
+            t_cycle.brachy_fk = brachy_fk
+            t_cycle.serialno = num
+            t_cycle.save()
+            print(5)
+        return redirect('pbi:view_treatmentplan', p_id, tp_num)
+    else:
+        form = BrachyChartForm()
+        print(6)
+    context = {'form': form, 'type':'Brachy'}
+    print(7)
+    return render(request, 'tables/EditRadioCycle.html', context)
+
+
+@login_required
+def edit_brachycycle(request, p_id, tp_num, sino):
+    tp_fk = TreatmentPlan.objects.get(identity_fk=p_id, num=tp_num)
+    brachy_fk = RadioTherapy.objects.get(tp_fk=tp_fk, type='Brachy')
+    num = 0
+    if not BrachyChart.objects.filter(brachy_fk=brachy_fk).exists():
+        return new_brachycycle(request, p_id, tp_num)
+    else:
+        t_cycle = get_object_or_404(BrachyChart, brachy_fk=brachy_fk, serialno=sino)
+        if request.method == "POST":
+            form = BrachyChartForm(request.POST, instance=t_cycle)
+            if form.is_valid():
+                t_cycle = form.save()
+                return redirect('pbi:view_treatmentplan', p_id, tp_num)
+        else:
+            form = BrachyChartForm(instance=t_cycle)  # NactCycle
+        context = {'form': form, 't_cycle': t_cycle, 'type':'Brachy'}
+        return render(request, 'tables/EditRadioCycle.html', context)

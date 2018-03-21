@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91952b4c-a776-4c17-af8b-007bac8ac7ec" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/uploads/history_file/2018/03/18/04/51/01/Arno.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/uploads/history_file/2018/03/18/04/51/25/DSC_0267.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/uploads/history_file/2018/03/18/14/28/06/IMG_20180303_124003.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/uploads/history_file/2018/03/18/14/30/53/IMG_20180303_124210.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/uploads/pf_file/2018/03/19/07/36/07/22450028_1669867399754907_838961885327410761_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/uploads/pf_file/2018/03/19/07/41/21/23634695_797877690403925_487925946_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/uploads/profile_pic/2018/03/16/11/44/38/18518021_1898632230392167_2674796107442009149_o.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/uploads/profile_pic/2018/03/16/11/46/54/Arno2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/uploads/profile_pic/2018/03/18/14/48/06/IMG_20180303_124003.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/uploads/profile_pic/2018/03/18/14/51/39/IMG_20180303_124032.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/uploads/profile_pic/2018/03/18/15/00/47/IMG_20180303_124003.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/uploads/profile_pic/2018/03/19/03/42/15/assassins-creed-workout-2014.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cDoctorAssistant/settings.py" afterPath="$PROJECT_DIR$/cDoctorAssistant/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commit.txt" afterPath="$PROJECT_DIR$/commit.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/patientbasicinfo/treatmentplan.py" afterPath="$PROJECT_DIR$/patientbasicinfo/treatmentplan.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/radiotherapy/templates/radiotherapy/ViewRadioTherapy.html" afterPath="$PROJECT_DIR$/radiotherapy/templates/radiotherapy/ViewRadioTherapy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables/admin.py" afterPath="$PROJECT_DIR$/tables/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables/forms.py" afterPath="$PROJECT_DIR$/tables/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables/models.py" afterPath="$PROJECT_DIR$/tables/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables/urls.py" afterPath="$PROJECT_DIR$/tables/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables/views.py" afterPath="$PROJECT_DIR$/tables/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,11 +25,9 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tables/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="107">
+              <caret line="39" column="44" lean-forward="false" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -43,8 +35,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tables/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1397">
-              <caret line="197" column="56" lean-forward="false" selection-start-line="197" selection-start-column="56" selection-end-line="197" selection-end-column="56" />
+            <state relative-caret-position="392">
+              <caret line="353" column="0" lean-forward="true" selection-start-line="353" selection-start-column="0" selection-end-line="353" selection-end-column="0" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
@@ -52,53 +44,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="linac_chart.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tables/templates/tables/linac_chart.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tables/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="347">
+              <caret line="34" column="106" lean-forward="false" selection-start-line="34" selection-start-column="106" selection-end-line="34" selection-end-column="106" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="palliative_cycle.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tables/templates/tables/palliative_cycle.html">
+      <file leaf-file-name="brachy_chart.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tables/templates/tables/brachy_chart.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="act_cycle.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tables/templates/tables/act_cycle.html">
+      <file leaf-file-name="EditRadioCycle.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tables/templates/tables/EditRadioCycle.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commit.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/commit.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditChemoCycle.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tables/templates/tables/EditChemoCycle.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+            <state relative-caret-position="315">
+              <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -107,22 +87,44 @@
       <file leaf-file-name="treatmentplan.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/patientbasicinfo/treatmentplan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="81" column="104" lean-forward="false" selection-start-line="81" selection-start-column="104" selection-end-line="81" selection-end-column="104" />
+            <state relative-caret-position="-928">
+              <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
-                <marker date="1521611813038" expanded="true" signature="3808:3885" ph="..." />
+                <marker date="1521622824684" expanded="true" signature="4473:4550" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ViewChemoTherapy.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chemotherapy/templates/chemotherapy/ViewChemoTherapy.html">
+      <file leaf-file-name="commit.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/commit.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+            <state relative-caret-position="255">
+              <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewRadioTherapy.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/radiotherapy/templates/radiotherapy/ViewRadioTherapy.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tables/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,11 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/patientbasicinfo/urls.py" />
-        <option value="$PROJECT_DIR$/surgeryhormone/templates/surgeryhormone/EditHormone.html" />
-        <option value="$PROJECT_DIR$/surgeryhormone/templates/surgeryhormone/EditSurgery.html" />
-        <option value="$PROJECT_DIR$/surgeryhormone/views.py" />
-        <option value="$PROJECT_DIR$/surgeryhormone/urls.py" />
         <option value="$PROJECT_DIR$/radiotherapy/models.py" />
         <option value="$PROJECT_DIR$/radiotherapy/forms.py" />
         <option value="$PROJECT_DIR$/radiotherapy/templates/radiotherapy/EditRadioTherapy.html" />
@@ -158,7 +155,6 @@
         <option value="$PROJECT_DIR$/radiotherapy/templates/radiotherapy/Brachy.html" />
         <option value="$PROJECT_DIR$/radiotherapy/urls.py" />
         <option value="$PROJECT_DIR$/chemotherapy/forms.py" />
-        <option value="$PROJECT_DIR$/radiotherapy/templates/radiotherapy/ViewRadioTherapy.html" />
         <option value="$PROJECT_DIR$/chemotherapy/templates/chemotherapy/ViewRadioTherapy.html" />
         <option value="$PROJECT_DIR$/chemotherapy/templates/chemotherapy/EditChemoTherapy.html" />
         <option value="$PROJECT_DIR$/chemotherapy/models.py" />
@@ -183,16 +179,22 @@
         <option value="$PROJECT_DIR$/cDoctorAssistant/urls.py" />
         <option value="$PROJECT_DIR$/tables/templates/tables/nact_cycle.html" />
         <option value="$PROJECT_DIR$/tables/templates/tables/act_cycle.html" />
-        <option value="$PROJECT_DIR$/tables/forms.py" />
         <option value="$PROJECT_DIR$/tables/templates/tables/concurr_cycle.html" />
         <option value="$PROJECT_DIR$/tables/templates/tables/EditChemoCycle.html" />
-        <option value="$PROJECT_DIR$/tables/urls.py" />
         <option value="$PROJECT_DIR$/tables/templates/tables/palliative_cycle.html" />
         <option value="$PROJECT_DIR$/chemotherapy/templates/chemotherapy/ViewChemoTherapy.html" />
-        <option value="$PROJECT_DIR$/patientbasicinfo/treatmentplan.py" />
-        <option value="$PROJECT_DIR$/tables/views.py" />
-        <option value="$PROJECT_DIR$/tables/models.py" />
         <option value="$PROJECT_DIR$/cDoctorAssistant/settings.py" />
+        <option value="$PROJECT_DIR$/tables/forms.py" />
+        <option value="$PROJECT_DIR$/tables/templates/tables/cobalt_chart.html" />
+        <option value="$PROJECT_DIR$/tables/templates/tables/linac_chart.html" />
+        <option value="$PROJECT_DIR$/tables/admin.py" />
+        <option value="$PROJECT_DIR$/tables/models.py" />
+        <option value="$PROJECT_DIR$/tables/templates/tables/EditRadioCycle.html" />
+        <option value="$PROJECT_DIR$/tables/views.py" />
+        <option value="$PROJECT_DIR$/tables/urls.py" />
+        <option value="$PROJECT_DIR$/tables/templates/tables/brachy_chart.html" />
+        <option value="$PROJECT_DIR$/radiotherapy/templates/radiotherapy/ViewRadioTherapy.html" />
+        <option value="$PROJECT_DIR$/patientbasicinfo/treatmentplan.py" />
         <option value="$PROJECT_DIR$/commit.txt" />
       </list>
     </option>
@@ -219,8 +221,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -231,12 +231,50 @@
             <path>
               <item name="cDoctorAssistant" type="b2602c69:ProjectViewProjectNode" />
               <item name="cDoctorAssistant" type="462c0819:PsiDirectoryNode" />
+              <item name="patientbasicinfo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cDoctorAssistant" type="b2602c69:ProjectViewProjectNode" />
               <item name="cDoctorAssistant" type="462c0819:PsiDirectoryNode" />
+              <item name="radiotherapy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cDoctorAssistant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cDoctorAssistant" type="462c0819:PsiDirectoryNode" />
+              <item name="radiotherapy" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cDoctorAssistant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cDoctorAssistant" type="462c0819:PsiDirectoryNode" />
+              <item name="radiotherapy" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="radiotherapy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cDoctorAssistant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cDoctorAssistant" type="462c0819:PsiDirectoryNode" />
+              <item name="tables" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cDoctorAssistant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cDoctorAssistant" type="462c0819:PsiDirectoryNode" />
+              <item name="tables" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cDoctorAssistant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cDoctorAssistant" type="462c0819:PsiDirectoryNode" />
+              <item name="tables" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="tables" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,87 +353,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/radiotherapy/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="57" lean-forward="false" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/radiotherapy/templates/radiotherapy/EditRadioTherapy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/referralnote/templates/referralnote/EditReferralNote.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/radiotherapy/templates/radiotherapy/Linac.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="59" lean-forward="false" selection-start-line="0" selection-start-column="59" selection-end-line="0" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/radiotherapy/templates/radiotherapy/Brachy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="6" lean-forward="false" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/patientbasicinfo/templates/patientbasicinfo/ViewIdentity.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chemotherapy/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/patientbasicinfo/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/patientbasicinfo/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="89" column="54" lean-forward="false" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/patientbasicinfo/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/radiotherapy/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/radiotherapy/templates/radiotherapy/ViewRadioTherapy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -508,9 +469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#1#25#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -518,7 +476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -526,9 +483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -536,9 +490,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#form#0;n#ul#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -546,9 +497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1065">
           <caret line="78" column="13" lean-forward="false" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#57#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -556,9 +504,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -566,7 +511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="54" column="62" lean-forward="false" selection-start-line="54" selection-start-column="62" selection-end-line="54" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -574,7 +518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="37" column="29" lean-forward="false" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -582,7 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="47">
           <caret line="16" column="62" lean-forward="false" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -590,17 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tables/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -608,7 +539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="911">
           <caret line="149" column="59" lean-forward="false" selection-start-line="149" selection-start-column="59" selection-end-line="149" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -616,41 +546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/patientbasicinfo/templates/treatmentplan/ViewTreatmentPlan.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="69" column="46" lean-forward="false" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tables/templates/tables/EditChemoCycle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tables/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tables/templates/tables/act_cycle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -658,18 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/patientbasicinfo/treatmentplan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="81" column="104" lean-forward="false" selection-start-line="81" selection-start-column="104" selection-end-line="81" selection-end-column="104" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-            <marker date="1521611813038" expanded="true" signature="3808:3885" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -677,17 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tables/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1397">
-          <caret line="197" column="56" lean-forward="false" selection-start-line="197" selection-start-column="56" selection-end-line="197" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -695,24 +567,170 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
           <caret line="148" column="37" lean-forward="false" selection-start-line="148" selection-start-column="37" selection-end-line="148" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables/templates/tables/EditChemoCycle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="35" column="2" lean-forward="true" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/patientbasicinfo/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="47" column="15" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="47" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/patientbasicinfo/templates/patientbasicinfo/EditProfile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables/templates/tables/act_cycle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/patientbasicinfo/templates/treatmentplan/ViewTreatmentPlan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="69" column="46" lean-forward="false" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables/templates/tables/cobalt_chart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/patientbasicinfo/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tables/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+        <state relative-caret-position="107">
+          <caret line="39" column="44" lean-forward="false" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables/templates/tables/EditRadioCycle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="353" column="0" lean-forward="true" selection-start-line="353" selection-start-column="0" selection-end-line="353" selection-end-column="0" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="34" column="106" lean-forward="false" selection-start-line="34" selection-start-column="106" selection-end-line="34" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables/templates/tables/linac_chart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/radiotherapy/templates/radiotherapy/ViewRadioTherapy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables/templates/tables/brachy_chart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/patientbasicinfo/treatmentplan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-928">
+          <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+            <marker date="1521622824684" expanded="true" signature="4473:4550" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commit.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        <state relative-caret-position="255">
+          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
           <folding />
         </state>
       </provider>

@@ -5,7 +5,7 @@ from chemotherapy.models import ChemoTherapy
 from patientbasicinfo.models import Identity, TreatmentPlan
 from radiotherapy.models import RadioTherapy
 from surgeryhormone.models import Hormone, Surgery
-from tables.models import NactCycle, ActCycle, ConcurrentCycle, PalliativeCycle
+from tables.models import NactCycle, ActCycle, ConcurrentCycle, PalliativeCycle, CobaltChart, LinacChart, BrachyChart
 from targetedtherapy.models import Immunotherapy, Tki
 
 
@@ -61,13 +61,13 @@ def view_treatmentplan(request, p_id, tp_num):
     else:
         tki = get_object_or_404(Tki, tp_fk=tp_fk)
     if not NactCycle.objects.filter(nact_fk=nact).exists():
-        nact_cycle= None
+        nact_cycle = None
     else:
-        nact_cycle = get_list_or_404(NactCycle,nact_fk=nact)
+        nact_cycle = get_list_or_404(NactCycle, nact_fk=nact)
     if not ActCycle.objects.filter(act_fk=act).exists():
-        act_cycle= None
+        act_cycle = None
     else:
-        act_cycle = get_list_or_404(ActCycle,act_fk=act)
+        act_cycle = get_list_or_404(ActCycle, act_fk=act)
     if not ConcurrentCycle.objects.filter(concurr_fk=concurrent).exists():
         concurr_cycle = None
     else:
@@ -76,8 +76,23 @@ def view_treatmentplan(request, p_id, tp_num):
         palliative_cycle = None
     else:
         palliative_cycle = get_list_or_404(PalliativeCycle, palliative_fk=palliative)
+    if not CobaltChart.objects.filter(cobalt_fk=cobalt).exists():
+        cobalt_cycle = None
+    else:
+        cobalt_cycle = get_list_or_404(CobaltChart, cobalt_fk=cobalt)
+    if not LinacChart.objects.filter(linac_fk=linac).exists():
+        linac_cycle = None
+    else:
+        linac_cycle = get_list_or_404(LinacChart, linac_fk=linac)
+
+    if not BrachyChart.objects.filter(brachy_fk=brachy).exists():
+        brachy_cycle = None
+    else:
+        brachy_cycle = get_list_or_404(BrachyChart, brachy_fk=brachy)
+
     context = {'patient': patient, 'tp_fk': tp_fk, 'hormone': hormone, 'surgery': surgery, 'cobalt': cobalt,
                'linac': linac, 'brachy': brachy, 'palliative': palliative, 'nact': nact, 'act': act,
-               'concurrent':concurrent, 'immunotherapy':immunotherapy, 'tki': tki, 'nact_cycle':nact_cycle,
-               'act_cycle':act_cycle, 'concurr_cycle':concurr_cycle, 'palliative_cycle':palliative_cycle}
+               'concurrent': concurrent, 'immunotherapy': immunotherapy, 'tki': tki, 'nact_cycle': nact_cycle,
+               'act_cycle': act_cycle, 'concurr_cycle': concurr_cycle, 'palliative_cycle': palliative_cycle,
+               'cobalt_cycle': cobalt_cycle,'linac_cycle': linac_cycle, 'brachy_cycle':brachy_cycle}
     return render(request, 'treatmentplan/ViewTreatmentPlan.html', context)

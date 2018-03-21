@@ -1,0 +1,46 @@
+{% if brachy_cycle %}
+<div class="container">
+<table class="GeneratedTable">
+  <thead>
+    <tr>
+      <th>---</th>
+      <th>Serial No</th>
+        <th>Date</th>
+      <th>Name of Field</th>
+      <th>Field Size (cm)</th>
+      <th>Tumor Dose</th>
+      <th>Seperation</th>
+
+    </tr>
+  </thead>
+  {% for Cell in brachy_cycle %}
+  <tbody>
+    <tr>
+      <td><a href="< {% url 'table:edit_brachycycle' patient.pk tp_fk.num Cell.serialno %}" class="w3-btn w3-green">Edit</a></td>
+      <td>{{Cell.serialno}}</td>
+        <td>{{Cell.date}}</td>
+      <td>{{Cell.nameoffield}}</td>
+      <td>{{Cell.fieldsize}}</td>
+      <td>{{Cell.tumordose}}</td>
+      <td>{{Cell.seperation}}</td>
+
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+</div>
+
+<div>
+        <ul>
+            <a href="{% url 'table:new_brachycycle' patient.pk tp_fk.num %}" class="w3-btn w3-green">Add New Cycle</a>
+        </ul>
+    </div>
+
+{% else %}
+ <div>
+        <ul>
+            <h3>Brachy schedule is empty.</h3>
+            <a href="{% url 'table:new_brachycycle' patient.pk tp_fk.num %}" class="w3-btn w3-green">Add New Table</a>
+        </ul>
+    </div>
+{% endif %}

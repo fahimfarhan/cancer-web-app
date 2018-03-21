@@ -21,5 +21,17 @@ urlpatterns = [
         views.edit_palliativecycle, name='edit_palliativecycle'),
     url(r'^new_palliativecycle/(?P<p_id>[0-9]+)/(?P<tp_num>[0-9]+)/$',
         views.new_palliativecycle, name='new_palliativecycle'),
+    # ---------------------------------------------------------------------------------------
+    url(r'^edit_cobaltcycle/(?P<p_id>[0-9]+)/(?P<tp_num>[0-9]+)/(?P<sino>[0-9]+)$',
+            views.edit_cobaltcycle, name='edit_cobaltcycle'),
+    url(r'^new_cobaltcycle/(?P<p_id>[0-9]+)/(?P<tp_num>[0-9]+)/$', views.new_cobaltcycle, name='new_cobaltcycle'),
+
+    url(r'^edit_linaccycle/(?P<p_id>[0-9]+)/(?P<tp_num>[0-9]+)/(?P<sino>[0-9]+)$',
+            views.edit_linaccycle, name='edit_linaccycle'),
+    url(r'^new_linaccycle/(?P<p_id>[0-9]+)/(?P<tp_num>[0-9]+)/$', views.new_linaccycle, name='new_linaccycle'),
+
+url(r'^edit_brachycycle/(?P<p_id>[0-9]+)/(?P<tp_num>[0-9]+)/(?P<sino>[0-9]+)$',
+            views.edit_brachycycle, name='edit_brachycycle'),
+    url(r'^new_brachycycle/(?P<p_id>[0-9]+)/(?P<tp_num>[0-9]+)/$', views.new_brachycycle, name='new_brachycycle'),
 
 ]
