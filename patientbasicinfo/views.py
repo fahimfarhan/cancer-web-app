@@ -283,6 +283,7 @@ def new_prescription(request, p_id):
             except:
                 print("Exception! Shit!")
             data.num = num
+            data.date  = timezone.now()
             data.save()
         return redirect('view_patientdetails', p_id=pid)
     else:

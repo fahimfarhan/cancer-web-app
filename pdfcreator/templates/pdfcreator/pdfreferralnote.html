@@ -1,0 +1,55 @@
+{% extends 'pdfcreator/pdfbase.html' %}
+{% block body %}
+<div class="w3-container" style="margin-top:20px" id="referralnote">
+{% if referralnote %}
+<div class="w3-container w3-white" style="margin-top:20px">
+</div>
+
+
+    <div class="w3-row-padding">
+            <table class="GeneratedPdf">
+  <thead>
+    <tr>
+      <th>Referral Note</th>
+      <th>#{{referralnote.noteNo}}</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+      <td>Purpose:</td>
+      <td>{{referralnote.purpose}}</td>
+    </tr>
+
+  <tr>
+      <td>Condition</td>
+      <td>{{referralnote.condition}}</td>
+    </tr>
+
+
+  <tr>
+      <td>Referred Department</td>
+      <td>{{referralnote.refferedDept}}</td>
+    </tr>
+  <tr>
+      <td>Referred Consultant</td>
+      <td>{{referralnote.refferedConsultant}}</td>
+    </tr>
+  <tr>
+      <td>Response Note</td>
+      <td>{{referralnote.responseNote}}</td>
+    </tr>
+  <tr>
+      <td>Remarks</td>
+      <td>{{referralnote.remarks}}</td>
+    </tr>
+  </tbody>
+</table>
+
+        </div>
+   <br>
+
+
+{% endif %}
+</div>
+
+{% endblock %}

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'targetedtherapy',
     'tables',
     'analytics',
+    'pdfcreator',
     'filetransfers',
     'django.contrib.admin',
     'django.contrib.auth',

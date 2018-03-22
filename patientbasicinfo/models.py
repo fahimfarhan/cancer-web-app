@@ -93,6 +93,7 @@ class TreatmentPlan(models.Model):
 
 class Prescription(models.Model):
     identity_fk = models.ForeignKey(Identity, on_delete=models.CASCADE)
+    date = models.DateField(default=now)
     num = models.IntegerField()
     details = models.CharField(max_length=1000, blank=True)
 
