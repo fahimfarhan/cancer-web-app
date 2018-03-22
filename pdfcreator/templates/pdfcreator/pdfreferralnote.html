@@ -1,8 +1,12 @@
 {% extends 'pdfcreator/pdfbase.html' %}
 {% block body %}
 <div class="w3-container" style="margin-top:20px" id="referralnote">
-    <div class="w3-container w3-white" style="margin-top:40px">
-    <div><p><h2 align="center">Referral Note</h2></p></div>
+    <div class="w3-container w3-white" style="margin-top:0px">
+    <div class="w3-light-gray"><p><h2 align="center">Referral Note</h2></p></div>
+
+    <p>
+        Patient name : {{profile.identity.name}}, Disease Code : {{profile.diseaseCode}}, Stage : {{profile.stage}}
+    </p>
     </div>
 <div class="w3-container" style="margin-top:20px">
 

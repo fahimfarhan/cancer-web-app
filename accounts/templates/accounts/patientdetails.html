@@ -15,6 +15,7 @@
         <div class="w3-bar-block">
             <!--a href=" fix this when ready" onclick="w3_close()"
                class="w3-bar-item w3-button w3-hover-light-green">Full Report</a-->
+            <a href="{% url 'pdfcreator:print_summary' patient.pk %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Summary</a>
             <a href="#identity" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Identity</a>
             <a href="#profile" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Profile</a>
             <a href="#comorbidity" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Comorbidity</a>

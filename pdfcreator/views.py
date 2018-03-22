@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 
 from accounts.models import Doctor
-from patientbasicinfo.models import Prescription
+from patientbasicinfo.models import Prescription, Identity, Profile
 
 # Create your views here.
 
@@ -16,9 +16,10 @@ from referralnote.models import ReferralNote
 
 def view_prescription(request, p_id, number, user_pk):
     user = get_object_or_404(User, pk=user_pk)
-    doctor = get_object_or_404(Doctor, identity_fk = user)
+    doctor = get_object_or_404(Doctor, identity_fk=user)
+    profile = get_object_or_404(Profile, identity=p_id)
     prescription = get_object_or_404(Prescription, identity_fk=p_id, num=number)
-    context = {'prescription': prescription, 'user':user, 'doctor':doctor}
+    context = {'prescription': prescription, 'user': user, 'doctor': doctor, 'profile':profile}
     return render(request, 'pdfcreator/pdfprescription.html', context)
 
 
@@ -38,8 +39,10 @@ def print_prescription(request, p_id, number):
 def view_referralnote(request, p_id, number, user_pk):
     user = get_object_or_404(User, pk=user_pk)
     doctor = get_object_or_404(Doctor, identity_fk=user)
+    # identity = get_object_or_404(Identity, pk=p_id)
+    profile = get_object_or_404(Profile, identity=p_id)
     referralnote = get_object_or_404(ReferralNote, identity=p_id, noteNo=number)
-    context = {'referralnote': referralnote, 'user': user, 'doctor':doctor}
+    context = {'referralnote': referralnote, 'user': user, 'doctor': doctor, 'profile':profile}
     return render(request, 'pdfcreator/pdfreferralnote.html', context)
 
 

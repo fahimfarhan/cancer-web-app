@@ -1,0 +1,28 @@
+{% load staticfiles %}
+{% if history %}
+<ul>
+<div class="w3-container">
+
+
+<table class="GeneratedPdf">
+  <thead>
+    <tr>
+      <th>History</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>details</td>
+      <td>{{history.details}}</td>
+    </tr>
+    <tr>
+      <td>Notes</td>
+      <td>{{history.notes}}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+</ul>
+{% endif %}

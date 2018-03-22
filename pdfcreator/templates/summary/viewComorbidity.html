@@ -1,0 +1,46 @@
+
+    {% if comorbidity %}
+     <ul>
+<div class="w3-container">
+<table class="GeneratedPdf">
+  <thead>
+    <tr>
+      <th>Comorbidity</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hypertension</td>
+      <td>{{comorbidity.hypertension}}</td>
+    </tr>
+    <tr>
+      <td>Diabetes</td>
+      <td>{{comorbidity.diabetes}}</td>
+    </tr>
+    <tr>
+      <td>Cardiac</td>
+      <td> {{comorbidity.cardiac}}</td>
+    </tr>
+      <tr>
+      <td>Liver</td>
+      <td> {{comorbidity.liver}}</td>
+    </tr>
+
+        <tr>
+      <td>Kedney</td>
+      <td>  {{comorbidity.kedney}}</td>
+    </tr>
+        <tr>
+      <td>Others</td>
+      <td> {{comorbidity.others}}</td>
+    </tr>
+
+
+  </tbody>
+</table>
+</div>
+    </ul>
+
+    {% endif %}
+

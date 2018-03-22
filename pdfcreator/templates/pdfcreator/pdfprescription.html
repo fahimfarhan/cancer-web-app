@@ -1,15 +1,16 @@
 {% extends 'pdfcreator/pdfbase.html' %}
 {% block body %}
 
-<div class="w3-container w3-white" style="margin-top:40px">
-    <div><p><h2 align="center">Prescription</h2></p></div>
-    <p align="right">{{prescription.date}}</p>
+<div class="w3-container w3-white" style="margin-top:10px">
+        <ul>
+    <div class="w3-container w3-light-gray" style="margin-top:0px"> <h2 align="center">Prescription</h2></div></ul>
     </div>
+
 <div class="w3-container" style="margin-top:20px">
+<ul>
 
 
-
-<div class="w3-row-padding">
+<div class="w3-row-padding w3-containe">
 
 <table class="GeneratedPdf">
   <thead>
@@ -28,7 +29,9 @@
 </table>
 
 </div>
+    </ul>
 </div>
+
 <!--div class="container">
         <h3>Details:</h3>
     <p>{{prescription.date}}</p>

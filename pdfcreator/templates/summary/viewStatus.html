@@ -1,0 +1,28 @@
+{% load staticfiles %}
+{% if status %}
+<ul>
+<div class="w3-container">
+
+
+<table class="GeneratedPdf">
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>details</td>
+      <td>{{status.details}}</td>
+    </tr>
+    <tr>
+      <td>advive</td>
+      <td>{{status.advice}}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+</ul>
+{% endif %}

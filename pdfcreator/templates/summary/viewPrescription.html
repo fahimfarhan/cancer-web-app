@@ -1,0 +1,32 @@
+{% load staticfiles %}
+{% if prescription %}
+<ul>
+<div class="w3-container w3-light-gray" style="margin-top:0px"> <h3 align="center">All Prescriptions</h3></div></ul>
+{% for i in prescription %}
+<ul>
+<div class="w3-container">
+
+
+<table class="GeneratedPdf">
+  <thead>
+    <tr>
+      <th>Prescription</th>
+      <th>#{{i.num}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Date</td>
+      <td>{{i.date}}</td>
+    </tr><tr>
+      <td>details</td>
+      <td>{{i.details}}</td>
+    </tr>
+
+  </tbody>
+</table>
+
+</div>
+</ul>
+{% endfor %}
+{% endif %}

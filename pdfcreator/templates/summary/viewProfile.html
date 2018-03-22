@@ -1,0 +1,58 @@
+{% if profile %}
+    <ul>
+<div class="w3-container">
+<table class="GeneratedPdf">
+  <thead>
+    <tr>
+      <th>Profile</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Disease Code</td>
+      <td>{{profile.diseaseCode}}</td>
+    </tr>
+    <tr>
+      <td>Histopathology</td>
+      <td>{{profile.histopathology}}</td>
+    </tr>
+    <tr>
+      <td>IHC</td>
+      <td>{{profile.ihc}}</td>
+    </tr>
+      <tr>
+      <td>ER/PR</td>
+      <td>{{profile.er_pr}}</td>
+    </tr>
+
+        <tr>
+      <td>TNM</td>
+      <td> {{profile.tnm}}</td>
+    </tr>
+        <tr>
+      <td>Stage</td>
+      <td>{{profile.stage}}</td>
+    </tr>
+        <tr>
+      <td>BSA</td>
+      <td>{{profile.bsa}}</td>
+    </tr>
+
+  <tr>
+      <td>PS</td>
+      <td>{{profile.ps}}</td>
+    </tr>
+
+  <tr>
+      <td>Blood Group</td>
+      <td>{{profile.bloodGroup}}</td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+    </ul>
+{% endif %}
+
+

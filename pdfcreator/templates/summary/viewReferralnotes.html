@@ -1,0 +1,48 @@
+{% load staticfiles %}
+{% if referralnote %}
+<ul>
+<div class="w3-container w3-light-gray" style="margin-top:0px"> <h3 align="center">All Referral Notes </h3></div></ul>
+{% for i in referralnote %}
+<ul>
+<div class="w3-container">
+
+
+<table class="GeneratedPdf">
+  <thead>
+    <tr>
+      <th>ReferralNote</th>
+      <th>#{{i.noteNo}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Purpose</td>
+      <td>{{i.purpose}}</td>
+    </tr><tr>
+      <td>Condition</td>
+      <td>{{i.condition}}</td>
+    </tr>
+  <tr>
+      <td>Referred Dept.</td>
+      <td>{{i.refferedDept}}</td>
+    </tr>
+  <tr>
+      <td>Referred Consultant</td>
+      <td>{{i.refferedConsultant}}</td>
+    </tr>
+    <tr>
+      <td>Response Note</td>
+      <td>{{i.responseNote}}</td>
+    </tr>
+    <tr>
+      <td>Remarks</td>
+      <td>{{i.remarks}}</td>
+    </tr>
+
+  </tbody>
+</table>
+
+</div>
+</ul>
+{% endfor %}
+{% endif %}
