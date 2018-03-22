@@ -1,0 +1,51 @@
+{% extends 'accounts/base.html' %}
+{% block body %}
+
+
+    {% if num %}
+    <h2>Patient with Mobile No: 0{{n}}</h2><br>
+    {% for i in num %}
+<br>
+<div class="w3-container w3-white">
+    <div class="w3-half">
+        <p> <a href="{% url 'view_patientdetails' i.pk %}" class="w3-btn w3-green">{{ i.name }}</a>
+    </p>
+        <p> E-mail: {{i.email}}</p>
+    <p> unit: {{i.unit}}</p>
+        <p>Date of Admission: {{i.dateOfAdmission}}</p>
+        <p> Referred By:{{i.referredBy}}</p>
+
+    </div>
+    <div class="w3-half">
+        <p><img src="{{ i.image.url }}" width="240" height="240" alt="No Image Available"></p>
+    </div>
+</div>
+
+
+    {% endfor %}
+{% elif by_p_id %}
+    <h2>Patient with ID No: {{n}}</h2><br>
+
+<br>
+<div class="w3-container w3-white">
+    <div class="w3-half">
+        <p> <a href="{% url 'view_patientdetails' by_p_id.pk %}" class="w3-btn w3-green">{{ by_p_id.name }}</a>
+    </p>
+    <p> unit: {{by_p_id.unit}}</p>
+        <p>Date of Admission: {{by_p_id.dateOfAdmission}}</p>
+        <p> Referred By:{{by_p_id.referredBy}}</p>
+
+    </div>
+    <div class="w3-half">
+        <p><img src="{{ by_p_id.image.url }}" width="240" height="240" alt="No Image Available"></p>
+    </div>
+</div>
+
+    {% else %}
+<div>
+    <p>
+        <h3 align="center">Sorry! No result found!</h3>
+    </p>
+</div>
+{% endif %}
+{% endblock %}

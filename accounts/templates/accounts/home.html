@@ -23,13 +23,30 @@
     </form>
 
         <br>
-
+    <form action="{% url 'analytics:form_handle_pk' %}" method="POST" class="w3-text-black">
+        {% csrf_token %}
+        <!--p>
+            <input type="text" name="mobile" value="{{mobile}}" maxlength="10" required id="id_mobile" />
+        </p-->
+    {{form_pk.as_p}}
+    <button type="submit" style="color:#047ff8;">Search</button>
+    </form>
 
     </div>
 
 
     <div class="w3-container w3-half">
         <h3 align="center">Analytics</h3>
+            <h3>Chemotherapy-wise Search:</h3>
+    <a href="{% url 'analytics:sq_nact' %}" class="w3-btn w3-green">NACT</a> See patients in NACT Therapy<br><br>
+    <a href="{% url 'analytics:sq_act' %}" class="w3-btn w3-green">ACT </a> See patients in ACT Therapy<br><br>
+    <a href="{% url 'analytics:sq_concurrent' %}" class="w3-btn w3-green">Concurrent</a> See patients in Concurrent Therapy<br><br>
+    <a href="{% url 'analytics:sq_palliative' %}" class="w3-btn w3-green">Palliative</a> See patients in Palliative Therapy<br><br>
+<h3>Radiotherapy-wise Search:</h3>
+<a href="{% url 'analytics:sq_linac' %}" class="w3-btn w3-green">Linac</a> See patients in Linac Therapy<br><br>
+    <a href="{% url 'analytics:sq_cobalt' %}" class="w3-btn w3-green">Cobalt</a> See patients in Cobalt Therapy<br><br>
+    <a href="{% url 'analytics:sq_brachy' %}" class="w3-btn w3-green">Brachy</a> See patients in Brachy Therapy<br><br>
+
     </div>
 
 

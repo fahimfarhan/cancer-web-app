@@ -1,6 +1,6 @@
 {% extends 'accounts/base.html' %}
 {% block body %}
-
+{% load staticfiles %}
 
     {% if num %}
     <h2>Patient with Mobile No: 0{{n}}</h2><br>
@@ -23,25 +23,279 @@
 
 
     {% endfor %}
-{% elif key %}
+{% elif by_p_id %}
     <h2>Patient with ID No: {{n}}</h2><br>
-    {% for i in key %}
+
 <br>
 <div class="w3-container w3-white">
     <div class="w3-half">
-        <p> <a href="{% url 'view_patientdetails' i.pk %}" class="w3-btn w3-green">{{ i.name }}</a>
+        <p> <a href="{% url 'view_patientdetails' by_p_id.pk %}" class="w3-btn w3-green">{{ by_p_id.name }}</a>
     </p>
-    <p> unit: {{i.unit}}</p>
-        <p>Date of Admission: {{i.dateOfAdmission}}</p>
-        <p> Referred By:{{i.referredBy}}</p>
+    <p> unit: {{by_p_id.unit}}</p>
+        <p>Date of Admission: {{by_p_id.dateOfAdmission}}</p>
+        <p> Referred By:{{by_p_id.referredBy}}</p>
 
     </div>
     <div class="w3-half">
-        <p><img src="{{ i.image.url }}" width="240" height="240" alt="No Image Available"></p>
+        <p><img src="{{ by_p_id.image.url }}" width="240" height="240" alt="No Image Available"></p>
     </div>
 </div>
-{% endfor %}
 
+{% elif linac %}
+    <h2>Linac patient query:</h2><br>
+    {% for i in linac %}
+        <div class="w3-container w3-white">
+    <div class="w3-half">
+        <p> <a href="{% url 'view_patientdetails' i.tp_fk.identity_fk.pk %}" class="w3-btn w3-green">{{ i.tp_fk.identity_fk.name }}</a>
+    </p>
+        <p> E-mail: {{i.tp_fk.identity_fk.email}}</p>
+    <p> unit: {{i.tp_fk.identity_fk.unit}}</p>
+        <p>Date of Admission: {{i.tp_fk.identity_fk.dateOfAdmission}}</p>
+        <p> Referred By:{{i.tp_fk.identity_fk.referredBy}}</p>
+
+    </div>
+    <div class="w3-half">
+        {% if i.tp_fk.identity_fk.image %}
+        <p><img src="{{ i.tp_fk.identity_fk.image.url }}" width="240" height="240" alt="No Image Available"></p>
+        {% else %}
+        <p><img src="{% static 'img/blank-profile-picture.png' %}" width="240" height="240" alt="No Image Available"></p>
+        {% endif %}
+    </div>
+</div>
+
+    {% endfor %}
+
+
+{% elif brachy %}
+    <h2>Brachy patient query:</h2><br>
+    {% for i in brachy %}
+        <div class="w3-container w3-white">
+    <div class="w3-half">
+        <p> <a href="{% url 'view_patientdetails' i.tp_fk.identity_fk.pk %}" class="w3-btn w3-green">{{ i.tp_fk.identity_fk.name }}</a>
+    </p>
+        <p> E-mail: {{i.tp_fk.identity_fk.email}}</p>
+    <p> unit: {{i.tp_fk.identity_fk.unit}}</p>
+        <p>Date of Admission: {{i.tp_fk.identity_fk.dateOfAdmission}}</p>
+        <p> Referred By:{{i.tp_fk.identity_fk.referredBy}}</p>
+
+    </div>
+    <div class="w3-half">
+        {% if i.tp_fk.identity_fk.image %}
+        <p><img src="{{ i.tp_fk.identity_fk.image.url }}" width="240" height="240" alt="No Image Available"></p>
+        {% else %}
+        <p><img src="{% static 'img/blank-profile-picture.png' %}" width="240" height="240" alt="No Image Available"></p>
+        {% endif %}
+    </div>
+</div>
+    {% endfor %}
+
+{% elif cobalt %}
+    <h2>Cobalt patient query:</h2><br>
+    {% for i in cobalt %}
+        <div class="w3-container w3-white">
+    <div class="w3-half">
+        <p> <a href="{% url 'view_patientdetails' i.tp_fk.identity_fk.pk %}" class="w3-btn w3-green">{{ i.tp_fk.identity_fk.name }}</a>
+    </p>
+        <p> E-mail: {{i.tp_fk.identity_fk.email}}</p>
+    <p> unit: {{i.tp_fk.identity_fk.unit}}</p>
+        <p>Date of Admission: {{i.tp_fk.identity_fk.dateOfAdmission}}</p>
+        <p> Referred By:{{i.tp_fk.identity_fk.referredBy}}</p>
+
+    </div>
+    <div class="w3-half">
+        {% if i.tp_fk.identity_fk.image %}
+        <p><img src="{{ i.tp_fk.identity_fk.image.url }}" width="240" height="240" alt="No Image Available"></p>
+        {% else %}
+        <p><img src="{% static 'img/blank-profile-picture.png' %}" width="240" height="240" alt="No Image Available"></p>
+        {% endif %}
+    </div>
+</div>
+    {% endfor %}
+
+
+{% elif act %}
+    <h2>ACT patient query:</h2><br>
+    {% for i in act %}
+        <div class="w3-container w3-white">
+    <div class="w3-half">
+        <p> <a href="{% url 'view_patientdetails' i.tp_fk.identity_fk.pk %}" class="w3-btn w3-green">{{ i.tp_fk.identity_fk.name }}</a>
+    </p>
+        <p> E-mail: {{i.tp_fk.identity_fk.email}}</p>
+    <p> unit: {{i.tp_fk.identity_fk.unit}}</p>
+        <p>Date of Admission: {{i.tp_fk.identity_fk.dateOfAdmission}}</p>
+        <p> Referred By:{{i.tp_fk.identity_fk.referredBy}}</p>
+
+    </div>
+    <div class="w3-half">
+        {% if i.tp_fk.identity_fk.image %}
+        <p><img src="{{ i.tp_fk.identity_fk.image.url }}" width="240" height="240" alt="No Image Available"></p>
+        {% else %}
+        <p><img src="{% static 'img/blank-profile-picture.png' %}" width="240" height="240" alt="No Image Available"></p>
+        {% endif %}
+    </div>
+</div>
+    {% endfor %}
+
+
+{% elif concurrent %}
+    <h2>Concurrent patient query:</h2><br>
+    {% for i in concurrent %}
+        <div class="w3-container w3-white">
+    <div class="w3-half">
+        <p> <a href="{% url 'view_patientdetails' i.tp_fk.identity_fk.pk %}" class="w3-btn w3-green">{{ i.tp_fk.identity_fk.name }}</a>
+    </p>
+        <p> E-mail: {{i.tp_fk.identity_fk.email}}</p>
+    <p> unit: {{i.tp_fk.identity_fk.unit}}</p>
+        <p>Date of Admission: {{i.tp_fk.identity_fk.dateOfAdmission}}</p>
+        <p> Referred By:{{i.tp_fk.identity_fk.referredBy}}</p>
+
+    </div>
+    <div class="w3-half">
+        {% if i.tp_fk.identity_fk.image %}
+        <p><img src="{{ i.tp_fk.identity_fk.image.url }}" width="240" height="240" alt="No Image Available"></p>
+        {% else %}
+        <p><img src="{% static 'img/blank-profile-picture.png' %}" width="240" height="240" alt="No Image Available"></p>
+        {% endif %}
+    </div>
+</div>
+
+    {% endfor %}
+
+
+{% elif palliative %}
+    <h2>Palliative patient query:</h2><br>
+    {% for i in palliative %}
+      <div class="w3-container w3-white">
+    <div class="w3-half">
+        <p> <a href="{% url 'view_patientdetails' i.tp_fk.identity_fk.pk %}" class="w3-btn w3-green">{{ i.tp_fk.identity_fk.name }}</a>
+    </p>
+        <p> E-mail: {{i.tp_fk.identity_fk.email}}</p>
+    <p> unit: {{i.tp_fk.identity_fk.unit}}</p>
+        <p>Date of Admission: {{i.tp_fk.identity_fk.dateOfAdmission}}</p>
+        <p> Referred By:{{i.tp_fk.identity_fk.referredBy}}</p>
+
+    </div>
+    <div class="w3-half">
+        {% if i.tp_fk.identity_fk.image %}
+        <p><img src="{{ i.tp_fk.identity_fk.image.url }}" width="240" height="240" alt="No Image Available"></p>
+        {% else %}
+        <p><img src="{% static 'img/blank-profile-picture.png' %}" width="240" height="240" alt="No Image Available"></p>
+        {% endif %}
+    </div>
+</div>
+    {% endfor %}
+
+{% elif nact %}
+    <h2>NACT patient query:</h2><br>
+    {% for i in nact %}
+      <div class="w3-container w3-white">
+    <div class="w3-half">
+        <p> <a href="{% url 'view_patientdetails' i.tp_fk.identity_fk.pk %}" class="w3-btn w3-green">{{ i.tp_fk.identity_fk.name }}</a>
+    </p>
+        <p> E-mail: {{i.tp_fk.identity_fk.email}}</p>
+    <p> unit: {{i.tp_fk.identity_fk.unit}}</p>
+        <p>Date of Admission: {{i.tp_fk.identity_fk.dateOfAdmission}}</p>
+        <p> Referred By:{{i.tp_fk.identity_fk.referredBy}}</p>
+
+    </div>
+    <div class="w3-half">
+        {% if i.tp_fk.identity_fk.image %}
+        <p><img src="{{ i.tp_fk.identity_fk.image.url }}" width="240" height="240" alt="No Image Available"></p>
+        {% else %}
+        <p><img src="{% static 'img/blank-profile-picture.png' %}" width="240" height="240" alt="No Image Available"></p>
+        {% endif %}
+    </div>
+</div>
+    {% endfor %}
+{% elif stage_one %}
+    <h2>Stage One Patient's List:</h2><br>
+    {% for i in stage_one %}
+      <div class="w3-container w3-white">
+    <div class="w3-half">
+        <p> <a href="{% url 'view_patientdetails' i.tp_fk.identity_fk.pk %}" class="w3-btn w3-green">{{ i.tp_fk.identity_fk.name }}</a>
+    </p>
+        <p> E-mail: {{i.tp_fk.identity_fk.email}}</p>
+    <p> unit: {{i.tp_fk.identity_fk.unit}}</p>
+        <p>Date of Admission: {{i.tp_fk.identity_fk.dateOfAdmission}}</p>
+        <p> Referred By:{{i.tp_fk.identity_fk.referredBy}}</p>
+
+    </div>
+    <div class="w3-half">
+        {% if i.tp_fk.identity_fk.image %}
+        <p><img src="{{ i.tp_fk.identity_fk.image.url }}" width="240" height="240" alt="No Image Available"></p>
+        {% else %}
+        <p><img src="{% static 'img/blank-profile-picture.png' %}" width="240" height="240" alt="No Image Available"></p>
+        {% endif %}
+    </div>
+</div>
+    {% endfor %}
+{% elif stage_two %}
+    <h2>Stage two Patient's List:</h2><br>
+    {% for i in stage_two %}
+      <div class="w3-container w3-white">
+    <div class="w3-half">
+        <p> <a href="{% url 'view_patientdetails' i.tp_fk.identity_fk.pk %}" class="w3-btn w3-green">{{ i.tp_fk.identity_fk.name }}</a>
+    </p>
+        <p> E-mail: {{i.tp_fk.identity_fk.email}}</p>
+    <p> unit: {{i.tp_fk.identity_fk.unit}}</p>
+        <p>Date of Admission: {{i.tp_fk.identity_fk.dateOfAdmission}}</p>
+        <p> Referred By:{{i.tp_fk.identity_fk.referredBy}}</p>
+
+    </div>
+    <div class="w3-half">
+        {% if i.tp_fk.identity_fk.image %}
+        <p><img src="{{ i.tp_fk.identity_fk.image.url }}" width="240" height="240" alt="No Image Available"></p>
+        {% else %}
+        <p><img src="{% static 'img/blank-profile-picture.png' %}" width="240" height="240" alt="No Image Available"></p>
+        {% endif %}
+    </div>
+</div>
+    {% endfor %}
+{% elif stage_three %}
+    <h2>Stage three Patient's List:</h2><br>
+    {% for i in stage_three %}
+      <div class="w3-container w3-white">
+    <div class="w3-half">
+        <p> <a href="{% url 'view_patientdetails' i.tp_fk.identity_fk.pk %}" class="w3-btn w3-green">{{ i.tp_fk.identity_fk.name }}</a>
+    </p>
+        <p> E-mail: {{i.tp_fk.identity_fk.email}}</p>
+    <p> unit: {{i.tp_fk.identity_fk.unit}}</p>
+        <p>Date of Admission: {{i.tp_fk.identity_fk.dateOfAdmission}}</p>
+        <p> Referred By:{{i.tp_fk.identity_fk.referredBy}}</p>
+
+    </div>
+    <div class="w3-half">
+        {% if i.tp_fk.identity_fk.image %}
+        <p><img src="{{ i.tp_fk.identity_fk.image.url }}" width="240" height="240" alt="No Image Available"></p>
+        {% else %}
+        <p><img src="{% static 'img/blank-profile-picture.png' %}" width="240" height="240" alt="No Image Available"></p>
+        {% endif %}
+    </div>
+</div>
+    {% endfor %}
+
+{% elif stage_four %}
+    <h2>Stage four Patient's List:</h2><br>
+    {% for i in stage_four %}
+      <div class="w3-container w3-white">
+    <div class="w3-half">
+        <p> <a href="{% url 'view_patientdetails' i.tp_fk.identity_fk.pk %}" class="w3-btn w3-green">{{ i.tp_fk.identity_fk.name }}</a>
+    </p>
+        <p> E-mail: {{i.tp_fk.identity_fk.email}}</p>
+    <p> unit: {{i.tp_fk.identity_fk.unit}}</p>
+        <p>Date of Admission: {{i.tp_fk.identity_fk.dateOfAdmission}}</p>
+        <p> Referred By:{{i.tp_fk.identity_fk.referredBy}}</p>
+
+    </div>
+    <div class="w3-half">
+        {% if i.tp_fk.identity_fk.image %}
+        <p><img src="{{ i.tp_fk.identity_fk.image.url }}" width="240" height="240" alt="No Image Available"></p>
+        {% else %}
+        <p><img src="{% static 'img/blank-profile-picture.png' %}" width="240" height="240" alt="No Image Available"></p>
+        {% endif %}
+    </div>
+</div>
+    {% endfor %}
     {% else %}
 <div>
     <p>

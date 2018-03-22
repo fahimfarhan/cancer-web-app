@@ -33,7 +33,7 @@
 {% else %}
 <ul>
     <h3> No Prescription Yet! </h3>
-    <a href="{% url 'pdfcreator:new_prescription' patient.pk %}" class="w3-btn w3-green">New Prescription</a>
+    <a href="{% url 'pbi:new_prescription' patient.pk %}" class="w3-btn w3-green">New Prescription</a>
 </ul>
 {% endif %}
 </div>
