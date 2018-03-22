@@ -15,9 +15,6 @@
 
     <form action="{% url 'analytics:form_handle' %}" method="POST" class="w3-text-black">
         {% csrf_token %}
-        <!--p>
-            <input type="text" name="mobile" value="{{mobile}}" maxlength="10" required id="id_mobile" />
-        </p-->
     {{form.as_p}}
     <button type="submit" style="color:#047ff8;">Search</button>
     </form>
@@ -25,12 +22,15 @@
         <br>
     <form action="{% url 'analytics:form_handle_pk' %}" method="POST" class="w3-text-black">
         {% csrf_token %}
-        <!--p>
-            <input type="text" name="mobile" value="{{mobile}}" maxlength="10" required id="id_mobile" />
-        </p-->
     {{form_pk.as_p}}
     <button type="submit" style="color:#047ff8;">Search</button>
     </form>
+<br>
+        <!--form action="{% url 'analytics:form_handle_date' %}" method="POST" class="w3-text-black">
+        {#% csrf_token %}
+    {#{form_date.as_p}}
+    <button type="submit" style="color:#047ff8;">Search</button>
+    </form-->
 
     </div>
 

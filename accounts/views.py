@@ -6,14 +6,15 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 from accounts.forms import RegistrationForm, EditProfileForm, EditDoctorForm
 from accounts.models import Doctor
-from analytics.forms import SearchByNumForm, SearchByPkForm
+from analytics.forms import SearchByNumForm, SearchByPkForm, SearchByDate
 
 
 @login_required
 def home(request):
     form = SearchByNumForm()
     form_pk = SearchByPkForm()
-    context = {'form':form, 'form_pk':form_pk}
+    form_date = SearchByDate()
+    context = {'form': form, 'form_pk': form_pk, 'form_date': form_date}
     return render(request, 'accounts/home.html', context)
 
 

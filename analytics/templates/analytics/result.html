@@ -17,7 +17,11 @@
 
     </div>
     <div class="w3-half">
+        {% if i.image %}
         <p><img src="{{ i.image.url }}" width="240" height="240" alt="No Image Available"></p>
+        {% else %}
+        <p><img src="{% static 'img/blank-profile-picture.png' %}" width="240" height="240" alt="No Image Available"></p>
+        {% endif %}
     </div>
 </div>
 
@@ -37,10 +41,31 @@
 
     </div>
     <div class="w3-half">
+        {% if by_p_id.image %}
+        <p><img src="{{ by_p_id.image.url }}" width="240" height="240" alt="No Image Available"></p>
+        {% else %}
+        <p><img src="{% static 'img/blank-profile-picture.png' %}" width="240" height="240" alt="No Image Available"></p>
+        {% endif %}
+    </div>
+</div>
+{% elif by_date %}
+    <h2>Total Patients on date {{date}} = len(by_date)</h2><br>
+{% for i in by_date %}
+<br>
+<div class="w3-container w3-white">
+    <div class="w3-half">
+        <p> <a href="{% url 'view_patientdetails' by_p_id.pk %}" class="w3-btn w3-green">{{ by_p_id.name }}</a>
+    </p>
+    <p> unit: {{by_p_id.unit}}</p>
+        <p>Date of Admission: {{by_p_id.dateOfAdmission}}</p>
+        <p> Referred By:{{by_p_id.referredBy}}</p>
+
+    </div>
+    <div class="w3-half">
         <p><img src="{{ by_p_id.image.url }}" width="240" height="240" alt="No Image Available"></p>
     </div>
 </div>
-
+{% endfor %}
 {% elif linac %}
     <h2>Linac patient query:</h2><br>
     {% for i in linac %}

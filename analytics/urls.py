@@ -7,6 +7,8 @@ app_name = 'analytics'
 urlpatterns = [
     url(r'^result/form_handle/$', views.form_handle, name='form_handle'),
     url(r'^result/form_handle_pk/$', views.form_handle_pk, name='form_handle_pk'),
+    url(r'^result/form_handle_date/$', views.form_handle_date, name='form_handle_date'),
+
     url(r'^result/stage_one_query/$', views.stage_one, name='sq_stage_one'),
     url(r'^result/stage_two_query/$', views.stage_two, name='sq_stage_two'),
     url(r'^result/stage_three_query/$', views.stage_three, name='sq_stage_three'),

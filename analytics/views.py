@@ -1,15 +1,15 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, get_list_or_404
 
 # Create your views here.
-from analytics.forms import SearchByNumForm, SearchByPkForm
+from analytics.forms import SearchByNumForm, SearchByPkForm, SearchByDate
 from analytics.querycontroller import QueryController
 from chemotherapy.models import ChemoTherapy
 from patientbasicinfo.models import Identity, Profile
 from radiotherapy.models import RadioTherapy
 
-
 qc = QueryController()
+
 
 @login_required
 def form_handle(request):
@@ -24,6 +24,7 @@ def form_handle(request):
     context = {'form': form, 'n': n, 'num': num}
     return render(request, 'analytics/result.html', context)
 
+
 @login_required
 def form_handle_pk(request):
     n = 0
@@ -32,7 +33,20 @@ def form_handle_pk(request):
     if form.is_valid():
         n = form.cleaned_data['p_id']
         by_p_id = get_object_or_404(Identity, pk=n)
-    context = {'form': form, 'n': n,'by_p_id':by_p_id }
+    context = {'form': form, 'n': n, 'by_p_id': by_p_id}
+    return render(request, 'analytics/result.html', context)
+
+
+@login_required
+def form_handle_date(request):
+    n = 0
+    date = None
+    by_date = None
+    form = SearchByDate(request.POST)
+    if form.is_valid():
+        date = form.cleaned_data['date']
+        by_date = get_list_or_404(Identity, dateOfAdmission=date)
+    context = {'form': form, 'by_date': by_date, 'date':date}
     return render(request, 'analytics/result.html', context)
 
 
@@ -42,17 +56,20 @@ def nact(request):
     context = {'nact': nact}
     return render(request, 'analytics/result.html', context)
 
+
 @login_required
 def act(request):
     act = qc.SelectAllWithAct()
     context = {'act': act}
     return render(request, 'analytics/result.html', context)
 
+
 @login_required
 def concurrent(request):
     concurrent = qc.SelectAllWithConcurrent()
     context = {'concurrent': concurrent}
     return render(request, 'analytics/result.html', context)
+
 
 @login_required
 def palliative(request):
@@ -68,11 +85,13 @@ def brachy(request):
     context = {'brachy': brachy}
     return render(request, 'analytics/result.html', context)
 
+
 @login_required
 def cobalt(request):
     cobalt = qc.SelectAllWithCobalt()
     context = {'cobalt': cobalt}
     return render(request, 'analytics/result.html', context)
+
 
 @login_required
 def linac(request):
@@ -87,18 +106,20 @@ def stage_one(request):
     context = qc.selectAllWithStage1()
     return render(request, 'analytics/result.html', context)
 
+
 @login_required
 def stage_two(request):
     context = qc.selectAllWithStage2()
     return render(request, 'analytics/result.html', context)
+
 
 @login_required
 def stage_three(request):
     context = qc.selectAllWithStage3()
     return render(request, 'analytics/result.html', context)
 
+
 @login_required
 def stage_four(request):
     context = qc.selectAllWithStage4()
     return render(request, 'analytics/result.html', context)
-
