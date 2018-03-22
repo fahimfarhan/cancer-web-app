@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91952b4c-a776-4c17-af8b-007bac8ac7ec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/models.py" afterPath="$PROJECT_DIR$/accounts/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chemotherapy/models.py" afterPath="$PROJECT_DIR$/chemotherapy/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chemotherapy/templates/chemotherapy/EditChemoTherapy.html" afterPath="$PROJECT_DIR$/chemotherapy/templates/chemotherapy/EditChemoTherapy.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/history/models.py" afterPath="$PROJECT_DIR$/history/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/history/templates/history/EditHistory.html" afterPath="$PROJECT_DIR$/history/templates/history/EditHistory.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentingfeatures/models.py" afterPath="$PROJECT_DIR$/presentingfeatures/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentingfeatures/templates/status/EditStatus.html" afterPath="$PROJECT_DIR$/presentingfeatures/templates/status/EditStatus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/referralnote/models.py" afterPath="$PROJECT_DIR$/referralnote/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/referralnote/templates/referralnote/EditReferralNote.html" afterPath="$PROJECT_DIR$/referralnote/templates/referralnote/EditReferralNote.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/surgeryhormone/models.py" afterPath="$PROJECT_DIR$/surgeryhormone/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/surgeryhormone/templates/surgeryhormone/EditHormone.html" afterPath="$PROJECT_DIR$/surgeryhormone/templates/surgeryhormone/EditHormone.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/surgeryhormone/templates/surgeryhormone/EditSurgery.html" afterPath="$PROJECT_DIR$/surgeryhormone/templates/surgeryhormone/EditSurgery.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/targetedtherapy/models.py" afterPath="$PROJECT_DIR$/targetedtherapy/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/targetedtherapy/templates/targetedtherapy/EditTargetedTherapy.html" afterPath="$PROJECT_DIR$/targetedtherapy/templates/targetedtherapy/EditTargetedTherapy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commit.txt" afterPath="$PROJECT_DIR$/commit.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pdfcreator/summary.py" afterPath="$PROJECT_DIR$/pdfcreator/summary.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfprescription.html" afterPath="$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfprescription.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfreferralnote.html" afterPath="$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfreferralnote.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pdfcreator/templates/summary/viewIdentity.html" afterPath="$PROJECT_DIR$/pdfcreator/templates/summary/viewIdentity.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pdfcreator/views.py" afterPath="$PROJECT_DIR$/pdfcreator/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,16 +18,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EditStatus.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/presentingfeatures/templates/status/EditStatus.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="71" lean-forward="false" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/accounts/models.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -47,7 +28,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit_doctorinfo.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pdfcreator/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="62" column="114" lean-forward="false" selection-start-line="62" selection-start-column="114" selection-end-line="62" selection-end-column="114" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="summary.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pdfcreator/summary.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit_doctorinfo.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/edit_doctorinfo.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -57,77 +60,72 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/patientbasicinfo/models.py">
+      <file leaf-file-name="commit.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/commit.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1410">
-              <caret line="95" column="8" lean-forward="false" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
+            <state relative-caret-position="360">
+              <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/history/models.py">
+      <file leaf-file-name="pdfreferralnote.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfreferralnote.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+            <state relative-caret-position="105">
+              <caret line="7" column="62" lean-forward="false" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditHistory.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/history/templates/history/EditHistory.html">
+      <file leaf-file-name="report.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pdfcreator/templates/summary/report.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="70" lean-forward="false" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/followup/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="152">
+              <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chemotherapy/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditChemoTherapy.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chemotherapy/templates/chemotherapy/EditChemoTherapy.html">
+      <file leaf-file-name="pdfprescription.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfprescription.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="61" lean-forward="false" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+              <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pdfbase.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfbase.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/analytics/models.py">
+      <file leaf-file-name="viewIdentity.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pdfcreator/templates/summary/viewIdentity.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="150">
+              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -168,24 +166,18 @@
         <option value="$PROJECT_DIR$/accounts/forms.py" />
         <option value="$PROJECT_DIR$/accounts/admin.py" />
         <option value="$PROJECT_DIR$/accounts/views.py" />
-        <option value="$PROJECT_DIR$/pdfcreator/views.py" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/base.html" />
         <option value="$PROJECT_DIR$/pdfcreator/urls.py" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/patientdetails.html" />
-        <option value="$PROJECT_DIR$/pdfcreator/templates/summary/viewIdentity.html" />
         <option value="$PROJECT_DIR$/pdfcreator/templates/summary/viewProfile.html" />
         <option value="$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfbase.html" />
-        <option value="$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfprescription.html" />
-        <option value="$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfreferralnote.html" />
         <option value="$PROJECT_DIR$/pdfcreator/templates/summary/viewComorbidity.html" />
         <option value="$PROJECT_DIR$/pdfcreator/templates/summary/History.html" />
         <option value="$PROJECT_DIR$/pdfcreator/templates/summary/viewHistory.html" />
         <option value="$PROJECT_DIR$/pdfcreator/templates/summary/viewStatus.html" />
         <option value="$PROJECT_DIR$/pdfcreator/templates/summary/viewPrescription.html" />
         <option value="$PROJECT_DIR$/pdfcreator/templates/summary/viewReferralnotes.html" />
-        <option value="$PROJECT_DIR$/pdfcreator/summary.py" />
         <option value="$PROJECT_DIR$/pdfcreator/templates/summary/report.html" />
-        <option value="$PROJECT_DIR$/commit.txt" />
         <option value="$PROJECT_DIR$/targetedtherapy/models.py" />
         <option value="$PROJECT_DIR$/targetedtherapy/templates/targetedtherapy/EditTargetedTherapy.html" />
         <option value="$PROJECT_DIR$/surgeryhormone/models.py" />
@@ -200,6 +192,12 @@
         <option value="$PROJECT_DIR$/chemotherapy/models.py" />
         <option value="$PROJECT_DIR$/chemotherapy/templates/chemotherapy/EditChemoTherapy.html" />
         <option value="$PROJECT_DIR$/accounts/models.py" />
+        <option value="$PROJECT_DIR$/pdfcreator/templates/summary/viewIdentity.html" />
+        <option value="$PROJECT_DIR$/pdfcreator/summary.py" />
+        <option value="$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfprescription.html" />
+        <option value="$PROJECT_DIR$/pdfcreator/views.py" />
+        <option value="$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfreferralnote.html" />
+        <option value="$PROJECT_DIR$/commit.txt" />
       </list>
     </option>
   </component>
@@ -232,6 +230,31 @@
             <path>
               <item name="cDoctorAssistant" type="b2602c69:ProjectViewProjectNode" />
               <item name="cDoctorAssistant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cDoctorAssistant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cDoctorAssistant" type="462c0819:PsiDirectoryNode" />
+              <item name="pdfcreator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cDoctorAssistant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cDoctorAssistant" type="462c0819:PsiDirectoryNode" />
+              <item name="pdfcreator" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cDoctorAssistant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cDoctorAssistant" type="462c0819:PsiDirectoryNode" />
+              <item name="pdfcreator" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="pdfcreator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cDoctorAssistant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cDoctorAssistant" type="462c0819:PsiDirectoryNode" />
+              <item name="pdfcreator" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="summary" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -286,6 +309,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="742" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19692533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -294,7 +318,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2625" sideWeight="0.4941435" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2625" sideWeight="0.4941435" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -398,14 +422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pdfcreator/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/patientdetails.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -419,48 +435,6 @@
         <state relative-caret-position="210">
           <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfbase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pdfcreator/templates/summary/viewIdentity.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="40" lean-forward="true" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfprescription.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#ul#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfreferralnote.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -513,36 +487,6 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#ul#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pdfcreator/summary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="48" column="108" lean-forward="false" selection-start-line="48" selection-start-column="108" selection-end-line="48" selection-end-column="108" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pdfcreator/templates/summary/report.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commit.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,6 +696,83 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfbase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdfcreator/summary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdfcreator/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="62" column="114" lean-forward="false" selection-start-line="62" selection-start-column="114" selection-end-line="62" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdfcreator/templates/summary/report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdfcreator/templates/summary/viewIdentity.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfreferralnote.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="62" lean-forward="false" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdfcreator/templates/pdfcreator/pdfprescription.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commit.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
           <folding />
         </state>
       </provider>

@@ -16,10 +16,19 @@ from referralnote.models import ReferralNote
 
 def view_prescription(request, p_id, number, user_pk):
     user = get_object_or_404(User, pk=user_pk)
-    doctor = get_object_or_404(Doctor, identity_fk=user)
-    profile = get_object_or_404(Profile, identity=p_id)
+    # doctor = get_object_or_404(Doctor, identity_fk=user)
+    # profile = get_object_or_404(Profile, identity=p_id)
+    patient = get_object_or_404(Identity, pk=p_id)
+    if not Doctor.objects.filter(identity_fk=user).exists():
+        doctor = None
+    else:
+        doctor = get_object_or_404(Doctor, identity_fk=user)
+    if not Profile.objects.filter(identity=p_id).exists():
+        profile = None
+    else:
+        profile = get_object_or_404(Profile, identity=p_id)
     prescription = get_object_or_404(Prescription, identity_fk=p_id, num=number)
-    context = {'prescription': prescription, 'user': user, 'doctor': doctor, 'profile':profile}
+    context = {'prescription': prescription, 'user': user, 'doctor': doctor, 'profile': profile, 'patient':patient}
     return render(request, 'pdfcreator/pdfprescription.html', context)
 
 
@@ -38,11 +47,20 @@ def print_prescription(request, p_id, number):
 
 def view_referralnote(request, p_id, number, user_pk):
     user = get_object_or_404(User, pk=user_pk)
-    doctor = get_object_or_404(Doctor, identity_fk=user)
+    # doctor = get_object_or_404(Doctor, identity_fk=user)
     # identity = get_object_or_404(Identity, pk=p_id)
-    profile = get_object_or_404(Profile, identity=p_id)
+    # profile = get_object_or_404(Profile, identity=p_id)
+    patient = get_object_or_404(Identity, pk=p_id)
+    if not Doctor.objects.filter(identity_fk=user).exists():
+        doctor = None
+    else:
+        doctor = get_object_or_404(Doctor, identity_fk=user)
+    if not Profile.objects.filter(identity=p_id).exists():
+        profile = None
+    else:
+        profile = get_object_or_404(Profile, identity=p_id)
     referralnote = get_object_or_404(ReferralNote, identity=p_id, noteNo=number)
-    context = {'referralnote': referralnote, 'user': user, 'doctor': doctor, 'profile':profile}
+    context = {'referralnote': referralnote, 'user': user, 'doctor': doctor, 'profile': profile, 'patient':patient}
     return render(request, 'pdfcreator/pdfreferralnote.html', context)
 
 

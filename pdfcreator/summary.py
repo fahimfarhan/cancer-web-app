@@ -13,7 +13,7 @@ from referralnote.models import ReferralNote
 
 def view_summary(request, p_id, user_pk):
     user = get_object_or_404(User, pk=user_pk)
-    doctor = get_object_or_404(Doctor, identity_fk=user)
+    # doctor = get_object_or_404(Doctor, identity_fk=user)
     patient = get_object_or_404(Identity, pk=p_id)
     if not Doctor.objects.filter(identity_fk=user).exists():
         doctor = None
