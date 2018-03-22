@@ -29,27 +29,14 @@
                     <li class="w3-padding-16">{{user.email}}</li>
              </ul>
         </div>
+    <div class="w3-cotainer">
+        <p>
+        <a href="{% url 'edit_profile' %}" class="w3-bar-item w3-button w3-right w3-black">Edit Profile</a>
+        </p>
+    </div>
 
     </div>
-<!--div class="w3-container">
 
-    <div class="w3-display-middle w3-mobile">
-    <h2 align="center">User Profile</h2>
-    <p>
-        username : {{user}}
-    </p>
-
-    <p>
-        first name : {{user.first_name}}
-    </p>
-    <p>
-        last name : {{user.last_name}}
-    </p>
-    <p>
-        email : {{user.email}}
-    </p>
-</div>
-</div-->
 {% endblock %}
 <!--/body>
 </html-->

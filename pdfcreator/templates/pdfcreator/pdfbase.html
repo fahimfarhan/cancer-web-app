@@ -15,6 +15,12 @@
 <body>
 <!----->
 <div class="w3-container">
+<!--------------->
+    <p align="right">{{ user.first_name }} {{ user.last_name }},{%if doctor %} {{doctor.designation}},<br>
+        {{doctor.hospital}},<br>Mobile: 0{{doctor.mobile}},{% endif %} email: {{user.email}}
+    <hr>
+    </p>
+    <!------------>
 {% block body %}
 {% endblock %}
 </div>

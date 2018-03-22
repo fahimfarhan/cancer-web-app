@@ -1,10 +1,11 @@
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-from accounts.forms import RegistrationForm, EditProfileForm
+from accounts.forms import RegistrationForm, EditProfileForm, EditDoctorForm
+from accounts.models import Doctor
 from analytics.forms import SearchByNumForm, SearchByPkForm
 
 
@@ -60,3 +61,45 @@ def change_password(request):
         form = PasswordChangeForm(user=request.user)
         args = {'form': form}
         return render(request, 'accounts/change_password.html', args)
+
+
+@login_required
+def edit_doctorinfo(request):
+    if not Doctor.objects.filter(identity_fk=request.user).exists():
+        return new_doctorinfo(request)
+    else:
+        doctor = get_object_or_404(Doctor, identity_fk=request.user)
+        if request.method == 'POST':
+            form = EditDoctorForm(request.POST, instance=doctor)
+            if form.is_valid():
+                form.save()
+                return redirect('view_doctorinfo')
+        else:
+            form = EditDoctorForm(instance=doctor)
+            args = {'form': form}
+            return render(request, 'accounts/edit_doctorinfo.html', args)
+
+
+@login_required
+def new_doctorinfo(request):
+    if request.method == 'POST':
+        form = EditDoctorForm(request.POST)  # UserCreationForm
+        if form.is_valid():
+            p_doctor = form.save(commit=False)
+            p_doctor.identity_fk = request.user
+            p_doctor.save()
+            return redirect('view_doctorinfo')
+    else:
+        form = EditDoctorForm()  #
+        args = {'form': form}
+        return render(request, 'accounts/edit_doctorinfo.html', args)
+
+
+@login_required
+def view_doctorinfo(request):
+    if not Doctor.objects.filter(identity_fk=request.user).exists():
+        doctor = None
+    else:
+        doctor = get_object_or_404(Doctor, identity_fk=request.user)
+    args = {'doctor': doctor}
+    return render(request, 'accounts/view_doctorinfo.html', args)

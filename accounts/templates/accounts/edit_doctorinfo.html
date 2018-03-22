@@ -1,0 +1,15 @@
+{% extends 'accounts/base.html' %}
+
+{% block body %}
+<div class="w3-container">
+    <div class="w3-display-middle w3-mobile">
+        <h2>Edit Doctor Information</h2>
+    <form method="post">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type = "submit" style="color:#047ff8;">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
+    </form>
+</div>
+</div>
+{% endblock %}

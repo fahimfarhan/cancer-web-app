@@ -3,6 +3,8 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
+from accounts.models import Doctor
+
 
 class RegistrationForm(UserCreationForm):
     email = forms.EmailField(required=True)
@@ -37,4 +39,14 @@ class EditProfileForm(UserChangeForm):
             'last_name',
             'email',
             'password'
+        )
+
+
+class EditDoctorForm(forms.ModelForm):
+    class Meta:
+        model = Doctor
+        fields = (
+            'mobile',
+            'designation',
+            'hospital'
         )

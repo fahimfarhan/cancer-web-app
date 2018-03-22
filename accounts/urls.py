@@ -25,4 +25,8 @@ urlpatterns = [
     # url(r'^reset-password/confirm/(?P<uidb64>[0-9A-Za-z]+)-(P?<token>.+)$', password_reset_confirm,
     #    name='password_reset_confirm'),
 
+    url(r'^doctorinfo/$', views.view_doctorinfo, name='view_doctorinfo'),
+    url(r'^doctorinfo/edit/$', views.edit_doctorinfo, name='edit_doctorinfo'),
+    url(r'^doctorinfo/new/$', views.new_doctorinfo, name='new_doctorinfo'),
+
 ]

@@ -1,0 +1,51 @@
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body-->
+{% extends 'accounts/base.html' %}
+{% block body %}
+{% if doctor %}
+<div class="w3-row-padding">
+    <div class="w3-container w3-white" style="margin-top:80px">
+        <h2 align="center">Doctor Information</h2>
+    </div>
+        <div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-light-gray w3-center">
+            <li class="w3-black w3-xlarge w3-padding-16"></li>
+                    <li class="w3-padding-16">Designation:</li>
+                    <li class="w3-padding-16">Mobile Number:</li>
+                    <li class="w3-padding-16">Hospital</li>
+                    </ul>
+        </div>
+         <div class="w3-half w3-margin-bottom">
+             <ul class="w3-ul w3-light-gray w3-center">
+            <li class="w3-black w3-xlarge w3-padding-16"></li>
+                    <li class="w3-padding-16"> {{doctor.designation}} </li>
+                    <li class="w3-padding-16">{{doctor.mobile}}</li>
+                    <li class="w3-padding-16">{{doctor.hospital}}</li>
+
+             </ul>
+        </div>
+    <div class="w3-cotainer">
+        <p>
+        <a href="{% url 'edit_doctorinfo' %}" class="w3-bar-item w3-button w3-right w3-black">Edit Doctor-Info</a>
+        </p>
+    </div>
+    </div>
+{% else %}
+<div class="w3-row-padding">
+    <div class="w3-container w3-white" style="margin-top:80px">
+    <h3>You haven't filled in your details! </h3>
+        <div class="w3-cotainer">
+        <p>Please click the button to fill in!
+        <a href="{% url 'new_doctorinfo' %}" class="w3-bar-item w3-button w3-black">New Doctor-Info</a>
+        </p>
+    </div>
+    </div></div>
+{% endif %}
+{% endblock %}
+<!--/body>
+</html-->
