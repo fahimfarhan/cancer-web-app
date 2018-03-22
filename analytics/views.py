@@ -8,7 +8,14 @@ from chemotherapy.models import ChemoTherapy
 from patientbasicinfo.models import Identity, Profile
 from radiotherapy.models import RadioTherapy
 
+
+
 qc = QueryController()
+
+
+@login_required
+def calculators(request):
+    return render(request, 'analytics/mycalculator.html')
 
 
 @login_required

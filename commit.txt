@@ -27,3 +27,4 @@ FC 25: analytics updated
 FC 26: lalala
 FC 27: autosuggestion check
 FC 28: disease code check
+FC 29: calculators check

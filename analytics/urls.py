@@ -21,4 +21,6 @@ urlpatterns = [
     url(r'^result/concurrent/$', views.concurrent, name='sq_concurrent'),
     url(r'^result/palliative/$', views.palliative, name='sq_palliative'),
 
+    url(r'^calculator/$', views.calculators, name='calculators'),
+
 ]

@@ -2,13 +2,16 @@
 {% block body %}
 
 <div class="w3-display-middle w3-mobile">
+    <!--div class="w3-middle"-->
 <ul>
-    <br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
 <h1>Patient Profile:</h1>
     <form method = post  enctype="multipart/form-data">
 
         {% if p_profile%}
+        <a href="http://www.icd10data.com/ICD10CM/Codes/C00-D49"  target="_blank">List of ICD 10 codes</a>
         <p>Previous disease code: {{p_profile.diseaseCode}}. Please select it again. Sorry for the inconvenience :'(</p>
+        <!--a href="https://www.ncri.ie/html/icd10"  target="_blank">List of ICD 10 codes</a-->
         {% endif %}
         {% csrf_token %}
         {{form.as_p}}
@@ -18,5 +21,8 @@
         <button type="reset" value="Reset">Reset</button>
     </form>
 </ul>
+        <!--/div-->
+
 </div>
+
 {% endblock %}

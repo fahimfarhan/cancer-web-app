@@ -1,0 +1,77 @@
+<div class="w3-container w3-middle">
+
+<p>GFR male=[(140-Age) x Wt/(72 x Sc) + 25 ] x AUC</p>
+
+<button type="button" onclick="myFunction()" style="color:#047ff8;">Calculate!</button>
+
+<p id="mgfr"></p>
+
+<script>
+function myFunction() {
+    var age = Number(prompt("Enter AGE"));
+var wt = Number(prompt("Enter Wt"));
+var sc = Number(prompt("Enter S. Creatinine"));
+var auc = Number(prompt("Enter AUC"));
+var x = (140-age)*wt/(72*sc)+25 ;
+x=x*auc
+document.getElementById("mgfr").innerHTML = x;
+}
+</script>
+<hr>
+
+<p>GFR Female=[0.85 x (140-Age) x Wt/(72 x Sc) + 25]xAUC</p>
+
+<button type="button" onclick="myFunction1()" style="color:#047ff8;">Calculate!</button>
+
+<p id="fgfr"></p>
+
+<script>
+function myFunction1() {
+    var age = Number(prompt("Enter AGE"));
+var wt = Number(prompt("Enter Wt"));
+var sc = Number(prompt("Enter S. Creatinine"));
+var auc = Number(prompt("Enter AUC"));
+var x = (140-age)*wt/(72*sc)*0.85+25 ;
+x=x*auc
+document.getElementById("fgfr").innerHTML = x;
+}
+</script>
+
+<hr>
+
+
+<p>Carbo-platine Dose = (GFR + 25) x AUC </p>
+
+<button type="button" onclick="myFunction2()" style="color:#047ff8;">Calculate!</button>
+
+<p id="cpd"></p>
+
+<script>
+function myFunction2() {
+var gfr = Number(prompt("Enter GFR"));
+var auc = Number(prompt("Enter AUC"));
+var x = (gfr + 25)*auc;
+
+document.getElementById("cpd").innerHTML = x;
+}
+</script>
+<hr>
+
+
+<p>BSA = (Wt x 4 + 7)/( Wt + 90) </p>
+
+<button type="button" onclick="myFunction3()" style="color:#047ff8;">Calculate!</button>
+
+<p id="bsa"></p>
+
+<script>
+function myFunction3() {
+var wt = Number(prompt("Enter Wt"));
+
+var x = (wt*4+7)/(wt+90);
+
+document.getElementById("bsa").innerHTML = x;
+}
+</script>
+<hr>
+</div>
