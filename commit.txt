@@ -25,3 +25,4 @@ FC 23: changed length
 FC 24: lalalalala
 FC 25: analytics updated
 FC 26: lalala
+FC 27: autosuggestion check
