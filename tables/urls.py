@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from tables import views
+from tables import views, importDiseaseCode
 
 app_name = 'table'
 
@@ -30,8 +30,9 @@ urlpatterns = [
             views.edit_linaccycle, name='edit_linaccycle'),
     url(r'^new_linaccycle/(?P<p_id>[0-9]+)/(?P<tp_num>[0-9]+)/$', views.new_linaccycle, name='new_linaccycle'),
 
-url(r'^edit_brachycycle/(?P<p_id>[0-9]+)/(?P<tp_num>[0-9]+)/(?P<sino>[0-9]+)$',
+    url(r'^edit_brachycycle/(?P<p_id>[0-9]+)/(?P<tp_num>[0-9]+)/(?P<sino>[0-9]+)$',
             views.edit_brachycycle, name='edit_brachycycle'),
     url(r'^new_brachycycle/(?P<p_id>[0-9]+)/(?P<tp_num>[0-9]+)/$', views.new_brachycycle, name='new_brachycycle'),
-
+    ####################
+    # url(r'^import/$', importDiseaseCode.import_disease_code, name='import_disease_code')
 ]

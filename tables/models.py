@@ -52,3 +52,11 @@ class LinacChart(RadioTherapyChart):
 
 class BrachyChart(RadioTherapyChart):
     brachy_fk = models.ForeignKey(RadioTherapy, on_delete=models.CASCADE)
+
+
+class DiseaseCode(models.Model):
+    code = models.CharField(max_length=10)
+    meaning = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.code

@@ -10,6 +10,7 @@ from patientbasicinfo.forms import IdentityForm, ComorbidityForm, ProfileForm, U
 from django.utils import timezone
 
 from patientbasicinfo.models import Identity, Comorbidity, Profile, TreatmentPlan, Prescription
+from tables.models import DiseaseCode
 
 
 @login_required
@@ -31,6 +32,7 @@ def edit_profile(request, p_id):
                 return redirect('view_patientdetails', p_id=temp_pk)
         else:
             form = ProfileForm(instance=p_profile)  # Profile
+        # dc_pk = get_object_or_404(DiseaseCode, code=p_profile.diseaseCode)
         context = {'form': form, 'p_profile': p_profile}
         return render(request, 'patientbasicinfo/EditProfile.html', context)
         # return HttpResponse("ep")
@@ -283,7 +285,7 @@ def new_prescription(request, p_id):
             except:
                 print("Exception! Shit!")
             data.num = num
-            data.date  = timezone.now()
+            data.date = timezone.now()
             data.save()
         return redirect('view_patientdetails', p_id=pid)
     else:

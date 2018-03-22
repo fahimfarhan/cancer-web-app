@@ -3,6 +3,8 @@ from django import forms
 from patientbasicinfo.models import Identity, Comorbidity, Profile, Prescription
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
+from tables.models import DiseaseCode
+
 
 class DateInput(forms.DateInput):
     input_type = 'date'
@@ -34,6 +36,11 @@ class IdentityForm(forms.ModelForm):
         }
 
 
+def get_my_choices():
+    choice_list = DiseaseCode.objects.all()
+    return choice_list
+
+
 class ProfileForm(forms.ModelForm):
     bg_choice = [
         ('Not Selected', 'Not Selected'),
@@ -46,6 +53,13 @@ class ProfileForm(forms.ModelForm):
 
     bloodGroup = forms.ChoiceField(widget=forms.Select, choices=bg_choice)
 
+    diseaseCode = forms.ModelChoiceField(widget=forms.Select, queryset=DiseaseCode.objects.all())
+
+    '''def __init__(self, *args, **kwargs):
+        super(ProfileForm, self).__init__(*args, **kwargs)
+        self.fields['diseaseCode'] = forms.ChoiceField(
+            choices=get_my_choices())
+    '''
     class Meta:
         model = Profile
         # fields = "__all__"

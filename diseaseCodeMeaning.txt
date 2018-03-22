@@ -1,0 +1,875 @@
+Malignant neoplasm of lip
+External upper lip
+External lower lip
+External lip, unspecified
+Upper lip, inner aspect
+Lower lip, inner aspect
+Lip, unspecified, inner aspect
+Commissure of lip
+Overlapping lesion of lip
+Lip, unspecified
+Malignant neoplasm of base of tongue
+Malignant neoplasm of other and unspecified parts of tongue
+Dorsal surface of tongue
+Border of tongue
+Ventral surface of tongue
+Anterior two-thirds of tongue, part unspecified
+Lingual tonsil
+Overlapping lesion of tongue
+Tongue, unspecified
+Malignant neoplasm of gum
+Upper gum
+Lower gum
+Gum, unspecified
+Malignant neoplasm of floor of mouth
+Anterior floor of mouth
+Lateral floor of mouth
+Overlapping lesion of floor of mouth
+Floor of mouth, unspecified
+Malignant neoplasm of palate
+Hard palate
+Soft palate
+Uvula
+Overlapping lesion of palate
+Palate, unspecified
+Malignant neoplasm of other and unspecified parts of mouth
+Cheek mucosa
+Vestibule of mouth
+Retromolar area
+Overlapping lesion of other and unspecified parts of mouth
+Mouth, unspecified
+Malignant neoplasm of parotid gland
+Malignant neoplasm of other and unspecified major salivary glands
+Submandibular gland
+Sublingual gland
+Overlapping lesion of major salivary glands
+Major salivary gland, unspecified
+Malignant neoplasm of tonsil
+Tonsillar fossa
+Tonsillar pillar (anterior)(posterior)
+Overlapping lesion of tonsil
+Tonsil, unspecified
+Malignant neoplasm of oropharynx
+Vallecula
+Anterior surface of epiglottis
+Lateral wall of oropharynx
+Posterior wall of oropharynx
+Branchial cleft
+Overlapping lesion of oropharynx
+Oropharynx, unspecified
+Malignant neoplasm of nasopharynx
+Superior wall of nasopharynx
+Posterior wall of nasopharynx
+Lateral wall of nasopharynx
+Anterior wall of nasopharynx
+Overlapping lesion of nasopharynx
+Nasopharynx, unspecified
+Malignant neoplasm of piriform sinus
+Malignant neoplasm of hypopharynx
+Postcricoid region
+Aryepiglottic fold, hypopharyngeal aspect
+Posterior wall of hypopharynx
+Overlapping lesion of hypopharynx
+Hypopharynx, unspecified
+Malignant neoplasm of other and ill-defined sites in the lip, oral cavity and pharynx
+Pharynx, unspecified
+Waldeyer's ring
+Overlapping lesion of lip, oral cavity and pharynx
+Malignant neoplasm of oesophagus
+Cervical part of oesophagus
+Thoracic part of oesophagus
+Abdominal part of oesophagus
+Upper third of oesophagus
+Middle third of oesophagus
+Lower third of oesophagus
+Overlapping lesion of oesophagus
+Oesophagus, unspecified
+Malignant neoplasm of stomach
+Cardia
+Fundus of stomach
+Body of stomach
+Pyloric antrum
+Pylorus
+Lesser curvature of stomach, unspecified
+Greater curvature of stomach, unspecified
+Overlapping lesion of stomach
+Stomach, unspecified
+Malignant neoplasm of small intestine
+Duodenum
+Jejunum
+Ileum
+Meckel diverticulum
+Overlapping lesion of small intestine
+Small intestine, unspecified
+Malignant neoplasm of colon
+Caecum
+Appendix
+Ascending colon
+Hepatic flexure
+Transverse colon
+Splenic flexure
+Descending colon
+Sigmoid colon
+Overlapping lesion of colon
+Colon, unspecified
+Malignant neoplasm of rectosigmoid junction
+Malignant neoplasm of rectum
+Malignant neoplasm of anus and anal canal
+Anus, unspecified
+Anal canal
+Cloacogenic zone
+Overlapping lesion of rectum, anus and anal canal
+Malignant neoplasm of liver and intrahepatic bile ducts
+Liver cell carcinoma
+Intrahepatic bile duct carcinoma
+Hepatoblastoma
+Angiosarcoma of liver
+Other sarcomas of liver
+Other specified carcinomas of liver
+Liver, unspecified
+Malignant neoplasm of gallbladder
+Malignant neoplasm of other and unspecified parts of biliary tract
+Extrahepatic bile duct
+Ampulla of Vater
+Overlapping lesion of biliary tract
+Biliary tract, unspecified
+Malignant neoplasm of pancreas
+Head of pancreas
+Body of pancreas
+Tail of pancreas
+Pancreatic duct
+Endocrine pancreas
+Other parts of pancreas
+Overlapping lesion of pancreas
+Pancreas, unspecified
+Malignant neoplasm of other and ill-defined digestive organs
+Intestinal tract, part unspecified
+Spleen
+Overlapping lesion of digestive system
+Ill-defined sites within the digestive system
+Malignant neoplasm of nasal cavity and middle ear
+Nasal cavity
+Middle ear
+Malignant neoplasm of accessory sinuses
+Maxillary sinus
+Ethmoidal sinus
+Frontal sinus
+Sphenoidal sinus
+Overlapping lesion of accessory sinuses
+Accessory sinus, unspecified
+Malignant neoplasm of larynx
+Glottis
+Supraglottis
+Subglottis
+Laryngeal cartilage
+Overlapping lesion of larynx
+Larynx, unspecified
+Malignant neoplasm of trachea
+Malignant neoplasm of bronchus and lung
+Main bronchus
+Upper lobe, bronchus or lung
+Middle lobe, bronchus or lung
+Lower lobe, bronchus or lung
+Overlapping lesion of bronchus and lung
+Bronchus or lung, unspecified
+Malignant neoplasm of thymus
+Malignant neoplasm of heart, mediastinum and pleura
+Heart
+Anterior mediastinum
+Posterior mediastinum
+Mediastinum, part unspecified
+Pleura
+Overlapping lesion of heart, mediastinum and pleura
+Malignant neoplasm of other and ill-defined sites in the respiratory system and intrathoracic organs
+Upper respiratory tract, part unspecified
+Overlapping lesion of respiratory and intrathoracic organs
+Ill-defined sites within the respiratory system
+Malignant neoplasm of bone and articular cartilage of limbs
+Scapula and long bones of upper limb
+Short bones of upper limb
+Long bones of lower limb
+Short bones of lower limb
+Overlapping lesion of bone and articular cartilage of limbs
+Bone and articular cartilage of limb, unspecified
+Malignant neoplasm of bone and articular cartilage of other and unspecified sites
+Bones of skull and face
+Mandible
+Vertebral column
+Ribs, sternum and clavicle
+Pelvic bones, sacrum and coccyx
+Overlapping lesion of bone and articular cartilage
+Bone and articular cartilage, unspecified
+Malignant melanoma of skin
+Malignant melanoma of lip
+Malignant melanoma of eyelid, including canthus
+Malignant melanoma of ear and external auricular canal
+Malignant melanoma of other and unspecified parts of face
+Malignant melanoma of scalp and neck
+Malignant melanoma of trunk
+Malignant melanoma of upper limb, including shoulder
+Malignant melanoma of lower limb, including hip
+Overlapping malignant melanoma of skin
+Malignant melanoma of skin, unspecified
+Other malignant neoplasms of skin
+Skin of lip
+Skin of eyelid, including canthus
+Skin of ear and external auricular canal
+Skin of other and unspecified parts of face
+Skin of scalp and neck
+Skin of trunk
+Skin of upper limb, including shoulder
+Skin of lower limb, including hip
+Overlapping lesion of skin
+Malignant neoplasm of skin, unspecified
+Mesothelioma
+Mesothelioma of pleura
+Mesothelioma of peritoneum
+Mesothelioma of pericardium
+Mesothelioma of other sites
+Mesothelioma, unspecified
+Kaposi's sarcoma
+Kaposi's sarcoma of skin
+Kaposi's sarcoma of soft tissue
+Kaposi's sarcoma of palate
+Kaposi's sarcoma of lymph nodes
+Kaposi's sarcoma of other sites
+Kaposi's sarcoma of multiple organs
+Kaposi's sarcoma, unspecified
+Malignant neoplasm of peripheral nerves and autonomic nervous system
+Peripheral nerves of head, face and neck
+Peripheral nerves of upper limb, including shoulder
+Peripheral nerves of lower limb, including hip
+Peripheral nerves of thorax
+Peripheral nerves of abdomen
+Peripheral nerves of pelvis
+Peripheral nerves of trunk, unspecified
+Overlapping lesion of peripheral nerves and autonomic nervous system
+Peripheral nerves and autonomic nervous system, unspecified
+Malignant neoplasm of retroperitoneum and peritoneum
+Retroperitoneum
+Specified parts of peritoneum
+Peritoneum, unspecified
+Overlapping lesion of retroperitoneum and peritoneum
+Malignant neoplasm of other connective and soft tissue
+Connective and soft tissue of head, face and neck
+Connective and soft tissue of upper limb, including shoulder
+Connective and soft tissue of lower limb, including hip
+Connective and soft tissue of thorax
+Connective and soft tissue of abdomen
+Connective and soft tissue of pelvis
+Connective and soft tissue of trunk, unspecified
+Overlapping lesion of connective and soft tissue
+Connective and soft tissue, unspecified
+Malignant neoplasm of breast
+Nipple and areola
+Central portion of breast
+Upper-inner quadrant of breast
+Lower-inner quadrant of breast
+Upper-outer quadrant of breast
+Lower-outer quadrant of breast
+Axillary tail of breast
+Overlapping lesion of breast
+Breast, unspecified
+Malignant neoplasm of vulva
+Labium majus
+Labium minus
+Clitoris
+Overlapping lesion of vulva
+Vulva, unspecified
+Malignant neoplasm of vagina
+Malignant neoplasm of cervix uteri
+Endocervix
+Exocervix
+Overlapping lesion of cervix uteri
+Cervix uteri, unspecified
+Malignant neoplasm of corpus uteri
+Isthmus uteri
+Endometrium
+Myometrium
+Fundus uteri
+Overlapping lesion of corpus uteri
+Corpus uteri, unspecified
+Malignant neoplasm of uterus, part unspecified
+Malignant neoplasm of ovary
+Malignant neoplasm of other and unspecified female genital organs
+Fallopian tube
+Broad ligament
+Round ligament
+Parametrium
+Uterine adnexa, unspecified
+Other specified female genital organs
+Overlapping lesion of female genital organs
+Female genital organ, unspecified
+Malignant neoplasm of placenta
+Malignant neoplasm of penis
+Prepuce
+Glans penis
+Body of penis
+Overlapping lesion of penis
+Penis, unspecified
+Malignant neoplasm of prostate
+Malignant neoplasm of testis
+Undescended testis
+Descended testis
+Testis, unspecified
+Malignant neoplasm of other and unspecified male genital organs
+Epididymis
+Spermatic cord
+Scrotum
+Other specified male genital organs
+Overlapping lesion of male genital organs
+Male genital organ, unspecified
+Malignant neoplasm of kidney, except renal pelvis
+Malignant neoplasm of renal pelvis
+Malignant neoplasm of ureter
+Malignant neoplasm of bladder
+Trigone of bladder
+Dome of bladder
+Lateral wall of bladder
+Anterior wall of bladder
+Posterior wall of bladder
+Bladder neck
+Ureteric orifice
+Urachus
+Overlapping lesion of bladder
+Bladder, unspecified
+Malignant neoplasm of other and unspecified urinary organs
+Urethra
+Paraurethral gland
+Overlapping lesion of urinary organs
+Urinary organ, unspecified
+Malignant neoplasm of eye and adnexa
+Conjunctiva
+Cornea
+Retina
+Choroid
+Ciliary body
+Lacrimal gland and duct
+Orbit
+Overlapping lesion of eye and adnexa
+Eye, unspecified
+Malignant neoplasm of meninges
+Cerebral meninges
+Spinal meninges
+Meninges, unspecified
+Malignant neoplasm of brain
+Cerebrum, except lobes and ventricles
+Frontal lobe
+Temporal lobe
+Parietal lobe
+Occipital lobe
+Cerebral ventricle
+Cerebellum
+Brain stem
+Overlapping lesion of brain
+Brain, unspecified
+Malignant neoplasm of spinal cord, cranial nerves and other parts of central nervous system
+Spinal cord
+Cauda equina
+Olfactory nerve
+Optic nerve
+Acoustic nerve
+Other and unspecified cranial nerves
+Overlapping lesion of brain and other parts of central nervous system
+Central nervous system, unspecified
+Malignant neoplasm of thyroid gland
+Malignant neoplasm of adrenal gland
+Cortex of adrenal gland
+Medulla of adrenal gland
+Adrenal gland, unspecified
+Malignant neoplasm of other endocrine glands and related structures
+Parathyroid gland
+Pituitary gland
+Craniopharyngeal duct
+Pineal gland
+Carotid body
+Aortic body and other paraganglia
+Pluriglandular involvement, unspecified
+Endocrine gland, unspecified
+Malignant neoplasm of other and ill-defined sites
+Head, face and neck
+Thorax
+Abdomen
+Pelvis
+Upper limb
+Lower limb
+Other ill-defined sites
+Overlapping lesion of other and ill-defined sites
+Secondary and unspecified malignant neoplasm of lymph nodes
+Lymph nodes of head, face and neck
+Intrathoracic lymph nodes
+Intra-abdominal lymph nodes
+Axillary and upper limb lymph nodes
+Inguinal and lower limb lymph nodes
+Intrapelvic lymph nodes
+Lymph nodes of multiple regions
+Lymph node, unspecified
+Secondary malignant neoplasm of respiratory and digestive organs
+Secondary malignant neoplasm of lung
+Secondary malignant neoplasm of mediastinum
+Secondary malignant neoplasm of pleura
+Secondary malignant neoplasm of other and unspecified respiratory organs
+Secondary malignant neoplasm of small intestine
+Secondary malignant neoplasm of large intestine and rectum
+Secondary malignant neoplasm of retroperitoneum and peritoneum
+Secondary malignant neoplasm of liver and intrahepatic bile duct
+Secondary malignant neoplasm of other and unspecified digestive organs
+Secondary malignant neoplasm of other sites
+Secondary malignant neoplasm of kidney and renal pelvis
+Secondary malignant neoplasm of bladder and other and unspecified urinary organs
+Secondary malignant neoplasm of skin
+Secondary malignant neoplasm of brain and cerebral meninges
+Secondary malignant neoplasm of other and unspecified parts of nervous system
+Secondary malignant neoplasm of bone and bone marrow
+Secondary malignant neoplasm of ovary
+Secondary malignant neoplasm of adrenal gland
+Secondary malignant neoplasm of other specified sites
+Secondary malignant neoplasm, unspecified site
+Malignant neoplasm without specification of site
+Malignant neoplasm, primary site unknown, so stated
+Malignant neoplasm, primary site unspecified
+Hodgkin lymphoma
+Nodular lymphocyte predominant Hodgkin lymphoma
+Nodular sclerosis (classical) Hodgkin lymphoma
+Mixed cellularity (classical) Hodgkin lymphoma
+Lymphocyte depleted (classical) Hodgkin lymphoma
+Lymphocyte-rich (classical) Hodgkin lymphoma
+Other (classical) Hodgkin lymphoma
+Hodgkin lymphoma, unspecified
+Follicular lymphoma
+Follicular lymphoma grade I
+Follicular lymphoma grade II
+Follicular lymphoma grade III, unspecified
+Follicular lymphoma grade IIIa
+Follicular lymphoma grade IIIb
+Diffuse follicle centre lymphoma
+Cutaneous follicle centre lymphoma
+Other types of follicular lymphoma
+Follicular lymphoma, unspecified
+Non-follicular lymphoma
+Small cell B-cell lymphoma
+Mantle cell lymphoma
+Diffuse large B-cell lymphoma
+Lymphoblastic (diffuse) lymphoma
+Burkitt lymphoma
+Other non-follicular lymphoma
+Non-follicular (diffuse) lymphoma, unspecified
+Mature T/NK-cell lymphomas
+Mycosis fungoides
+Sézary's disease
+Peripheral T-cell lymphoma, not elsewhere classified
+Other mature T/NK-cell lymphomas
+Anaplastic large cell lymphoma, ALK-positive
+Anaplastic large cell lymphoma, ALK-negative
+Cutaneous T-cell lymphoma, unspecified
+Mature T/NK-cell lymphoma, unspecified
+Other and unspecified types of non-Hodgkin lymphoma
+B-cell lymphoma, unspecified
+Mediastinal (thymic) large B-cell lymphoma
+Other specified types of non-Hodgkin lymphoma
+Non-Hodgkin's lymphoma, unspecified
+Other specified types of T/NK-cell lymphoma
+Extranodal NK/T-cell lymphoma, nasal type
+Hepatosplenic T-cell lymphoma
+Enteropathy-type (intestinal) T-cell lymphoma
+Subcutaneous panniculitis-like T-cell lymphoma
+Blastic NK-cell lymphoma
+Angioimmunoblastic T-cell lymphoma
+Primary cutaneous CD30-positive T-cell proliferations
+Malignant immunoproliferative diseases
+Waldenström macroglobulinaemia
+Other heavy chain disease
+Immunoproliferative small intestinal disease
+Extranodal marginal zone B-cell lymphoma of mucosa-associated lymphoid tissue [MALT-lyphoma]
+Other malignant immunoproliferative diseases
+Malignant immunoproliferative disease, unspecified
+Multiple myeloma and malignant plasma cell neoplasms
+Multiple myeloma
+Plasma cell leukaemia
+Extramedullary plasmacytoma
+Solitary plasmacytoma
+Lymphoid leukaemia
+Acute lymphoblastic leukaemia [ALL]
+Chronic lymphocytic leukaemia of B-cell type
+Prolymphocytic leukaemia of B-cell type
+Hairy-cell leukaemia
+Adult T-cell lymphoma/leukaemia [HTLV-1-associated]
+Prolymphocytic leukaemia of T-cell type
+Other lymphoid leukaemia
+Mature B-cell leukaemia Burkitt-type
+Lymphoid leukaemia, unspecified
+Myeloid leukaemia
+Acute myeloblastic leukaemia [AML]
+Chronic myeloid leukaemia [CML], BCR/ABL-positive
+Atypical chronic myeloid leukaemia, BCR/ABL- negative
+Myeloid sarcoma
+Acute promyelocytic leukaemia [PML]
+Acute myelomonocytic leukaemia
+Acute myeloid leukaemia with 11q23-abnormality
+Other myeloid leukaemia
+Acute myeloid leukaemia with multilineage dysplasia
+Myeloid leukaemia, unspecified
+Monocytic leukaemia
+Acute monoblastic/monocytic leukaemia
+Chronic myelomonocytic leukaemia
+Juvenile myelomonocytic leukaemia
+Other monocytic leukaemia
+Monocytic leukaemia, unspecified
+Other leukaemias of specified cell type
+Acute erythroid leukaemia
+Acute megakaryoblastic leukaemia
+Mast cell leukaemia
+Acute panmyelosis with myelofibrosis
+Myelodysplastic and myeloproliferative disease, not elsewhere classified
+Other specified leukaemias
+Leukaemia of unspecified cell type
+Acute leukaemia of unspecified cell type
+Chronic leukaemia of unspecified cell type
+Other leukaemia of unspecified cell type
+Leukaemia, unspecified
+Other and unspecified malignant neoplasms of lymphoid, haematopoietic and related tissue
+Multifocal and multisystemic (disseminated) Langerhans-cell histiocytosis [Letterer-Siwe disease]
+Malignant mast cell tumour
+Sarcoma of dendritic cells (accessory cells)
+Multifocal and unisystemic Langerhans-cell histiocytosis
+Unifocal Langerhans-cell histiocytosis
+Other specified malignant neoplasms of lymphoid, haematopoietic and related tissue
+Histiocytic sarcoma
+Malignant neoplasm of lymphoid, haematopoietic and related tissue, unspecified
+Malignant neoplasms of independent (primary) multiple sites
+
+Carcinoma in situ of oral cavity, oesophagus and stomach
+Lip, oral cavity and pharynx
+Oesophagus
+Stomach
+Carcinoma in situ of other and unspecified digestive organs
+Colon
+Rectosigmoid junction
+Rectum
+Anus and anal canal
+Other and unspecified parts of intestine
+Liver, gallbladder and bile ducts
+Other specified digestive organs
+Digestive organ, unspecified
+Carcinoma in situ of middle ear and respiratory system
+Larynx
+Trachea
+Bronchus and lung
+Other parts of respiratory system
+Respiratory system, unspecified
+Melanoma in situ
+Melanoma in situ of lip
+Melanoma in situ of eyelid, including canthus
+Melanoma in situ of ear and external auricular canal
+Melanoma in situ of other and unspecified parts of face
+Melanoma in situ of scalp and neck
+Melanoma in situ of trunk
+Melanoma in situ of upper limb, including shoulder
+Melanoma in situ of lower limb, including hip
+Melanoma in situ of other sites
+Melanoma in situ, unspecified
+Carcinoma in situ of skin
+Skin of lip
+Skin of eyelid, including canthus
+Skin of ear and external auricular canal
+Skin of other and unspecified parts of face
+Skin of scalp and neck
+Skin of trunk
+Skin of upper limb, including shoulder
+Skin of lower limb, including hip
+Skin of other sites
+Skin, unspecified
+Carcinoma in situ of breast
+Lobular carcinoma in situ 
+Intraductal carcinoma in situ 
+Other carcinoma in situ of breast
+Carcinoma in situ of breast, unspecified
+Carcinoma in situ of cervix uteri
+Endocervix
+Exocervix
+Other parts of cervix
+Cervix, unspecified
+Carcinoma in situ of other and unspecified genital organs
+Endometrium
+Vulva
+Vagina
+Other and unspecified female genital organs
+Penis
+Prostate
+Other and unspecified male genital organs
+Carcinoma in situ of other and unspecified sites
+Bladder
+Other and unspecified urinary organs
+Eye
+Thyroid and other endocrine glands
+Carcinoma in situ of other specified sites
+Carcinoma in situ, unspecified
+Benign neoplasm of mouth and pharynx
+Lip
+Tongue
+Floor of mouth
+Other and unspecified parts of mouth
+Tonsil
+Other parts of oropharynx
+Nasopharynx
+Hypopharynx
+Pharynx, unspecified
+Benign neoplasm of major salivary glands
+Parotid gland
+Other major salivary glands
+Major salivary gland, unspecified
+Benign neoplasm of colon, rectum, anus and anal canal
+Caecum
+Appendix
+Ascending colon
+Transverse colon
+Descending colon
+Sigmoid colon
+Colon, unspecified
+Rectosigmoid junction
+Rectum
+Anus and anal canal
+Benign neoplasm of other and ill-defined parts of digestive system
+Oesophagus
+Stomach
+Duodenum
+Other and unspecified parts of small intestine
+Liver
+Extrahepatic bile ducts
+Pancreas
+Endocrine pancreas
+Ill-defined sites within the digestive system
+Benign neoplasm of middle ear and respiratory system
+Middle ear, nasal cavity and accessory sinuses
+Larynx
+Trachea
+Bronchus and lung
+Respiratory system, unspecified
+Benign neoplasm of other and unspecified intrathoracic organs
+Thymus
+Heart
+Mediastinum
+Other specified intrathoracic organs
+Intrathoracic organ, unspecified
+Benign neoplasm of bone and articular cartilage
+Scapula and long bones of upper limb
+Short bones of upper limb
+Long bones of lower limb
+Short bones of lower limb
+Bones of skull and face
+Lower jaw bone
+Vertebral column
+Ribs, sternum and clavicle
+Pelvic bones, sacrum and coccyx
+Bone and articular cartilage, unspecified
+Benign lipomatous neoplasm
+Benign lipomatous neoplasm of skin and subcutaneous tissue of head, face and neck
+Benign lipomatous neoplasm of skin and subcutaneous tissue of trunk
+Benign lipomatous neoplasm of skin and subcutaneous tissue of limbs
+Benign lipomatous neoplasm of skin and subcutaneous tissue of other and unspecified sites
+Benign lipomatous neoplasm of intrathoracic organs
+Benign lipomatous neoplasm of intra-abdominal organs
+Benign lipomatous neoplasm of spermatic cord
+Benign lipomatous neoplasm of other sites
+Benign lipomatous neoplasm, unspecified
+Haemangioma and lymphangioma, any site
+Haemangioma, any site
+Lymphangioma, any site
+Benign neoplasm of mesothelial tissue
+Mesothelial tissue of pleura
+Mesothelial tissue of peritoneum
+Mesothelial tissue of other sites
+Mesothelial tissue, unspecified
+Benign neoplasm of soft tissue of retroperitoneum and peritoneum
+Retroperitoneum
+Peritoneum
+Other benign neoplasms of connective and other soft tissue
+Connective and other soft tissue of head, face and neck
+Connective and other soft tissue of upper limb, including shoulder
+Connective and other soft tissue of lower limb, including hip
+Connective and other soft tissue of thorax
+Connective and other soft tissue of abdomen
+Connective and other soft tissue of pelvis
+Connective and other soft tissue of trunk, unspecified
+Connective and other soft tissue, unspecified
+Melanocytic naevi
+Melanocytic naevi of lip
+Melanocytic naevi of eyelid, including canthus
+Melanocytic naevi of ear and external auricular canal
+Melanocytic naevi of other and unspecified parts of face
+Melanocytic naevi of scalp and neck
+Melanocytic naevi of trunk
+Melanocytic naevi of upper limb, including shoulder
+Melanocytic naevi of lower limb, including hip
+Melanocytic naevi, unspecified
+Other benign neoplasms of skin
+Skin of lip
+Skin of eyelid, including canthus
+Skin of ear and external auricular canal
+Skin of other and unspecified parts of face
+Skin of scalp and neck
+Skin of trunk
+Skin of upper limb, including shoulder
+Skin of lower limb, including hip
+Skin, unspecified
+Benign neoplasm of breast
+Leiomyoma of uterus
+Submucous leiomyoma of uterus
+Intramural leiomyoma of uterus
+Subserosal leiomyoma of uterus
+Leiomyoma of uterus, unspecified
+Other benign neoplasms of uterus
+Cervix uteri
+Corpus uteri
+Other parts of uterus
+Uterus, unspecified
+Benign neoplasm of ovary
+Benign neoplasm of other and unspecified female genital organs
+Vulva
+Vagina
+Uterine tubes and ligaments
+Other specified female genital organs
+Female genital organ, unspecified
+Benign neoplasm of male genital organs
+Penis
+Prostate
+Testis
+Epididymis
+Scrotum
+Other male genital organs
+Male genital organ, unspecified
+Benign neoplasm of urinary organs
+Kidney
+Renal pelvis
+Ureter
+Bladder
+Urethra
+Other urinary organs
+Urinary organ, unspecified
+Benign neoplasm of eye and adnexa
+Conjunctiva
+Cornea
+Retina
+Choroid
+Ciliary body
+Lacrimal gland and duct
+Orbit, unspecified
+Eye, unspecified
+Benign neoplasm of meninges
+Cerebral meninges
+Spinal meninges
+Meninges, unspecified
+Benign neoplasm of brain and other parts of central nervous system
+Brain, supratentorial
+Brain, infratentorial
+Brain, unspecified
+Cranial nerves
+Spinal cord
+Other specified parts of central nervous system
+Central nervous system, unspecified
+Benign neoplasm of thyroid gland
+Benign neoplasm of other and unspecified endocrine glands
+Adrenal gland
+Parathyroid gland
+Pituitary gland
+Craniopharyngeal duct
+Pineal gland
+Carotid body
+Aortic body and other paraganglia
+Other specified endocrine glands
+Pluriglandular involvement
+Endocrine gland, unspecified
+Benign neoplasm of other and unspecified sites
+Lymph nodes
+Peripheral nerves and autonomic nervous system
+Other specified sites
+Benign neoplasm of unspecified site
+Neoplasm of uncertain or unknown behaviour of oral cavity and digestive organs
+Lip, oral cavity and pharynx
+Stomach
+Small intestine
+Appendix
+Colon
+Rectum
+Liver, gallbladder and bile ducts
+Other digestive organs
+Digestive organ, unspecified
+Neoplasm of uncertain or unknown behaviour of middle ear and respiratory and intrathoracic organs
+Larynx
+Trachea, bronchus and lung
+Pleura
+Mediastinum
+Thymus
+Other respiratory organs
+Respiratory organ, unspecified
+Neoplasm of uncertain or unknown behaviour of female genital organs
+Uterus
+Ovary
+Placenta
+Other female genital organs
+Female genital organ, unspecified
+Neoplasm of uncertain or unknown behaviour of male genital organs
+Prostate
+Testis
+Other male genital organs
+Male genital organ, unspecified
+Neoplasm of uncertain or unknown behaviour of urinary organs
+Kidney
+Renal pelvis
+Ureter
+Urethra
+Bladder
+Other urinary organs
+Urinary organ, unspecified
+Neoplasm of uncertain or unknown behaviour of meninges
+Cerebral meninges
+Spinal meninges
+Meninges, unspecified
+Neoplasm of uncertain or unknown behaviour of brain and central nervous system
+Brain, supratentorial
+Brain, infratentorial
+Brain, unspecified
+Cranial nerves
+Spinal cord
+Other parts of central nervous system
+Central nervous system, unspecified
+Neoplasm of uncertain or unknown behaviour of endocrine glands
+Thyroid gland
+Adrenal gland
+Parathyroid gland
+Pituitary gland
+Craniopharyngeal duct
+Pineal gland
+Carotid body
+Aortic body and other paraganglia
+Pluriglandular involvement
+Endocrine gland, unspecified
+Polycythaemia vera
+Myelodysplastic syndromes
+Refractory anaemia without sideroblasts, so stated
+Refractory anaemia with sideroblasts
+Refractory anaemia with excess of blasts [RAEB]
+Refractory anaemia, unspecified
+Refractory anaemia with multi-lineage dysplasia
+Myelodysplastic syndrome with isolated del(5q) chromosomal abnormality
+Other myelodysplastic syndromes
+Myelodysplastic syndrome, unspecified
+Other neoplasms of uncertain or unknown behaviour of lymphoid, haematopoietic and related tissue
+Histiocytic and mast cell tumours of uncertain and unknown behaviour
+Chronic myeloproliferative disease
+Monoclonal gammopathy of undetermined significance (MGUS)
+Essential (haemorrhagic) thrombocythaemia
+Osteomyelofibrosis
+Chronic eosinophilic leukaemia [hypereosinophilic syndrome]
+Other specified neoplasms of uncertain or unknown behaviour of lymphoid, haematopoietic and related tissue
+Neoplasm of uncertain or unknown behaviour of lymphoid, haematopoietic and related tissue, unspecified
+Neoplasm of uncertain or unknown behaviour of other and unspecified sites
+Bone and articular cartilage
+Connective and other soft tissue
+Peripheral nerves and autonomic nervous system
+Retroperitoneum
+Peritoneum
+Skin
+Breast
+Other specified sites
+Neoplasm of uncertain or unknown behaviour, unspecified

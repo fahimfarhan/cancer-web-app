@@ -3,11 +3,17 @@
 
 <div class="w3-display-middle w3-mobile">
 <ul>
-    <br><br><br><br>
+    <br><br><br><br><br><br>
 <h1>Patient Profile:</h1>
     <form method = post  enctype="multipart/form-data">
+
+        {% if p_profile%}
+        <p>Previous disease code: {{p_profile.diseaseCode}}. Please select it again. Sorry for the inconvenience :'(</p>
+        {% endif %}
         {% csrf_token %}
         {{form.as_p}}
+
+
         <button type = "submit" style="color:#047ff8;">Submit</button>
         <button type="reset" value="Reset">Reset</button>
     </form>
