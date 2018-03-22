@@ -6,8 +6,8 @@ from patientbasicinfo.models import Identity
 
 class Status(models.Model):
     identity_fk = models.OneToOneField(Identity, on_delete=models.CASCADE)
-    details = models.CharField(max_length=200, blank=True)
-    advice = models.CharField(max_length=200, blank=True)
+    details = models.CharField(max_length=1000, blank=True)
+    advice = models.CharField(max_length=1000, blank=True)
 
 
 class Investigation(models.Model):

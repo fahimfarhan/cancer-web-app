@@ -6,9 +6,9 @@ from patientbasicinfo.models import TreatmentPlan
 
 class Surgery(models.Model):
     tp_fk = models.OneToOneField(TreatmentPlan, on_delete=models.CASCADE)
-    details = models.CharField(max_length=200)
+    details = models.CharField(max_length=1000)
 
 
 class Hormone(models.Model):
     tp_fk = models.OneToOneField(TreatmentPlan, on_delete=models.CASCADE)
-    details = models.CharField(max_length=200)
+    details = models.CharField(max_length=1000)

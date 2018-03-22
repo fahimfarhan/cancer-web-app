@@ -6,8 +6,8 @@ from patientbasicinfo.models import Identity
 
 class HistoryModel(models.Model):
     identity_fk = models.ForeignKey(Identity, on_delete=models.CASCADE)
-    details = models.CharField(max_length=200, blank=True)
-    notes = models.CharField(max_length=200, blank=True)
+    details = models.CharField(max_length=1000, blank=True)
+    notes = models.CharField(max_length=1000, blank=True)
 
 
 class HistoryModelFile(models.Model):

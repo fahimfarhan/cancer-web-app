@@ -15,9 +15,9 @@
         {% csrf_token %}
 
 <p><label for="id_details">Details:</label><br>
-    <textarea id="inputor" class="inputor" name="details" maxlength="200" id="id_details">{{p_history.details}}</textarea></p>
+    <textarea id="inputor" class="inputor" name="details" maxlength="1000" id="id_details">{{p_history.details}}</textarea></p>
 <p><label for="id_notes">Notes:</label><br>
-    <textarea id="inputor0" class="inputor" name="notes" maxlength="200" id="id_notes">{{p_history.notes}}</textarea></p>
+    <textarea id="inputor0" class="inputor" name="notes" maxlength="1000" id="id_notes">{{p_history.notes}}</textarea></p>
 
         <button type = "submit" style="color:#047ff8;">Submit</button>
         <button type="reset" value="Reset">Reset</button>

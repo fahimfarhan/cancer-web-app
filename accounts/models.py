@@ -7,5 +7,5 @@ from django.db import models
 class Doctor(models.Model):
     identity_fk = models.OneToOneField(User, on_delete=models.CASCADE)
     mobile = models.IntegerField()
-    designation = models.CharField(max_length=50, blank=True)
+    designation = models.CharField(max_length=100, blank=True)
     hospital = models.CharField(max_length=100, blank=True)

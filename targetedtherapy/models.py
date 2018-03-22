@@ -5,7 +5,7 @@ from patientbasicinfo.models import TreatmentPlan
 
 
 class TargetedTherapy(models.Model):
-    details = models.CharField(max_length=200, blank=True)
+    details = models.CharField(max_length=1000, blank=True)
 
 
 class Immunotherapy(TargetedTherapy):
