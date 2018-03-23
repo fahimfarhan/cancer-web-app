@@ -1,0 +1,43 @@
+<div class="w3-container" style="margin-top:20px" id="linac">
+    {% if linac %}
+
+<div class="w3-row-padding">
+
+<table class="GeneratedPdf">
+  <thead>
+    <tr>
+      <th>Linac Therapy</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+      <td>Intensity</td>
+      <td>{{linac.intensity}} </td>
+    </tr>
+    <tr>
+      <td>Dose</td>
+      <td>{{linac.dose}} </td>
+    </tr>
+  <tr>
+      <td>Gray</td>
+      <td>{{linac.gray}} </td>
+    </tr>
+    <tr>
+      <td>Fraction(Fx)</td>
+      <td>{{linac.fractionFx}}</td>
+    </tr>
+    <tr>
+      <td>Start Date - End Date</td>
+      <td>{{linac.startDate}} to {{linac.endDate}}</td>
+    </tr>
+
+  </tbody>
+</table>
+
+</div>
+
+<br>
+
+{% endif %}
+</div>

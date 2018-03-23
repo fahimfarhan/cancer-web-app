@@ -28,3 +28,4 @@ FC 26: lalala
 FC 27: autosuggestion check
 FC 28: disease code check
 FC 29: calculators check
+FC 30: summary reconstructed

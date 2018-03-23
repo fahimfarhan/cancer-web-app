@@ -1,0 +1,37 @@
+<div class="w3-container" style="margin-top:20px" id="palliative">
+
+    {% if palliative %}
+
+<div class="w3-row-padding">
+
+<table class="GeneratedPdf">
+  <thead>
+    <tr>
+      <th>Palliative</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <tr>
+      <td>Details</td>
+      <td>{{palliative.details}}</td>
+    </tr>
+  </tbody>
+</table>
+    <!--div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-light-gray w3-center">
+                <li class="w3-black w3-xlarge w3-padding-16">Palliative</li>
+                    <li class="w3-padding-16">Details</li>
+            </ul>
+        </div>
+         <div class="w3-half w3-margin-bottom">
+             <ul class="w3-ul w3-light-gray w3-center">
+                <li class="w3-black w3-xlarge w3-padding-16">Value</li>
+                 <li class="w3-padding-16"> {{palliative.details}}</li>
+             </ul>
+        </div-->
+
+</div>
+{% endif %}
+</div>

@@ -13,7 +13,7 @@ urlpatterns = [
     url(r'^pdf/referralnote/(?P<p_id>[0-9]+)/(?P<number>[0-9]+)/$', views.print_referralnote,
         name='print_referralnote'),
     #
-    url(r'^view/summary/(?P<p_id>[0-9]+)/(?P<user_pk>[0-9]+)/$', summary.view_summary, name='view_summary'),
-    url(r'^pdf/summary/(?P<p_id>[0-9]+)/$', summary.print_summary, name='print_summary'),
+    url(r'^view/report/(?P<user_pk>[0-9]+)/(?P<p_id>[0-9]+)/(?P<tp_num>[0-9]+)/$', summary.view_report, name='view_report'),
+    url(r'^pdf/report/(?P<p_id>[0-9]+)/(?P<tp_num>[0-9]+)/$', summary.print_report, name='print_report'),
 
 ]

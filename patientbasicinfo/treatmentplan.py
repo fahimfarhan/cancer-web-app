@@ -11,6 +11,7 @@ from targetedtherapy.models import Immunotherapy, Tki
 
 @login_required
 def view_treatmentplan(request, p_id, tp_num):
+    tp_num_1234 = tp_num
     patient = get_object_or_404(Identity, pk=p_id)
     if not TreatmentPlan.objects.filter(identity_fk=p_id, num=tp_num).exists():
         tp_fk = None
@@ -90,9 +91,10 @@ def view_treatmentplan(request, p_id, tp_num):
     else:
         brachy_cycle = get_list_or_404(BrachyChart, brachy_fk=brachy)
 
-    context = {'patient': patient, 'tp_fk': tp_fk, 'hormone': hormone, 'surgery': surgery, 'cobalt': cobalt,
+    context = {'tp_num_1234': tp_num_1234, 'patient': patient, 'tp_fk': tp_fk, 'hormone': hormone, 'surgery': surgery,
+               'cobalt': cobalt,
                'linac': linac, 'brachy': brachy, 'palliative': palliative, 'nact': nact, 'act': act,
                'concurrent': concurrent, 'immunotherapy': immunotherapy, 'tki': tki, 'nact_cycle': nact_cycle,
                'act_cycle': act_cycle, 'concurr_cycle': concurr_cycle, 'palliative_cycle': palliative_cycle,
-               'cobalt_cycle': cobalt_cycle,'linac_cycle': linac_cycle, 'brachy_cycle':brachy_cycle}
+               'cobalt_cycle': cobalt_cycle, 'linac_cycle': linac_cycle, 'brachy_cycle': brachy_cycle}
     return render(request, 'treatmentplan/ViewTreatmentPlan.html', context)

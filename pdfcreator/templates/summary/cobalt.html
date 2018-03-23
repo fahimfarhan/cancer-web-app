@@ -1,0 +1,41 @@
+{%load staticfiles%}
+<div class="w3-container" style="margin-top:20px" id="cobalt">
+    {% if cobalt %}
+<div class="w3-row-padding">
+
+<table class="GeneratedPdf">
+  <thead>
+    <tr>
+      <th>Cobalt Therapy</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+   <tr>
+      <td>Intensity</td>
+      <td>{{cobalt.intensity}} </td>
+    </tr>
+    <tr>
+      <td>Dose</td>
+      <td>{{cobalt.dose}} </td>
+    </tr>
+  <tr>
+      <td>Gray</td>
+      <td>{{cobalt.gray}} </td>
+    </tr>
+
+    <tr>
+      <td>Fraction(Fx)</td>
+      <td>{{cobalt.fractionFx}}</td>
+    </tr>
+    <tr>
+      <td>Start Date - End Date</td>
+      <td>{{cobalt.startDate}} to {{cobalt.endDate}}</td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+    {% endif %}
+
+</div>

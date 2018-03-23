@@ -1,0 +1,45 @@
+<div class="w3-container" style="margin-top:20px" id="brachy">
+    {% if brachy %}
+
+
+<div class="w3-row-padding">
+
+
+<table class="GeneratedPdf">
+  <thead>
+    <tr>
+      <th>Brachy Therapy</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Intensity</td>
+      <td>{{brachy.intensity}} </td>
+    </tr>
+    <tr>
+      <td>Dose</td>
+      <td>{{brachy.dose}} </td>
+    </tr>
+  <tr>
+      <td>Gray</td>
+      <td>{{brachy.gray}} </td>
+    </tr>
+
+    <tr>
+      <td>Fraction(Fx)</td>
+      <td>{{brachy.fractionFx}}</td>
+    </tr>
+    <tr>
+      <td>Start Date - End Date</td>
+      <td>{{brachy.startDate}} to {{brachy.endDate}}</td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+</div>
+
+{% endif %}
+</div>

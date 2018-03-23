@@ -41,6 +41,8 @@
       <a href="{% url 'home' %}" class="w3-bar-item w3-button">Home</a>
         <a href="{% url 'profile' %}" class="w3-bar-item w3-button"><b>{{user}}</b></a>
       <a href="{% url 'view_doctorinfo' %}" class="w3-bar-item w3-button">Doctor Info</a>
+        <a href="{% url 'analytics:calculators' %}" class="w3-bar-item w3-button" target="_blank">Calculator</a>
+
       <a href="{% url 'change_password' %}" class="w3-bar-item w3-button">Change Password</a>
       <a href="{% url 'mylogout' %}" class="w3-bar-item w3-button">Log out</a>
     </div>

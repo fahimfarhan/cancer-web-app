@@ -17,9 +17,10 @@
 <div class="w3-container">
 <!--------------->
     <p align="right">{{ user.first_name }} {{ user.last_name }},{%if doctor %} {{doctor.designation}},<br>
-        {{doctor.hospital}},<br>Mobile: 0{{doctor.mobile}},{% endif %} email: {{user.email}}
-    <hr>
+        {{doctor.hospital}},<br>Mobile: 0{{doctor.mobile}},{% endif %} email: {{user.email}}<br>{{now.day}}/{{now.month}}/{{now.year}}
+
     </p>
+<hr>
     <!------------>
 <!-- !PAGE CONTENT! -->
 <div class="w3-main w3-white" style="margin-left:340px;margin-right:10px">
@@ -28,12 +29,26 @@
     <div class="w3-container w3-light-gray" style="margin-top:0px"> <h2 align="center">Summary</h2></div></ul>
     </div>
 {% include  'summary/viewIdentity.html' %}
-{% include  'summary/viewProfile.html' %}
-{% include  'summary/viewComorbidity.html' %}
-{% include  'summary/viewStatus.html' %}
-{% include  'summary/viewHistory.html' %}
-    {% include  'summary/viewPrescription.html' %}
-        {% include  'summary/viewReferralnotes.html' %}
+    <ul>
+    {% include  'summary/cobalt.html' %}
+    {% include  'summary/linac.html' %}
+        {% include  'summary/brachy.html' %}
+            {% include  'summary/nact.html' %}
+            {% include  'summary/act.html' %}
+            {% include  'summary/palliative.html' %}
+            {% include  'summary/concurrent.html' %}
+                {% include  'summary/tki.html' %}
+            {% include  'summary/immunotherapy.html' %}
+    {% include  'summary/surgery.html' %}
+    {% include  'summary/hormone.html' %}
+    </ul>
+<!--{#% include  'summary/viewProfile.html' %}
+{#% include  'summary/viewComorbidity.html' %}
+{#% include  'summary/viewStatus.html' %}
+{#% include  'summary/viewHistory.html' %}
+    {#% include  'summary/viewPrescription.html' %}
+        {#% include  'summary/viewReferralnotes.html' %}
+        -->
 </div>
 </div>
 <!----->

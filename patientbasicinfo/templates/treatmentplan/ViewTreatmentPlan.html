@@ -15,6 +15,7 @@
         <div class="w3-bar-block">
             <!--a href=" fix this when ready" onclick="w3_close()"
                class="w3-bar-item w3-button w3-hover-light-green">Full Report</a-->
+            <a href="{% url 'pdfcreator:print_report' patient.pk tp_num_1234 %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Summary</a>
             <a href="#identity" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Identity</a>
             <a href="{% url 'view_patientdetails' patient.pk %}"  class="w3-bar-item w3-button w3-hover-light-green">Patient Details</a>
             <a href="#radiotherapy" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-green">Radio Therapy</a>
