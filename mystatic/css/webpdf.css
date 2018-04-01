@@ -1,0 +1,21 @@
+table.GeneratedPdf {
+  width: 100%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #ffffff;
+  border-style: solid;
+  color: #000000;
+}
+
+table.GeneratedPdf td, table.GeneratedPdf th {
+  border-width: 2px;
+  border-color: #ffffff;
+  border-style: solid;
+  padding: 3px;
+}
+
+table.GeneratedPdf thead {
+  background-color:  #F0F0F0;
+}
+

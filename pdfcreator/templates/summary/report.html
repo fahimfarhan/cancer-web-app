@@ -15,6 +15,13 @@
 <body>
 <!----->
 <div class="w3-container">
+     <button onclick="myFunction()" style="color:#047ff8;">Print this page</button>
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
 <!--------------->
     <p align="right">{{ user.first_name }} {{ user.last_name }},{%if doctor %} {{doctor.designation}},<br>
         {{doctor.hospital}},<br>Mobile: 0{{doctor.mobile}},{% endif %} email: {{user.email}}<br>{{now.day}}/{{now.month}}/{{now.year}}
