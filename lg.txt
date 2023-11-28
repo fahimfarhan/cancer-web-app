@@ -1,0 +1,46 @@
+f09da45 - (7 weeks ago) Bump pillow from 5.0.0 to 10.0.1 - dependabot[bot] (origin/dependabot/pip/pillow-10.0.1)
+2b82085 - (7 weeks ago) Bump django from 2.0.12 to 2.2.28 - dependabot[bot] (origin/dependabot/pip/django-2.2.28)
+6c5d8c5 - (4 years, 2 months ago) Merge pull request #1 from fahimfarhan/dependabot/pip/django-2.0.12 - Qazi Fahim Farhan (HEAD -> master, origin/master, origin/HEAD)
+7b0069b - (4 years, 2 months ago) Bump django from 2.0.3 to 2.0.12 - dependabot[bot]
+54db466 - (4 years, 6 months ago) nginx to rescue 4 - fahimfarhan
+49b5a37 - (4 years, 6 months ago) nginx to rescue 3 - fahimfarhan
+6baefe1 - (4 years, 6 months ago) nginx to rescue 2 - fahimfarhan
+47e6226 - (4 years, 6 months ago) nginx to rescue - fahimfarhan
+596a40e - (6 years ago) Create LICENSE - Qazi Fahim Farhan
+09f7ebd - (6 years ago) good bye wkhtmltopdf, THE END - fahimfarhan
+c372361 - (6 years ago) FC 31:lalala - fahimfarhan
+1188120 - (6 years ago) FC 30:summary reconstructed - fahimfarhan
+416cce4 - (6 years ago) FC 29: calculators check - fahimfarhan
+e4781fe - (6 years ago) FC 28: disease code check - fahimfarhan
+cca47c1 - (6 years ago) FC 27: autosuggestion check - fahimfarhan
+3d2b8e0 - (6 years ago) FC 26:lalala - fahimfarhan
+c7f130b - (6 years ago) FC 25: analytics updated - fahimfarhan
+f0b4cd0 - (6 years ago) FC 24:lalalalala - fahimfarhan
+4726952 - (6 years ago) FC 23: changed length - fahimfarhan
+963f16c - (6 years ago) FC 22: summary 70% dome - fahimfarhan
+018b8cc - (6 years ago) FC 21:lalalalala - fahimfarhan
+454275f - (6 years ago) FC 20: basic prescription check - fahimfarhan
+4c9ccd2 - (6 years ago) FC 19: lalala - fahimfarhan
+a293760 - (6 years ago) FC 18: prescription done - fahimfarhan
+4e12639 - (6 years ago) FC 18:description - fahimfarhan
+36ce003 - (6 years ago) FC 17: radiotherapy chart done - fahimfarhan
+80aae0f - (6 years ago) FC 16: media folder changed - fahimfarhan
+db6c554 - (6 years ago) FC 15: chemo chart done - fahimfarhan
+798e2c4 - (6 years ago) FC 14: targeted therapy done - fahimfarhan
+4cb21f2 - (6 years ago) FC 13:chemo without charts - fahimfarhan
+ed3945a - (6 years ago) FC 12:radiotherapy without charts - fahimfarhan
+675284e - (6 years ago) FC 11: requirement.txt added - fahimfarhan
+dd2ccfe - (6 years ago) FC 11: cobalt done - fahimfarhan
+912353c - (6 years ago) FC 10: tp surgery hormone done - fahimfarhan
+949b4f9 - (6 years ago) FC 9: pf done - fahimfarhan
+5b0d4eb - (6 years ago) FC 8 pro pic done - fahimfarhan
+4ed3854 - (6 years ago) FC - fahimfarhan
+fb23dba - (6 years ago) FC - fahimfarhan
+6cc4f53 - (6 years ago) FC 7 history done - fahimfarhan
+e0477ca - (6 years ago) FC 6 referralnotes ok - fahimfarhan
+3b19e9c - (6 years ago) FC 5 - fahimfarhan
+d981eca - (6 years ago) FC 4 - fahimfarhan
+104c1a2 - (6 years ago) FC 3 - fahimfarhan
+0b93a12 - (6 years ago) FC 2 login finally done! :D - fahimfarhan
+ea5d471 - (6 years ago) FC 1 - fahimfarhan
+72e06f4 - (6 years ago) FC 1 - fahimfarhan
