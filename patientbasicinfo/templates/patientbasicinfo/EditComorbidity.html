@@ -1,0 +1,38 @@
+{% extends 'accounts/base.html' %}
+{% block body %}
+<ul>
+<h1>Comorbidity:</h1>
+    <form method = post  enctype="multipart/form-data">
+<script type="text/javascript">
+$(function(){
+    var comor = {{ my_list|safe }}
+    if(comor[0]==0){document.getElementById("id_hypertension").checked = false;}
+
+
+    if(comor[1]==0){ document.getElementById("id_diabetes").checked = false; }
+
+    if(comor[2]==0){ document.getElementById("id_cardiac").checked = false; }
+
+
+    if(comor[3]==0){ document.getElementById("id_liver").checked = false; }
+
+    if(comor[4]==0){ document.getElementById("id_kedney").checked = false; }
+
+    if(comor[5]==0){ document.getElementById("id_others").checked = false; }
+});
+</script>
+        {% csrf_token %}
+         {{form.as_p}}
+<!--p><label for="id_hypertension">Hypertension:</label> <input type="checkbox" name="hypertension" value="{{p_comorbidity.hypertension}}" id="id_hypertension" /></p>
+<p><label for="id_diabetes">Diabetes:</label> <input type="checkbox" name="diabetes" value="{{p_comorbidity.diabetes}}" id="id_diabetes" /></p>
+<p><label for="id_cardiac">Cardiac:</label> <input type="checkbox" name="cardiac" value="{{p_comorbidity.cardiac}}" id="id_cardiac" /></p>
+<p><label for="id_liver">Liver:</label> <input type="checkbox" name="liver" value="{{p_comorbidity.liver}}" id="id_liver" /></p>
+<p><label for="id_kedney">Kedney:</label> <input type="checkbox" name="kedney" value="{{p_comorbidity.kedney}}" id="id_kedney" /></p>
+<p><label for="id_others">others:</label> <input type="checkbox" name="others" value="{{p_comorbidity.others}}" id="id_others" /></p>
+<!--p><label for="id_others">Others:</label> <input type="text" name="others" value="{{p_comorbidity.others}}" maxlength="200" required id="id_others" /></p-->
+        <button type = "submit" style="color:#047ff8;">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
+    </form>
+
+</ul>
+{% endblock %}
